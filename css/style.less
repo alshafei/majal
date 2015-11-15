@@ -1,16 +1,98 @@
-.center{
-  text-align: center;
+/***********************************************************************
+  Global Styles
+************************************************************************/
+@font-face {
+  font-family: "graphik";
+  src: url('assets/video/Graphik-Regular.otf') format("truetype");
 }
 
-header {
-  padding-top:65px;
+@font-face {
+  font-family: "graphik";
+  src: url('assets/video/Graphik-Bold.otf') format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "graphik";
+  src: url('assets/video/Graphik-Light.otf') format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "graphik";
+  src: url('assets/video/Graphik-Medium.otf') format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "graphik";
+  src: url('assets/video/Graphik-Extralight.otf') format("truetype");
+  font-weight: 300;
 }
 
 html, body {
-    max-width: 1282px;
-    height: 100%;
-    overflow: hidden;
-    margin: 0 auto;
+  max-width: 1282px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "graphik", sans-serif;
+}
+
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('http://www.konami.jp/mgs5/_img/certification/age_bg_tpp.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.video-overlay{
+  position:absolute;
+  float:left;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-color: rgba(0,0,0,0.8);
+  z-index:-1;
+}
+
+.center{
+  text-align: center;
+}
+/***********************************************************************
+  Header Styles
+************************************************************************/
+header {
+  padding-top:65px;
+  z-index: 1;
+
+  h1{
+    font-size: 60px;
+    color:white;
+    margin-bottom: 0px;
+  }
+
+  h2{
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    line-height: 26px;
+    margin-top:8px;
+    margin-bottom: 50px;
+  }
+
+  svg{
+    margin-bottom: 30px;
+  }
 }
 /***********************************************************************
   Spinning descriptions CSS - 
@@ -20,12 +102,17 @@ html, body {
   -webkit-transform: translate(0, -80%);
   -ms-transform: translate(0, -80%);
   transform: translate(0, -80%);
+  font-size: 24px;
+  font-weight: bold;
+  .majal__spinning-text-title{
+    margin-bottom:18px;
+  }
 }
 .animated-description{
+  margin:0px;
   position: absolute;
   overflow: inherit;
   width: 100%;
-  font-size: 20px;
   line-height: 34px;
   line-height: 2.125rem;
   opacity: 0;
@@ -37,24 +124,24 @@ html, body {
 }
 
 .animated-description.active {
-    opacity: 1;
-    -webkit-transform-origin: 50% 0%;
-    -ms-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    -webkit-transform: translateY(0%) rotateX(0deg) scale(1);
-    transform: translateY(0%) rotateX(0deg) scale(1);
-    -webkit-transition: opacity 600ms 200ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
-    transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+  opacity: 1;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: translateY(0%) rotateX(0deg) scale(1);
+  transform: translateY(0%) rotateX(0deg) scale(1);
+  -webkit-transition: opacity 600ms 200ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+  transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
 }
 
 .animated-description.hidden {
-    -webkit-transform-origin: 50% 0%;
-    -ms-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    -webkit-transform: translateY(140%) rotateX(-60deg) scale(0.95);
-    transform: translateY(140%) rotateX(-60deg) scale(0.95);
-    -webkit-transition: opacity 1000ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
-    transition: opacity 1000ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: translateY(140%) rotateX(-60deg) scale(0.95);
+  transform: translateY(140%) rotateX(-60deg) scale(0.95);
+  -webkit-transition: opacity 1000ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+  transition: opacity 1000ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
 }
 /***********************************************************************
   Majal products logos
@@ -66,6 +153,11 @@ html, body {
   left: 0;
   right: 0;
   margin: 0 auto;
+  .center{
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
 }
 .majal-product-logo{
   display: inline-block;
@@ -81,6 +173,6 @@ html, body {
 }
 
 .majal-product-logo:hover{
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(46,46,46,0.6);
   border-radius: 5px;
 }
