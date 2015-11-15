@@ -1,5 +1,7 @@
 Class('LogosFooter').inherits(Widget)({
 
+    //HTML : '<p>This is our Work</p>',
+
     ELEMENT_CLASS : 'majal__logos-wrapper',
     
     prototype : {
@@ -10,10 +12,11 @@ Class('LogosFooter').inherits(Widget)({
         },
 
         setup : function setup(logoImages) {
+            console.log(logoImages);
             logoImages.forEach(function(data ,index){
+                console.log(data);
                 this.appendChild(new Logo({
                     name : 'logo_' + index,
-                    element : $('.majal__logos-row').find('div'),
                     data : 
                     {
                         image   : data.logoInfo.image,

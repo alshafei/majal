@@ -13,7 +13,7 @@ Class('Logo').inherits(Widget)({
             Widget.prototype.init.call(this, config);
 
             this.el = this.element;
-            console.log(this.element);
+
             this.elementLink = this.el.find('a');
             this.elementImage = this.el.find('img');
 
