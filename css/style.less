@@ -3,81 +3,90 @@
 ************************************************************************/
 @font-face {
   font-family: "graphik";
-  src: url('assets/video/Graphik-Regular.otf') format("truetype");
+  src: url('assets/fonts/Graphik-Regular.otf') format("truetype");
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('assets/video/Graphik-Bold.otf') format("truetype");
+  src: url('assets/fonts/Graphik-Bold.otf') format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('assets/video/Graphik-Light.otf') format("truetype");
+  src: url('assets/fonts/Graphik-Light.otf') format("truetype");
   font-weight: lighter;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('assets/video/Graphik-Medium.otf') format("truetype");
+  src: url('assets/fonts/Graphik-Medium.otf') format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('assets/video/Graphik-Extralight.otf') format("truetype");
+  src: url('assets/fonts/Graphik-Extralight.otf') format("truetype");
   font-weight: 300;
 }
 
 html, body {
-  max-width: 1282px;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  //overflow: hidden;
   margin: 0 auto;
   color: #fff;
   font-family: "graphik", sans-serif;
 }
 
-video { 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  background: url('http://www.konami.jp/mgs5/_img/certification/age_bg_tpp.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-
-.video-overlay{
-  position:absolute;
-  float:left;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  background-color: rgba(0,0,0,0.8);
-  z-index:-1;
-}
-
 .center{
   text-align: center;
+}
+
+.container{
+  position: relative;
+}
+/***********************************************************************
+  Video Styles
+************************************************************************/
+.video-wrapper{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('http://www.konami.jp/mgs5/_img/certification/age_bg_tpp.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+  }
+  .video-overlay{
+    position:absolute;
+    float:left;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+  }
 }
 /***********************************************************************
   Header Styles
 ************************************************************************/
 header {
   padding-top:65px;
-  z-index: 1;
-
   h1{
     font-size: 60px;
     color:white;
+    margin-top: 0px;
     margin-bottom: 0px;
   }
 
@@ -86,24 +95,27 @@ header {
     font-weight: lighter;
     letter-spacing: 4px;
     line-height: 26px;
-    margin-top:8px;
-    margin-bottom: 50px;
+    margin-top:0px;
+    margin-bottom: 0px;
   }
 
   svg{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }
 /***********************************************************************
   Spinning descriptions CSS - 
 ************************************************************************/
 .majal__spinning-text-container{
-  margin-bottom: 200px;
-  -webkit-transform: translate(0, -80%);
-  -ms-transform: translate(0, -80%);
-  transform: translate(0, -80%);
   font-size: 24px;
   font-weight: bold;
+  .majal__spinning-text{
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
   .majal__spinning-text-title{
     margin-bottom:18px;
   }
@@ -116,39 +128,18 @@ header {
   line-height: 34px;
   line-height: 2.125rem;
   opacity: 0;
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: translateY(-100%) rotateX(60deg) scale(0.95);
-  transform: translateY(-100%) rotateX(60deg) scale(0.95);
-}
-
-.animated-description.active {
-  opacity: 1;
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: translateY(0%) rotateX(0deg) scale(1);
-  transform: translateY(0%) rotateX(0deg) scale(1);
-  -webkit-transition: opacity 600ms 200ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
   transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
 }
 
-.animated-description.hidden {
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: translateY(140%) rotateX(-60deg) scale(0.95);
-  transform: translateY(140%) rotateX(-60deg) scale(0.95);
-  -webkit-transition: opacity 1000ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
-  transition: opacity 1000ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+.animated-description.active {
+  transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+  opacity: 1;
 }
 /***********************************************************************
   Majal products logos
 ************************************************************************/
 .majal__logos-container{
   max-width: 1096px;
-  position: absolute;
   bottom: 100px;
   left: 0;
   right: 0;
