@@ -50,30 +50,7 @@ Class('SpinningText').inherits(Widget)({
             var firstRun = 0;
 
             this.description_0.activate();
-            // First animation
-            /*setInterval( function(){
-                if ( animatedDescriptions[previousPosition].classList.contains('active') === true ){
-                    if (firstRun >= 1){
-                        animatedDescriptions[previousPosition].classList.remove('active');
-                        animatedDescriptions[position].classList.add('active');
-                    }
-                    firstRun = 1;
-                } else {
-                    console.log('init');
-                    animatedDescriptions[position].classList.add('active');
-                }
 
-                if ( position === descriptionsLenght-1){
-                    previousPosition = position;
-                    position = 0;
-
-                    return;
-                }
-
-                previousPosition = position;
-                position++;
-
-            }, 5000);*/
             setInterval( function(){
 
                 if ( animatedDescriptions[previousPosition].classList.contains('active') === true ){
