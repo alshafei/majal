@@ -1,5 +1,4 @@
 Class('AnimatedDescription').inherits(Widget)({
-
     HTML : '<p></p>',
 
     ELEMENT_CLASS : 'animated-description',
@@ -8,7 +7,7 @@ Class('AnimatedDescription').inherits(Widget)({
         init : function init(config) {
             Widget.prototype.init.call(this, config);
 
-            this.el = this.element;
+            this.el = this.element[0];
 
             this._setup();
         },

@@ -15,57 +15,66 @@ Class('App').inherits(Widget)({
 
             this.descriptionSpinnerWidget.setup([
                 {
-                    descriptionText : 'freedom of expression and access to information.'
+                    descriptionText : 'We create platforms with two complementary goals: freedom of expression and access to information.'
                 },
 
                 {
-                    descriptionText : 'Crowdvoice is awesome broski'
+                    descriptionText : 'Our vision is to help build informed communities that celebrate and protect diversity and promote social justice.'
                 },
 
                 {
-                    descriptionText : 'I need some burritoz'
+                    descriptionText : 'I need some burritoz I need some burritoz I need some burritoz I need some burritoz'
                 },
 
                 {
-                    descriptionText : 'hell yeah bro'
+                    descriptionText : 'hell yeah bro I need some burritoz I need some burritoz'
+                },
+                {
+                    descriptionText : 'hell yeah bro I need some'
                 }
             ]);
 
             this.logosFooterWidget.setup([
                 {
                    logoInfo : {
-                        image : 'http://wasd.com.mx/wp-content/uploads/2013/11/LogoW011.png',
-                        url : 'http://wasd.com.mx/'
+                        image : 'assets/logos/CVorg-logo-1x.png',
+                        url : 'http://wasd.com.mx/',
+                        video : 'assets/video/cvorg.mp4'
                     }  
                 },
                 {
                     logoInfo : {
-                        image : 'http://wasd.com.mx/wp-content/uploads/2013/11/LogoW011.png',
-                        url : 'http://wasd.com.mx/'
+                        image : 'assets/logos/met-logo-1x.png',
+                        url : 'http://wasd.com.mx/',
+                        video : 'assets/video/MET_low.mp4'
                     } 
                 },
                 {
                    logoInfo : {
-                        image : 'http://wasd.com.mx/wp-content/uploads/2013/11/LogoW011.png',
-                        url : 'http://wasd.com.mx/'
+                        image : 'assets/logos/AHWAA-logo-1x.png',
+                        url : 'http://wasd.com.mx/',
+                        video : 'assets/video/ahwaa_low.mp4'
                     }  
                 },
                 {
                     logoInfo : {
-                        image : 'http://wasd.com.mx/wp-content/uploads/2013/11/LogoW011.png',
-                        url : 'http://wasd.com.mx/'
+                        image : 'assets/logos/MRorg-Logo-1x.png',
+                        url : 'http://wasd.com.mx/',
+                        video : 'assets/video/mr-low.mp4'
                     } 
                 },
                 {
                    logoInfo : {
-                        image : 'http://wasd.com.mx/wp-content/uploads/2013/11/LogoW011.png',
-                        url : 'http://wasd.com.mx/'
+                        image : 'assets/logos/mo-logo-1x.png',
+                        url : 'http://wasd.com.mx/',
+                        video : 'assets/video/cvby.mp4'
                     }  
                 },
                 {
                     logoInfo : {
-                        image : 'http://wasd.com.mx/wp-content/uploads/2013/11/LogoW011.png',
-                        url : 'http://wasd.com.mx/'
+                        image : 'assets/logos/CVby-logo-1x.png',
+                        url : 'http://wasd.com.mx/',
+                        video : 'assets/video/cvby.mp4'
                     } 
                 },
 

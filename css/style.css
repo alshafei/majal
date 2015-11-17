@@ -3,26 +3,26 @@
 ************************************************************************/
 @font-face {
   font-family: "graphik";
-  src: url('assets/fonts/Graphik-Regular.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Regular.otf') format("truetype");
 }
 @font-face {
   font-family: "graphik";
-  src: url('assets/fonts/Graphik-Bold.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Bold.otf') format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: "graphik";
-  src: url('assets/fonts/Graphik-Light.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Light.otf') format("truetype");
   font-weight: lighter;
 }
 @font-face {
   font-family: "graphik";
-  src: url('assets/fonts/Graphik-Medium.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Medium.otf') format("truetype");
   font-weight: 500;
 }
 @font-face {
   font-family: "graphik";
-  src: url('assets/fonts/Graphik-Extralight.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Extralight.otf') format("truetype");
   font-weight: 300;
 }
 html,
@@ -57,19 +57,19 @@ body {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
   transform: translateX(-50%) translateY(-50%);
-  background: url('http://www.konami.jp/mgs5/_img/certification/age_bg_tpp.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
+  opacity: 0;
+  transition: 1s opacity ease-out;
+}
+.video-wrapper video.active {
+  opacity: 1;
 }
 .video-wrapper .video-overlay {
   position: absolute;
   float: left;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 /***********************************************************************
   Header Styles
@@ -108,9 +108,6 @@ header svg {
   padding: 0 20px;
   position: relative;
 }
-.majal__spinning-text-container .majal__spinning-text-title {
-  margin-bottom: 18px;
-}
 .animated-description {
   margin: 0px;
   position: absolute;
@@ -119,21 +116,19 @@ header svg {
   line-height: 34px;
   line-height: 2.125rem;
   opacity: 0;
-  transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: opacity 600ms 200ms;
 }
 .animated-description.active {
-  transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: opacity 600ms 200ms;
   opacity: 1;
 }
 /***********************************************************************
   Majal products logos
 ************************************************************************/
 .majal__logos-container {
-  max-width: 1096px;
-  bottom: 100px;
-  left: 0;
-  right: 0;
+  max-width: 1210px;
   margin: 0 auto;
+  margin-top: 10vh;
 }
 .majal__logos-container .center {
   font-size: 17px;
@@ -142,17 +137,42 @@ header svg {
 }
 .majal-product-logo {
   display: inline-block;
-  max-width: 150px;
+  width: 180px;
   height: 110px;
-  padding: 10px;
-  margin: 5px;
+  margin: 0 10px;
+  transition: background-color 300ms ease-in;
 }
-.majal-product-logo img {
-  margin-top: 25%;
+.majal-product-logo a {
+  display: table;
   width: 100%;
+  height: 100%;
+}
+.majal-product-logo a div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.majal-product-logo a div img {
+  max-width: 100%;
   height: auto;
 }
-.majal-product-logo:hover {
-  background-color: rgba(46, 46, 46, 0.6);
+.majal-product-logo:hover,
+.majal-product-logo.active {
+  background-color: rgba(46, 46, 46, 0.65);
   border-radius: 5px;
+}
+/***********************************************************************
+ Footer Styles
+************************************************************************/
+footer {
+  margin-bottom: 30px;
+}
+footer a {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
 }
