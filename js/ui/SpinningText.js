@@ -46,11 +46,12 @@ Class('SpinningText').inherits(Widget)({
             var descriptionsLenght = animatedDescriptions.length;
             var position = 0;
             var previousPosition = 0;
+            var previousPositionTwo = 0;
             var firstRun = 0;
 
             this.description_0.activate();
-            
-            setInterval( function(){
+            // First animation
+            /*setInterval( function(){
                 if ( animatedDescriptions[previousPosition].classList.contains('active') === true ){
                     if (firstRun >= 1){
                         animatedDescriptions[previousPosition].classList.remove('active');
@@ -69,6 +70,43 @@ Class('SpinningText').inherits(Widget)({
                     return;
                 }
 
+                previousPosition = position;
+                position++;
+
+            }, 5000);*/
+            setInterval( function(){
+
+                if ( animatedDescriptions[previousPosition].classList.contains('active') === true ){
+                    if (animatedDescriptions[previousPositionTwo].classList.contains('hidden') === true){
+                        animatedDescriptions[previousPositionTwo].classList.remove('hidden');
+                    }
+
+                    if (firstRun > 0){
+                        animatedDescriptions[previousPosition].classList.remove('active');
+                        animatedDescriptions[previousPosition].classList.add('hidden');
+                        animatedDescriptions[position].classList.add('active');
+                        $(animatedDescriptions[position]).on('transitionend webkitTransidionEnd', function(){
+                            console.log('taco'); 
+                            animatedDescriptions[position].classList.remove('hidden');
+                        });                     
+                    }
+
+                    firstRun = 1;
+                 } else {
+                    console.log('init');
+                    animatedDescriptions[position].classList.add('active');
+                 }
+
+                
+                if ( position === descriptionsLenght-1){
+                    previousPositionTwo = previousPosition;
+                    previousPosition = position;
+                    position = 0;
+
+                    return;
+                }
+
+                previousPositionTwo = previousPosition;
                 previousPosition = position;
                 position++;
 

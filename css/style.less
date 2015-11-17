@@ -117,7 +117,8 @@ header {
     position: relative;
   }
 }
-.animated-description{
+// First animation
+/*.animated-description{
   margin:0px;
   position: absolute;
   overflow: inherit;
@@ -130,6 +131,39 @@ header {
 .animated-description.active {
   transition: opacity 600ms 200ms;
   opacity: 1;
+}*/
+.animated-description{
+  position: absolute;
+  overflow: inherit;
+  width: 100%;
+  line-height: 2.125rem;
+  opacity: 0;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: translateY(-100%) rotateX(60deg) scale(0.95);
+  transform: translateY(-100%) rotateX(60deg) scale(0.95);
+}
+
+.animated-description.active {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: translateY(0%) rotateX(0deg) scale(1);
+    transform: translateY(0%) rotateX(0deg) scale(1);
+    -webkit-transition: opacity 600ms 200ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+    transition: opacity 600ms 200ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+}
+
+.animated-description.hidden {
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: translateY(140%) rotateX(-60deg) scale(0.95);
+    transform: translateY(140%) rotateX(-60deg) scale(0.95);
+    -webkit-transition: opacity 1000ms, -webkit-transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
+    transition: opacity 1000ms, transform 800ms cubic-bezier(0.68,  -0.55,  0.265,  1.55);
 }
 /***********************************************************************
   Majal products logos
@@ -176,9 +210,13 @@ header {
 footer{
   margin: 0 auto;
   margin-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
   max-width: 800px;
   height: auto;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  right: 0;
   span{
     color: rgba(256,256,256,0.25);
   }
