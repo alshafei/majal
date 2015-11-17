@@ -20,17 +20,6 @@ Class('App').inherits(Widget)({
 
                 {
                     descriptionText : 'Our vision is to help build informed communities that celebrate and protect diversity and promote social justice.'
-                },
-
-                {
-                    descriptionText : 'I need some burritoz I need some burritoz I need some burritoz I need some burritoz'
-                },
-
-                {
-                    descriptionText : 'hell yeah bro I need some burritoz I need some burritoz'
-                },
-                {
-                    descriptionText : 'hell yeah bro I need some'
                 }
             ]);
 
@@ -38,42 +27,42 @@ Class('App').inherits(Widget)({
                 {
                    logoInfo : {
                         image : 'assets/logos/CVorg-logo-1x.png',
-                        url : 'http://wasd.com.mx/',
+                        url : 'http://crowdvoice.org/',
                         video : 'assets/video/cvorg.mp4'
                     }  
                 },
                 {
                     logoInfo : {
                         image : 'assets/logos/met-logo-1x.png',
-                        url : 'http://wasd.com.mx/',
+                        url : 'http://mideastunes.com/',
                         video : 'assets/video/MET_low.mp4'
                     } 
                 },
                 {
                    logoInfo : {
                         image : 'assets/logos/AHWAA-logo-1x.png',
-                        url : 'http://wasd.com.mx/',
+                        url : 'https://ahwaa.org/',
                         video : 'assets/video/ahwaa_low.mp4'
                     }  
                 },
                 {
                     logoInfo : {
                         image : 'assets/logos/MRorg-Logo-1x.png',
-                        url : 'http://wasd.com.mx/',
+                        url : 'http://www.migrant-rights.org/',
                         video : 'assets/video/mr-low.mp4'
                     } 
                 },
                 {
                    logoInfo : {
                         image : 'assets/logos/mo-logo-1x.png',
-                        url : 'http://wasd.com.mx/',
+                        url : 'http://makingofacentury.com/',
                         video : 'assets/video/cvby.mp4'
                     }  
                 },
                 {
                     logoInfo : {
                         image : 'assets/logos/CVby-logo-1x.png',
-                        url : 'http://wasd.com.mx/',
+                        url : 'http://crowdvoice.by/',
                         video : 'assets/video/cvby.mp4'
                     } 
                 },

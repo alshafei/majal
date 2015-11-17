@@ -1,10 +1,11 @@
 Class('LogosFooter').inherits(Widget)({
 
     ELEMENT_CLASS : 'majal__logos-wrapper center',
-    
+
     prototype : {
         init : function init(config) {
             Widget.prototype.init.call(this, config);
+        
         },
 
         setup : function setup(logoImages) {
@@ -21,7 +22,7 @@ Class('LogosFooter').inherits(Widget)({
             }, this);
 
             this.previousVideo = 0;
-            this.currentVideo = 0;
+            this.interval = 0;
 
             this.videoContainer = document.querySelector ('.video-wrapper');
             this.videoOverlay = document.createElement("div");
@@ -29,24 +30,26 @@ Class('LogosFooter').inherits(Widget)({
             this.videoOverlay.classList.add('video-overlay');
             this.videoContainer.appendChild(this.videoOverlay);
 
-            this.logo_5.video.play();
-            this.logo_5.video.classList.add('active');
+            this.logo_0.video.play();
+            this.logo_0.video.classList.add('active');
 
             this._bindEvents();
+            this._activateLogoOnTime();
 
             return this;
         },
 
         _bindEvents : function _bindEvents() {
             this.children.forEach( function(value, index){
-                value.bind('activate', this._videoPlay.bind(this));
+                value.bind('activate', this._stopTimer.bind(this));
+                value.bind('deactivate', this._timerStarted.bind(this));
             }, this);
         },
 
         _videoPlay : function _videoPlay(ev) {
             if(ev.target.video.classList.contains('active') !== true){
                 previousVideo = document.querySelectorAll('video.active');
-
+                
                 ev.target.video.classList.add('active');
                 ev.target.video.play();
 
@@ -55,6 +58,80 @@ Class('LogosFooter').inherits(Widget)({
                 previousVideo[0].load();
                 ev.target.activate();
             }          
+        },
+
+        _stopTimer : function _stopTimer(ev){
+            clearInterval(this.interval);
+            this.previousVideo = 1;
+            this._videoPlay(ev);
+            this.children.forEach ( function(element){
+                element.el[0].classList.remove('active');
+            });
+        },
+
+        _timerStarted : function _timerStarted(){
+            this._activateLogoOnTime();
+        },
+
+        _activateLogoOnTime : function _activateLogoOnTime(){
+            var logos = [];
+            this.children.forEach ( function(element){
+                logos.push(element);
+            });
+
+            var logosLenght = logos.length;
+            var position = 0;
+            var previousPosition = 0;
+            var previousPositionTwo = 0;
+            var firstRun = 0;
+            var previousJump = this.previousVideo;
+
+            this.interval = setInterval( function(){ clockStart(); }, 2000);
+
+            function previousPositionHandler(){
+                logos[previousPosition].el.removeClass('active');
+                logos[previousPosition].video.pause();
+                logos[previousPosition].video.classList.remove('active');
+            }
+
+            function actualPositionHandler(){
+                logos[position].el.addClass('active');
+                logos[position].video.play();
+                logos[position].video.classList.add('active');
+            }
+
+            function clockStart() {
+                if ( logos[previousPosition].el.hasClass('active') === true ){
+                    if (firstRun >= 1){
+                        previousPositionHandler();
+                        actualPositionHandler();
+                    }
+                    previousPositionHandler();
+                    actualPositionHandler();
+
+                    firstRun = 1;
+                } else {
+                    if(previousJump === 1){
+                       activeVideo = document.querySelectorAll('video.active');
+                        if( activeVideo.length > 0){
+                            activeVideo[0].classList.remove('active');
+                            activeVideo[0].pause();
+                            activeVideo[0].load();
+                        } 
+                    }
+                    actualPositionHandler();
+                }
+
+                if ( position === logosLenght-1){
+                    previousPosition = position;
+                    position = 0;
+
+                    return;
+                }
+
+                previousPosition = position;
+                position++;
+            }            
         }
     } 
 	

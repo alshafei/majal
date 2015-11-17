@@ -46,7 +46,6 @@ Class('SpinningText').inherits(Widget)({
             var descriptionsLenght = animatedDescriptions.length;
             var position = 0;
             var previousPosition = 0;
-            var previousPositionTwo = 0;
             var firstRun = 0;
 
             this.description_0.activate();
