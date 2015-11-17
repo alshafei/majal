@@ -86,7 +86,7 @@ Class('LogosFooter').inherits(Widget)({
             var firstRun = 0;
             var previousJump = this.previousVideo;
 
-            this.interval = setInterval( function(){ clockStart(); }, 2000);
+            this.interval = setInterval( function(){ clockStart(); }, 5000);
 
             function previousPositionHandler(){
                 logos[previousPosition].el.removeClass('active');
