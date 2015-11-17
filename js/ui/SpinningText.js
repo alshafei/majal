@@ -63,7 +63,6 @@ Class('SpinningText').inherits(Widget)({
                         animatedDescriptions[previousPosition].classList.add('hidden');
                         animatedDescriptions[position].classList.add('active');
                         $(animatedDescriptions[position]).on('transitionend webkitTransidionEnd', function(){
-                            console.log('taco'); 
                             animatedDescriptions[position].classList.remove('hidden');
                         });                     
                     }
