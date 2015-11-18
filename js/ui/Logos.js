@@ -29,6 +29,7 @@ Class('Logo').inherits(Widget)({
             this.video.setAttribute('muted',true);
             this.video.setAttribute('loop', true);
             this.video.setAttribute('type', 'video/mp4');
+            //this.video.setAttribute('poster', this.data.poster);
             this.video.setAttribute('src', this.data.video);
             this.videoContainer.appendChild(this.video);
             

@@ -16,7 +16,8 @@ Class('LogosFooter').inherits(Widget)({
                     {
                         image   : data.logoInfo.image,
                         url     : data.logoInfo.url,
-                        video   : data.logoInfo.video
+                        video   : data.logoInfo.video,
+                        //poster  : data.logoInfo.poster
                     }
                 })).render(this.element);
             }, this);
@@ -30,8 +31,8 @@ Class('LogosFooter').inherits(Widget)({
             this.videoOverlay.classList.add('video-overlay');
             this.videoContainer.appendChild(this.videoOverlay);
 
-            this.logo_0.video.play();
             this.logo_0.video.classList.add('active');
+            this.logo_0.video.play();
 
             this._bindEvents();
             this._activateLogoOnTime();

@@ -229,7 +229,34 @@ footer a.majal__talk-to-us:hover {
     width: 280px;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 599px) {
+  .majal-product-logo {
+    width: 190px;
+  }
+  .majal__spinning-text-container {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  .majal__spinning-text-container .majal__spinning-text {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .majal__logos-container {
+    max-width: 1210px;
+    margin: 0 auto;
+    margin-top: 15vh;
+  }
+  .majal__logos-container p.center {
+    padidng-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.75;
+  }
+}
+@media only screen and (max-width: 419px) {
   .majal-product-logo {
     width: 130px;
   }
