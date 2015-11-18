@@ -63,9 +63,10 @@ html, body {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     opacity:0;
-    //transition: 1s opacity ease-out;
+    transition: 500ms opacity;
+
   }
   video.active{
     opacity: 1;
@@ -231,9 +232,41 @@ footer{
   .majal-product-logo{
     width: 220px;
   }
+  footer{
+    position: absolute;
+    bottom: inherit;
+  }
 }
+
 @media only screen and (max-width: 1199px){
   .majal-product-logo{
     width: 280px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .majal-product-logo{
+    width: 130px;
+  }
+  .majal__spinning-text-container{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+    .majal__spinning-text{
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+  .majal__logos-container{
+    max-width: 1210px;
+    margin: 0 auto;
+    margin-top: 15vh;
+    p.center{
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      opacity: 0.75;
+    }
   }
 }

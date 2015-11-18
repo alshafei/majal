@@ -50,13 +50,11 @@ Class('LogosFooter').inherits(Widget)({
             if(ev.target.video.classList.contains('active') !== true){
                 previousVideo = document.querySelectorAll('video.active');
                 
+                previousVideo[0].classList.remove('active');
                 ev.target.video.classList.add('active');
                 ev.target.video.play();
-
-                previousVideo[0].classList.remove('active');
-                previousVideo[0].pause();
-                previousVideo[0].load();
-                ev.target.activate();
+                
+                previousVideo[0].pause();                
             }          
         },
 

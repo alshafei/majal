@@ -6,8 +6,30 @@
     <meta name="description" content="Amplifying underrepresented voices">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Facebook OG Tags-->
+    <meta property="og:url"                content="http://majal.org/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Majal" />
+    <meta property="og:description"        content="Amplifying underrepresented voices" />
+    <meta property="og:image"              content="" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="Majal" />
+    <meta name="twitter:description" content="Amplifying underrepresented voices" />
+    <meta name="twitter:image" content="" />
+
     <link rel="stylesheet" href="css/style.css" media="all"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <div id="fb-root"></div>
+    <script>
+    function popupCenter(url, title, w, h) {
+    var left = (screen.width/2)-(w/2);
+    var top = (screen.height/2)-(h/2);
+    return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+    } 
+    </script>
   </head>
   <body>
     <div class="video-wrapper"> 
@@ -36,12 +58,12 @@
       </main>
 
       <footer class="center">
-        <a href="http://twitter.com" target="_blank">
+        <a onclick="popupCenter('http://twitter.com/share?text=Amplifying underrepresented voices -&url=http://majal.org/', 'myPop1',550,450);" href="javascript:void(0);">
           <svg>
             <use xlink:href="assets/logos/twitter.svg#twitter"></use>
           </svg>
         </a>
-        <a href="http://facebook.com/" target="_blank">
+        <a onclick="popupCenter('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmajal.org', 'myPop1',550,450);" href="javascript:void(0);">
           <svg>
             <use xlink:href="assets/logos/facebook.svg#facebook-icon"></use>
           </svg>
