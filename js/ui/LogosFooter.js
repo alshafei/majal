@@ -77,7 +77,8 @@ Class('LogosFooter').inherits(Widget)({
             this.children.forEach ( function(element){
                 logos.push(element);
             });
-
+            console.log(logos);
+            
             var logosLenght = logos.length;
             var position = 0;
             var previousPosition = 0;
