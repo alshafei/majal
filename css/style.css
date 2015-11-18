@@ -4,11 +4,17 @@
 @font-face {
   font-family: "graphik";
   src: url('../assets/fonts/Graphik-Regular.otf') format("truetype");
+  font-weight: normal;
 }
 @font-face {
   font-family: "graphik";
   src: url('../assets/fonts/Graphik-Bold.otf') format("truetype");
   font-weight: bold;
+}
+@font-face {
+  font-family: "graphik";
+  src: url('../assets/fonts/Graphik-Semibold.otf') format("truetype");
+  font-weight: 600;
 }
 @font-face {
   font-family: "graphik";
@@ -69,42 +75,65 @@ body {
   float: left;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0.4) 95%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(4, 30, 53, 0.8) 100%);
 }
 /***********************************************************************
   Header Styles
 ************************************************************************/
 header {
   padding-top: 65px;
+  margin-bottom: 93px;
 }
 header h1 {
-  font-size: 60px;
+  font-size: 56px;
   color: white;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 18px;
+  font-weight: 600;
 }
 header h2 {
-  font-size: 14px;
-  font-weight: lighter;
-  letter-spacing: 4px;
-  line-height: 26px;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 17px;
   margin-top: 0px;
   margin-bottom: 0px;
+  position: relative;
+  overflow: hidden;
 }
-header svg {
-  margin-bottom: 20px;
-  margin-top: 20px;
+header h2 span {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  position: relative;
+  padding: 0 10px;
+}
+header h2 span:before,
+header h2 span:after {
+  content: '';
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 0.50em;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+header h2 span:before {
+  right: 100%;
+}
+header h2 span:after {
+  left: 100%;
 }
 /***********************************************************************
   Spinning descriptions CSS - 
 ************************************************************************/
 .majal__spinning-text-container {
-  font-size: 24px;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
   padding: 0 10px;
 }
 .majal__spinning-text-container .majal__spinning-text {
-  max-width: 700px;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
 }
@@ -113,7 +142,7 @@ header svg {
   overflow: inherit;
   margin: 0px;
   width: 100%;
-  line-height: 2.125rem;
+  line-height: 56px;
   opacity: 0;
   -webkit-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
@@ -146,13 +175,15 @@ header svg {
 .majal__logos-container {
   max-width: 1210px;
   margin: 0 auto;
-  margin-top: 15vh;
+  margin-top: 10vh;
+  margin-bottom: 60px;
 }
 .majal__logos-container p.center {
+  font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   font-weight: 300;
   letter-spacing: 1px;
-  opacity: 0.75;
+  margin-bottom: 20px;
 }
 .majal-product-logo {
   display: inline-block;
@@ -176,39 +207,37 @@ header svg {
 }
 .majal-product-logo:hover,
 .majal-product-logo.active {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 /***********************************************************************
  Footer Styles
 ************************************************************************/
 footer {
-  margin: 0 auto;
-  margin-top: 40px;
-  padding-bottom: 35px;
-  max-width: 800px;
-  height: auto;
   position: fixed;
-  left: 0px;
-  bottom: 0px;
+  top: 0 ;
+  margin-top: 40px;
+  padding-right: 20px;
   right: 0;
 }
 footer span {
   color: rgba(255, 255, 255, 0.25);
+  font-size: 20px;
+  font-weight: 100;
 }
 footer a {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
   margin: 8px;
 }
 footer a svg {
-  fill: rgba(255, 255, 255, 0.25);
-  vertical-align: middle;
+  fill: #ffffff;
+  vertical-align: sub;
   width: 16px;
   height: 16px;
 }
@@ -233,6 +262,9 @@ footer a.majal__talk-to-us:hover {
   }
 }
 @media only screen and (max-width: 599px) {
+  .animated-description {
+    line-height: 30px;
+  }
   .majal-product-logo {
     width: 190px;
   }
@@ -249,7 +281,7 @@ footer a.majal__talk-to-us:hover {
   .majal__logos-container {
     max-width: 1210px;
     margin: 0 auto;
-    margin-top: 15vh;
+    margin-top: 5vh;
   }
   .majal__logos-container p.center {
     padidng-top: 30px;
@@ -258,8 +290,22 @@ footer a.majal__talk-to-us:hover {
     letter-spacing: 1px;
     opacity: 0.75;
   }
+  footer {
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 35px;
+    max-width: 800px;
+    height: auto;
+    left: 0px;
+    bottom: inherit;
+    right: 0;
+    top: inherit;
+  }
 }
 @media only screen and (max-width: 419px) {
+  header h2 {
+    margin: 0 10px;
+  }
   .majal-product-logo {
     width: 130px;
   }
@@ -276,7 +322,7 @@ footer a.majal__talk-to-us:hover {
   .majal__logos-container {
     max-width: 1210px;
     margin: 0 auto;
-    margin-top: 15vh;
+    margin-top: 5vh;
   }
   .majal__logos-container p.center {
     padidng-top: 30px;
