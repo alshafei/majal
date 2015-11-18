@@ -249,6 +249,7 @@ footer a.majal__talk-to-us:hover {
     margin-top: 15vh;
   }
   .majal__logos-container p.center {
+    padidng-top: 30px;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 1px;
