@@ -175,7 +175,7 @@ header h2 span:after {
 .majal__logos-container {
   max-width: 1210px;
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 15vh;
   margin-bottom: 60px;
 }
 .majal__logos-container p.center {
@@ -190,7 +190,11 @@ header h2 span:after {
   width: 180px;
   height: 110px;
   margin: 0 10px;
-  transition: background-color 300ms ease-in;
+  padding: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: border 600ms ease;
+  transition: background 300ms ease;
 }
 .majal-product-logo a {
   display: table;
@@ -208,9 +212,7 @@ header h2 span:after {
 .majal-product-logo:hover,
 .majal-product-logo.active {
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background-color: rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
 }
 /***********************************************************************
  Footer Styles
@@ -247,7 +249,34 @@ footer a.majal__talk-to-us:hover {
 /***********************************************************************
  Media Queries
 ************************************************************************/
+@media only screen and (max-width: 1199px) {
+  .majal-product-logo {
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 954px) {
+  .majal__spinning-text-container {
+    font-size: 35px;
+  }
+  .majal__spinning-text-container .animated-description {
+    line-height: 45px;
+  }
+}
+@media only screen and (max-width: 928px) {
+  .majal__spinning-text-container {
+    font-size: 34px;
+  }
+  .majal__spinning-text-container .animated-description {
+    line-height: 45px;
+  }
+}
 @media only screen and (max-width: 800px) {
+  .majal__spinning-text-container {
+    font-size: 29px;
+  }
+  .majal__spinning-text-container .animated-description {
+    line-height: 45px;
+  }
   .majal-product-logo {
     width: 220px;
   }
@@ -256,9 +285,20 @@ footer a.majal__talk-to-us:hover {
     bottom: inherit;
   }
 }
-@media only screen and (max-width: 1199px) {
-  .majal-product-logo {
-    width: 280px;
+@media only screen and (max-width: 768px) {
+  .majal__spinning-text-container {
+    font-size: 28px;
+  }
+  .majal__spinning-text-container .animated-description {
+    line-height: 45px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .majal__spinning-text-container {
+    font-size: 22px;
+  }
+  .majal__spinning-text-container .animated-description {
+    line-height: 35px;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -270,8 +310,6 @@ footer a.majal__talk-to-us:hover {
   }
   .majal__spinning-text-container {
     font-size: 16px;
-    font-weight: bold;
-    padding: 0 10px;
   }
   .majal__spinning-text-container .majal__spinning-text {
     max-width: 700px;
@@ -281,7 +319,7 @@ footer a.majal__talk-to-us:hover {
   .majal__logos-container {
     max-width: 1210px;
     margin: 0 auto;
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
   .majal__logos-container p.center {
     padidng-top: 30px;
@@ -309,20 +347,10 @@ footer a.majal__talk-to-us:hover {
   .majal-product-logo {
     width: 130px;
   }
-  .majal__spinning-text-container {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 0 10px;
-  }
-  .majal__spinning-text-container .majal__spinning-text {
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-  }
   .majal__logos-container {
     max-width: 1210px;
     margin: 0 auto;
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
   .majal__logos-container p.center {
     padidng-top: 30px;
@@ -330,5 +358,20 @@ footer a.majal__talk-to-us:hover {
     font-weight: 300;
     letter-spacing: 1px;
     opacity: 0.75;
+  }
+}
+@media only screen and (max-width: 320px) {
+  header {
+    margin-top: 70px;
+    padding-top: 0px;
+  }
+  header h2 {
+    font-size: 12px;
+  }
+  header h2 span {
+    padding: 0 5px;
+  }
+  .majal__logos-container {
+    margin-top: 15vh;
   }
 }
