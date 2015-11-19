@@ -70,12 +70,25 @@ html, body {
     min-width: 100%;
     min-height: 100%;
     transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     opacity:0;
     transition: 500ms opacity;
-
+    img{
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
   }
-  video.active{
+  video.active {
     opacity: 1;
+    img{
+      opacity: 1;
+    }
+  }
+  video::-webkit-media-controls {
+    display:none !important;
   }
   .video-overlay{
     position:absolute;
@@ -83,6 +96,14 @@ html, body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(4,30,53,0.8) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.9)), to(rgba(4,30,53,0.8)));
+    background: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(4,30,53,0.8));
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.9), rgba(4,30,53,0.8));
+    background: -ms-linear-gradient(rgba(0,0,0,0.9), rgba(4,30,53,0.8));
+    background: -o-linear-gradient(rgba(0,0,0,0.9), rgba(4,30,53,0.8));
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(4,30,53,0.8));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0,0,0,0.9)', endColorstr='rgba(4,30,53,0.8)');
+    zoom: 1;
   }
 }
 /***********************************************************************
@@ -339,7 +360,7 @@ footer{
     margin: 0 auto;
     margin-top: 10vh;
     p.center{
-      padidng-top: 30px;
+      padding-top: 30px;
       font-size: 14px;
       font-weight: 300;
       letter-spacing: 1px;
