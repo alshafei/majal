@@ -3,37 +3,37 @@
 ************************************************************************/
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Regular.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Regular.otf');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Bold.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Bold.otf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Semibold.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Semibold.otf');
   font-weight: 600;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Light.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Light.otf');
   font-weight: lighter;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Medium.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Medium.otf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Extralight.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Extralight.otf');
   font-weight: 300;
 }
 
@@ -63,7 +63,7 @@ html, body {
   bottom: 0;
   height: 100%;
   overflow: hidden;
-  video { 
+  video , .videoBackground{ 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -74,18 +74,10 @@ html, body {
     -o-transform: translate(-50%, -50%);
     opacity:0;
     transition: 500ms opacity;
-    img{
-      display: block;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-    }
+
   }
-  video.active {
+  video.active , .videoBackground.active{
     opacity: 1;
-    img{
-      opacity: 1;
-    }
   }
   video::-webkit-media-controls {
     display:none !important;

@@ -18,7 +18,7 @@ Class('LogosFooter').inherits(Widget)({
                         url     : data.logoInfo.url,
                         videoMp4   : data.logoInfo.videoMp4,
                         videoWebm   : data.logoInfo.videoWebm,
-                        videoOgv   : data.logoInfo.videoOgv,
+                        videoOgv   : data.logoInfo.videoMp4,
                         poster  : data.logoInfo.poster
                     }
                 })).render(this.element);
@@ -34,7 +34,7 @@ Class('LogosFooter').inherits(Widget)({
             this.videoContainer.appendChild(this.videoOverlay);
 
             this.logo_0.video.classList.add('active');
-            //this.logo_0.videoImage.classList.add('active');
+            this.logo_0.videoImage.classList.add('active');
             this.logo_0.video.play();
 
             this._bindEvents();
@@ -61,14 +61,13 @@ Class('LogosFooter').inherits(Widget)({
                     previousVideo[0].pause(); 
                 }               
             } 
-            /*if (ev.target.videoImage.classList.contains('active') !== true ) {
-                console.log('desactivando todo lo anterior');
+            if (ev.target.videoImage.classList.contains('active') !== true ) {
                 previousVideoBackground = document.querySelectorAll('.videoBackground.active');
                 if ( previousVideoBackground.length > 0){
                     previousVideoBackground[0].classList.remove('active');
                     ev.target.videoImage.classList.add('active');
                 }
-            } */        
+            }        
         },
 
         _stopTimer : function _stopTimer(ev){
@@ -103,14 +102,14 @@ Class('LogosFooter').inherits(Widget)({
                 logos[previousPosition].el.removeClass('active');
                 logos[previousPosition].video.pause();
                 logos[previousPosition].video.classList.remove('active');
-                //logos[previousPosition].videoImage.classList.remove('active');
+                logos[previousPosition].videoImage.classList.remove('active');
             }
 
             function actualPositionHandler(){
                 logos[position].el.addClass('active');
                 logos[position].video.play();
                 logos[position].video.classList.add('active');
-                //logos[position].videoImage.classList.add('active');
+                logos[position].videoImage.classList.add('active');
             }
 
             function clockStart() {
@@ -126,16 +125,16 @@ Class('LogosFooter').inherits(Widget)({
                 } else {
                     if(previousJump === 1){
                        activeVideo = document.querySelectorAll('video.active');
-                       /*activeVideoBackground = document.querySelectorAll('.videoBackground.active');*/
+                       activeVideoBackground = document.querySelectorAll('.videoBackground.active');
                         if( activeVideo.length > 0){
                             activeVideo[0].classList.remove('active');
                             activeVideo[0].pause();
                             activeVideo[0].load();
                         } 
 
-                        /*if( activeVideoBackground > 0){
+                        if( activeVideoBackground > 0){
                             activeVideoBackground[0].classList.remove('active');
-                        }*/
+                        }
                     }
                     actualPositionHandler();
                 }

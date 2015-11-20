@@ -3,32 +3,32 @@
 ************************************************************************/
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Regular.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Regular.otf');
   font-weight: normal;
 }
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Bold.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Bold.otf');
   font-weight: bold;
 }
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Semibold.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Semibold.otf');
   font-weight: 600;
 }
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Light.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Light.otf');
   font-weight: lighter;
 }
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Medium.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Medium.otf');
   font-weight: 500;
 }
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Extralight.otf') format("truetype");
+  src: url('../assets/fonts/Graphik-Extralight.otf');
   font-weight: 300;
 }
 html,
@@ -57,7 +57,8 @@ body {
   height: 100%;
   overflow: hidden;
 }
-.video-wrapper video {
+.video-wrapper video,
+.video-wrapper .videoBackground {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -69,16 +70,8 @@ body {
   opacity: 0;
   transition: 500ms opacity;
 }
-.video-wrapper video img {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-.video-wrapper video.active {
-  opacity: 1;
-}
-.video-wrapper video.active img {
+.video-wrapper video.active,
+.video-wrapper .videoBackground.active {
   opacity: 1;
 }
 .video-wrapper video::-webkit-media-controls {
