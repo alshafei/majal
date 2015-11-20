@@ -30,7 +30,7 @@ Class('Logo').inherits(Widget)({
             this.elementImage.attr('src', this.data.image);
 
 
-            if (!Modernizr.video){
+            if (!Modernizr.video) {
                 this.videoImage.classList.add('videoBackground');
                 this.videoImage.setAttribute('src', this.data.poster);
                 this.videoContainer.appendChild(this.videoImage);

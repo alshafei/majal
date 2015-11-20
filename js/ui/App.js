@@ -31,7 +31,7 @@ Class('App').inherits(Widget)({
                         videoMp4 : 'assets/video/cvorg.mp4',
                         videoWebm : 'assets/video/cvorg.webm',
                         videoOgv : 'assets/video/cvorg.ogv',
-                        poster : 'http://u.cubeupload.com/Syzygos/NMSConceptArtWallpap.png'
+                        poster : 'assets/img/videoStills/CVORG_img.jpg'
                     }  
                 },
                 {
@@ -41,7 +41,7 @@ Class('App').inherits(Widget)({
                         videoMp4 : 'assets/video/MET_low.mp4',
                         videoWebm : 'assets/video/MET_low.webm',
                         videoOgv : 'assets/video/MET_low.ogv',
-                        poster : 'http://www.twinfinite.net/wp-content/uploads/2015/09/METAL-GEAR-SOLID-V_-THE-PHANTOM-PAIN_20150901123234-702x3601.jpg'
+                        poster : 'assets/img/videoStills/MET_img.jpg'
                     } 
                 },
                 {
@@ -51,7 +51,7 @@ Class('App').inherits(Widget)({
                         videoMp4 : 'assets/video/ahwaa_low.mp4',
                         videoWebm : 'assets/video/ahwaa_low.webm',
                         videoOgv : 'assets/video/ahwaa_low.ogv',
-                        poster : 'http://cdn.us.playstation.com/community-sites/helldivers/assets/images/wallpaper_3840x2160.png'
+                        poster : 'assets/img/videoStills/AHWAA_img.jpg'
                     }  
                 },
                 {
@@ -61,7 +61,7 @@ Class('App').inherits(Widget)({
                         videoMp4 : 'assets/video/mr-low.mp4',
                         videoWebm : 'assets/video/mr-low.webm',
                         videoOgv : 'assets/video/mr-low.ogv',
-                        poster : 'http://media.overkillsoftware.com/2014/11/payday2screen6-1920x1080.jpg'
+                        poster : 'assets/img/videoStills/MRO_img.jpg'
                     } 
                 },
                 {
@@ -71,7 +71,7 @@ Class('App').inherits(Widget)({
                         videoMp4 : 'assets/video/MoaC.mp4',
                         videoWebm : 'assets/video/MoaC.webm',
                         videoOgv : 'assets/video/MoaC.ogv',
-                        poster : 'https://i.ytimg.com/vi/5RMZQnWJUSw/maxresdefault.jpg'
+                        poster : 'assets/img/videoStills/MOAC_img.jpg'
                     }  
                 },
                 {
@@ -81,7 +81,7 @@ Class('App').inherits(Widget)({
                         videoMp4 : 'assets/video/cvby.mp4',
                         videoWebm : 'assets/video/cvby.webm',
                         videoOgv : 'assets/video/cvby.ogv',
-                        poster : 'http://wallpaperus.org/wallpapers/06/31/headphones-artgerm-1680x1050-wallpaper-815051.jpg'
+                        poster : 'assets/img/videoStills/CVB_img.jpg'
                     } 
                 },
 
