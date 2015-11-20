@@ -29,7 +29,7 @@ Class('Logo').inherits(Widget)({
             this.elementLink.attr('href', this.data.url);
             this.elementImage.attr('src', this.data.image);
 
-
+            
             if (!Modernizr.video) {
                 this.videoImage.classList.add('videoBackground');
                 this.videoImage.setAttribute('src', this.data.poster);
