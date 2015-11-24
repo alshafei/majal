@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <title>Majal | Amplifying underrepresented voices</title>
+    <meta name="description" content="Amplifying underrepresented voices">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+
+    <!-- Facebook OG Tags-->
+    <meta property="og:url"                content="http://majal.org/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Majal" />
+    <meta property="og:description"        content="Amplifying underrepresented voices" />
+    <meta property="og:image"              content="" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="Majal" />
+    <meta name="twitter:description" content="Amplifying underrepresented voices" />
+    <meta name="twitter:image" content="" />
+
+    <link rel="stylesheet" href="/css/style.css" media="all"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/js/vendor/modernizr-custom.js"></script>
-    <link rel="stylesheet" href="/css/style.css" media="all"/>
     <link rel="stylesheet" href="/js/vendor/slick/slick.css" media="all"/>
     <link rel="stylesheet" href="/js/vendor/slick/slick-theme.css" media="all"/>
 
@@ -20,6 +41,7 @@
       $('.majal__job-carousel-container').slick({
         centerMode: true,
         centerPadding: '600px',
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -34,18 +56,16 @@
               slidesToScroll: 1,
             }
           },
-
           {
             breakpoint: 1200,
             settings: {
-              centerPadding: '60px',
+              centerPadding: '150px',
               slidesToShow: 1,
               slidesToScroll: 1,
             }
           },
-
           {
-            breakpoint: 320,
+            breakpoint: 1024,
             settings: {
               centerPadding: '10px',
               slidesToShow: 1,
@@ -98,7 +118,7 @@
             <div class="majal__slide">
               <div class="majal_slide-elements">
                 <div class="majal_elements">
-                  <img src="/assets/logos/CVorg-logo-1x.png">
+                  <img src="/assets/logos/CVorg-logo-2x.png">
                   <p>Over 250K pieces of media in over 475 social justice topics worldwide.</p>
                   <p>This information has been used in court cases as evidence of human rights violations and featured in countless media reports.</p>
                 </div>
@@ -108,9 +128,9 @@
             <div class="majal__slide">
               <div class="majal_slide-elements">
                 <div class="majal_elements">
-                  <img src="/assets/logos/met-logo-1x.png">
-                  <p>Over 1,500 independet band from MENA</p>
-                  <p>and over 200,000 mobile app users.</p>
+                  <img src="/assets/logos/met-logo-2x.png">
+                  <p>Over 1,500 independet band from MENA
+                  and over 200,000 mobile app users.</p>
                 </div>
               </div>
             </div>
@@ -118,7 +138,7 @@
             <div class="majal__slide">
               <div class="majal_slide-elements">
                 <div class="majal_elements">
-                  <img src="/assets/logos/AHWAA-logo-1x.png">
+                  <img src="/assets/logos/AHWAA-logo-2x.png">
                   <p>Over 5,900 members in the Arab world, having shared over 1,800 stories.</p>
                 </div>
               </div>
@@ -128,10 +148,10 @@
             <div class="majal__slide">
               <div class="majal_slide-elements">
                 <div class="majal_elements">
-                  <img src="/assets/logos/MRorg-Logo-1x.png">
-                  <p>Continues to improve media coverage and challenge narratives on </p>
-                  <p>migration in the GCC, while supporting and encouraging grassroots, citizen</p>
-                  <p> and migrant-led contributions to combat racism and discrimination.</p>
+                  <img src="/assets/logos/MRorg-Logo-2x.png">
+                  <p>Continues to improve media coverage and challenge narratives on 
+                  migration in the GCC, while supporting and encouraging grassroots, citizen
+                  and migrant-led contributions to combat racism and discrimination.</p>
                 </div>
               </div>
             </div>
@@ -139,9 +159,9 @@
             <div class="majal__slide">
               <div class="majal_slide-elements">
                 <div class="majal_elements">
-                  <img src="/assets/logos/mo-logo-1x.png">
-                  <p>The Making of a Century iPad app is being used in several high schools to educate young</p>
-                  <p> students on global social movements and revolutionary leaders in an interactive way.</p>
+                  <img src="/assets/logos/mo-logo-2x.png">
+                  <p>The Making of a Century iPad app is being used in several high schools to educate young
+                  students on global social movements and revolutionary leaders in an interactive way.</p>
                 </div>
               </div>
             </div>
@@ -173,7 +193,8 @@
             </div>
           </div>
         </main>
-        <footer class="center">
+      </div>
+      <footer class="center">
         <a href="/index.html" class="majal__back-to-home active">Back to home</a>
         <span class="bar">|</span>
         <a class="majal__talk-to-us" href="mailto:director@mideastyouth.com" target="_blank">Talk To Us!</a>
@@ -189,7 +210,6 @@
           </svg>
         </a>
       </footer>
-      </div>
     </div>
 
     <script src="/js/vendor/neon/neon.js"></script>

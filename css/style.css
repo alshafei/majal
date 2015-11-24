@@ -451,13 +451,51 @@ body.job {
   .majal-product-logo img {
     width: 180px;
   }
-  .majal_elements img {
-    width: 180px;
+  .majal__slide {
+    padding: 0 30px;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 160px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .majal__slide {
+    padding: 0 30px;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 160px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
   }
 }
 @media only screen and (max-width: 1199px) {
   .majal-product-logo {
     width: 280px;
+  }
+  .majal-product-logo a div img {
+    width: 150px;
+  }
+  .majal__slide {
+    padding: 0 30px;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 160px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
   }
 }
 @media only screen and (max-width: 954px) {
@@ -486,9 +524,24 @@ body.job {
   .majal-product-logo {
     width: 220px;
   }
+  .majal-product-logo a div img {
+    width: 100px;
+  }
   footer {
     position: absolute;
     bottom: inherit;
+  }
+  .majal__slide {
+    padding: inherit;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 200px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -506,6 +559,18 @@ body.job {
   .majal__spinning-text-container .animated-description {
     line-height: 35px;
   }
+  .majal__slide {
+    padding: inherit;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 200px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
+  }
 }
 @media only screen and (max-width: 599px) {
   .animated-description {
@@ -513,6 +578,9 @@ body.job {
   }
   .majal-product-logo {
     width: 190px;
+  }
+  .majal-product-logo a div img {
+    width: 100px;
   }
   .majal__spinning-text-container {
     font-size: 16px;
@@ -545,6 +613,18 @@ body.job {
     right: 0;
     top: inherit;
   }
+  .majal__slide {
+    padding: 10px;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 180px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0px;
+  }
 }
 @media only screen and (max-width: 419px) {
   header h2 {
@@ -552,6 +632,9 @@ body.job {
   }
   .majal-product-logo {
     width: 130px;
+  }
+  .majal-product-logo a div img {
+    width: 100px;
   }
   .majal__logos-container {
     max-width: 1210px;
@@ -564,6 +647,18 @@ body.job {
     font-weight: 300;
     letter-spacing: 1px;
     opacity: 0.75;
+  }
+  .majal__slide {
+    padding: 10px;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 100px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -581,7 +676,15 @@ body.job {
     margin-top: 15vh;
   }
   .majal__slide {
+    padding: 10px;
+  }
+  .majal__slide .majal_slide-elements .majal_elements img {
+    width: 100px;
+    height: auto;
+  }
+  .majal__slide .majal_slide-elements .majal_elements p {
     font-size: 12px;
     line-height: 24px;
+    margin: 0px;
   }
 }

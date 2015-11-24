@@ -1,8 +1,7 @@
 Class('App').inherits(Widget)({
     prototype : {
         run : function() {
-            this.el = this.element;
-            console.log(this.el)
+            this.el = this.element[0];
             this.body = document.getElementsByTagName("body")[0];
 
             this.spinContainer = this.el.querySelector('.majal__spinning-text-container');
@@ -131,7 +130,7 @@ Class('App').inherits(Widget)({
             this.logosFooterWidget.setup([
                 {
                    logoInfo : {
-                        image : 'assets/logos/CVorg-logo-1x.png',
+                        image : 'assets/logos/CVorg-logo-2x.png',
                         url : 'http://crowdvoice.org/',
                         videoMp4 : 'assets/video/cvorg.mp4',
                         videoWebm : 'assets/video/cvorg.webm',
@@ -141,7 +140,7 @@ Class('App').inherits(Widget)({
                 },
                 {
                     logoInfo : {
-                        image : 'assets/logos/met-logo-1x.png',
+                        image : 'assets/logos/met-logo-2x.png',
                         url : 'http://mideastunes.com/',
                         videoMp4 : 'assets/video/MET_low.mp4',
                         videoWebm : 'assets/video/MET_low.webm',
@@ -151,7 +150,7 @@ Class('App').inherits(Widget)({
                 },
                 {
                    logoInfo : {
-                        image : 'assets/logos/AHWAA-logo-1x.png',
+                        image : 'assets/logos/AHWAA-logo-2x.png',
                         url : 'https://ahwaa.org/',
                         videoMp4 : 'assets/video/ahwaa_low.mp4',
                         videoWebm : 'assets/video/ahwaa_low.webm',
@@ -161,7 +160,7 @@ Class('App').inherits(Widget)({
                 },
                 {
                     logoInfo : {
-                        image : 'assets/logos/MRorg-Logo-1x.png',
+                        image : 'assets/logos/MRorg-Logo-2x.png',
                         url : 'http://www.migrant-rights.org/',
                         videoMp4 : 'assets/video/mr-low.mp4',
                         videoWebm : 'assets/video/mr-low.webm',
@@ -171,7 +170,7 @@ Class('App').inherits(Widget)({
                 },
                 {
                    logoInfo : {
-                        image : 'assets/logos/mo-logo-1x.png',
+                        image : 'assets/logos/mo-logo-2x.png',
                         url : 'http://makingofacentury.com/',
                         videoMp4 : 'assets/video/MoaC.mp4',
                         videoWebm : 'assets/video/MoaC.webm',
@@ -181,7 +180,7 @@ Class('App').inherits(Widget)({
                 },
                 {
                     logoInfo : {
-                        image : 'assets/logos/CVby-logo-1x.png',
+                        image : 'assets/logos/CVby-logo-2x.png',
                         url : 'http://crowdvoice.by/',
                         videoMp4 : 'assets/video/cvby.mp4',
                         videoWebm : 'assets/video/cvby.webm',
