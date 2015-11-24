@@ -492,6 +492,7 @@ body.job {
 }
 .majal__job-description .description-header h3 {
   margin: 0px;
+  margin-bottom: 40px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -527,7 +528,7 @@ body.job {
 .majal__job-call-to-action {
   margin-top: 50px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 14px;
+  font-size: 14px;
   line-height: 26px;
   font-weight: normal;
 }
