@@ -1,30 +1,21 @@
 Class('App').inherits(Widget)({
     prototype : {
         run : function() {
-            this.el = this.element[0];
+            this.el = this.element;
+            this.body = document.getElementsByTagName("body")[0];
             this.spinContainer = this.el.querySelector('.majal__spinning-text-container');
             this.logosContainer = this.el.querySelector('.majal__logos-container');
-            this.workWithUs = this.el.querySelector('.majal__work-with-us');
+            this.workWithUs = this.body.querySelector('.majal__work-with-us');
+            this.backHome = this.body.querySelector('.majal__back-to-home');
 
             this.jobResponsabilities = this.el.querySelector('.majal__job-responsabilities');
             this.jobSkills = this.el.querySelector('.majal__job-skills');
             this.jobDesirable = this.el.querySelector('.majal__job-desirable');
             this.carouselContainer = this.el.querySelector('.majal__job-carousel-container');
 
-            var job = function () { this._jobPage(); };
-            var home = function () { this._homePage(); };
+            this.jobOverlay = this.el.querySelector('.majal__job-overlay-background');
+            this.jobInformation = this.el.querySelector('.majal__job-overlay');
 
-            var routes = {
-                '/job': job.bind(this),
-                '/' : home.bind(this)
-            };
-
-            this.router = Router(routes).configure({
-                html5history: true,
-                run_handler_in_init: true
-            });
-
-            this.router.init();
 
             this.appendChild(new JobList({
                 name : 'jobResponsabilitiesList'
@@ -202,36 +193,8 @@ Class('App').inherits(Widget)({
             ]);
 
             this.descriptionSpinnerWidget.spinDescription();
-            this._bindEvents();
 
             return this;
-        },
-
-        _bindEvents : function _bindEvents() {
-            this.workWithUs.addEventListener('click', this._setJobRoute.bind(this));
-            this.jobResponsabilitiesList.bind('backToHome', this._setHomeRoute.bind(this));
-        },
-
-        _setJobRoute : function _setJobRoute(ev){
-            ev.preventDefault();
-            this.router.setRoute('/job');
-        },
-
-        _setHomeRoute : function _setHomeRoute(ev){
-            ev.preventDefault();
-            this.router.setRoute('/');
-        },
-
-        _jobPage : function _jobPage(){
-            this.homeContent = $(this.element).children().detach();
-            this.el.innerHTML = '<object type="text/html" data="job.html" ></object>';
-        },
-
-        _homePage : function _homePage(){
-            if (this.homeContent){
-                $(this.element).children().remove();
-                $(this.element).append(this.homeContent); 
-            }
         }
     }
 });

@@ -56,6 +56,11 @@ html, body {
 .container{
   position: relative;
 }
+
+.app-wrapper{
+  width: 100%;
+  height: 100%;
+}
 /***********************************************************************
   Video Styles
 ************************************************************************/
@@ -271,11 +276,19 @@ footer{
       height: 16px;
     }
   }
+  .majal__back-to-home, .majal__work-with-us{
+    display: none;
+  }
+
+  .majal__back-to-home.active, .majal__work-with-us.active{
+    display: inline;
+  }
+
   a.majal__talk-to-us:hover{
     text-decoration: underline;
   }
 
-  a.majal__back:hover{
+  .majal__back-to-home:hover, .majal__work-with-us:hover{
     text-decoration: underline;
   }
 } 
@@ -368,6 +381,7 @@ body.job{
   height: 300px !important;
   margin: 5px;
   padding: 60px; 
+  font-size: 14px;
   .majal_slide-elements{
     width: 100%;
     height: 100%;
@@ -430,6 +444,10 @@ body.job{
     h2{
       font-size: 18px;
     }
+  }
+
+  .job-header{
+    margin-bottom: 100px;
   }
   
   .majal__spinning-text-container{

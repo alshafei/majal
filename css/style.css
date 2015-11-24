@@ -50,6 +50,10 @@ body object {
 .container {
   position: relative;
 }
+.app-wrapper {
+  width: 100%;
+  height: 100%;
+}
 /***********************************************************************
   Video Styles
 ************************************************************************/
@@ -264,10 +268,19 @@ footer a svg {
   width: 16px;
   height: 16px;
 }
+footer .majal__back-to-home,
+footer .majal__work-with-us {
+  display: none;
+}
+footer .majal__back-to-home.active,
+footer .majal__work-with-us.active {
+  display: inline;
+}
 footer a.majal__talk-to-us:hover {
   text-decoration: underline;
 }
-footer a.majal__back:hover {
+footer .majal__back-to-home:hover,
+footer .majal__work-with-us:hover {
   text-decoration: underline;
 }
 /***********************************************************************
@@ -350,6 +363,7 @@ body.job {
   height: 300px !important;
   margin: 5px;
   padding: 60px;
+  font-size: 14px;
 }
 .majal__slide .majal_slide-elements {
   width: 100%;
@@ -409,6 +423,9 @@ body.job {
   }
   header h2 {
     font-size: 18px;
+  }
+  .job-header {
+    margin-bottom: 100px;
   }
   .majal__spinning-text-container {
     font-size: 48px;
