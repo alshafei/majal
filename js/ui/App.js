@@ -2,7 +2,9 @@ Class('App').inherits(Widget)({
     prototype : {
         run : function() {
             this.el = this.element;
+            console.log(this.el)
             this.body = document.getElementsByTagName("body")[0];
+
             this.spinContainer = this.el.querySelector('.majal__spinning-text-container');
             this.logosContainer = this.el.querySelector('.majal__logos-container');
             this.workWithUs = this.body.querySelector('.majal__work-with-us');
@@ -12,9 +14,6 @@ Class('App').inherits(Widget)({
             this.jobSkills = this.el.querySelector('.majal__job-skills');
             this.jobDesirable = this.el.querySelector('.majal__job-desirable');
             this.carouselContainer = this.el.querySelector('.majal__job-carousel-container');
-
-            this.jobOverlay = this.el.querySelector('.majal__job-overlay-background');
-            this.jobInformation = this.el.querySelector('.majal__job-overlay');
 
 
             this.appendChild(new JobList({

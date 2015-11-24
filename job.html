@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/vendor/modernizr-custom.js"></script>
     <link rel="stylesheet" href="/css/style.css" media="all"/>
     <link rel="stylesheet" href="/js/vendor/slick/slick.css" media="all"/>
     <link rel="stylesheet" href="/js/vendor/slick/slick-theme.css" media="all"/>
@@ -18,20 +19,39 @@
     $(document).ready(function(){
       $('.majal__job-carousel-container').slick({
         centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
+        centerPadding: '600px',
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
         dots: true,
         responsive: [
           {
-            breakpoint: 1200,
+            breakpoint: 2300,
             settings: {
+              centerPadding: '400px',
               slidesToShow: 1,
               slidesToScroll: 1,
             }
-          }
+          },
+
+          {
+            breakpoint: 1200,
+            settings: {
+              centerPadding: '60px',
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+
+          {
+            breakpoint: 320,
+            settings: {
+              centerPadding: '10px',
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
         ]
       });
     });
@@ -61,113 +81,115 @@
 
   </head>
   <body class="job">
-    <div class="video-wrapper"></div>
-    <div class="container">
-      <header class="center job-header">
-        <h1>MAJAL</h1>
-        <h2><span>AMPLIFYING UNDERREPRESENTED VOICES</span></h2>
-      </header>
+    <div class="app-wrapper">
+      <div class="video-wrapper"></div>
+      <div class="container">
+        <header class="center job-header">
+          <h1>MAJAL</h1>
+          <h2><span>AMPLIFYING UNDERREPRESENTED VOICES</span></h2>
+        </header>
 
-      <main>
-        <div class="majal__job-intro-text">
-          <p>As a small team, we've achieved a lot in the past 11 years.  We have created and sustained over 15 platforms and applications that have went on to make impact in their respective fields. Take a look at some of our ongoing projects and their progress thus far:</p>
-        </div>
+        <main>
+          <div class="majal__job-intro-text">
+            <p>As a small team, we've achieved a lot in the past 11 years.  We have created and sustained over 15 platforms and applications that have went on to make impact in their respective fields. Take a look at some of our ongoing projects and their progress thus far:</p>
+          </div>
 
-        <div class="majal__job-carousel-container">
-          <div class="majal__slide">
-            <div class="majal_slide-elements">
-              <div class="majal_elements">
-                <img src="/assets/logos/CVorg-logo-1x.png">
-                <p>Over 250K pieces of media in over 475 social justice topics worldwide.</p>
-                <p>This information has been used in court cases as evidence of human rights violations and featured in countless media reports.</p>
+          <div class="majal__job-carousel-container">
+            <div class="majal__slide">
+              <div class="majal_slide-elements">
+                <div class="majal_elements">
+                  <img src="/assets/logos/CVorg-logo-1x.png">
+                  <p>Over 250K pieces of media in over 475 social justice topics worldwide.</p>
+                  <p>This information has been used in court cases as evidence of human rights violations and featured in countless media reports.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="majal__slide">
+              <div class="majal_slide-elements">
+                <div class="majal_elements">
+                  <img src="/assets/logos/met-logo-1x.png">
+                  <p>Over 1,500 independet band from MENA</p>
+                  <p>and over 200,000 mobile app users.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="majal__slide">
+              <div class="majal_slide-elements">
+                <div class="majal_elements">
+                  <img src="/assets/logos/AHWAA-logo-1x.png">
+                  <p>Over 5,900 members in the Arab world, having shared over 1,800 stories.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="majal__slide">
+              <div class="majal_slide-elements">
+                <div class="majal_elements">
+                  <img src="/assets/logos/MRorg-Logo-1x.png">
+                  <p>Continues to improve media coverage and challenge narratives on </p>
+                  <p>migration in the GCC, while supporting and encouraging grassroots, citizen</p>
+                  <p> and migrant-led contributions to combat racism and discrimination.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="majal__slide">
+              <div class="majal_slide-elements">
+                <div class="majal_elements">
+                  <img src="/assets/logos/mo-logo-1x.png">
+                  <p>The Making of a Century iPad app is being used in several high schools to educate young</p>
+                  <p> students on global social movements and revolutionary leaders in an interactive way.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="majal__slide">
-            <div class="majal_slide-elements">
-              <div class="majal_elements">
-                <img src="/assets/logos/met-logo-1x.png">
-                <p>Over 1,500 independet band from MENA</p>
-                <p>and over 200,000 mobile app users.</p>
-              </div>
+          <div class="majal__job-efforts-text">
+            <p>To recognize these efforts, Majal was the recipient of several awards such as the Human Rights Tulip, the 2015 'Most Courageous Media' Prize by Free Press Unlimited, the Berkman Award for internet innovation, amongst many others in the past decade.<br><b>With your help, we can achieve more!</b></p>
+          </div>
+
+          <div class="majal__job-description">
+            <div class="description-header">
+              <h2>We are looking for a</h2>
+              <h1>Director Of Operations</h1>
+              <h3>Full time 40 hr/week · Remote</h3>
+            </div>
+            <div class="majal__job-responsabilities"></div>
+            <div class="majal__job-skills"></div>
+            <div class="majal__job-desirable"></div>
+            <div class="majal__job-call-to-action">
+              <p>The salary is negotiable based on the person's location, expertise and previous experience in the same or similar position at a different nonprofit or corporation.</p>
+
+              <p>The main perk is that the person may work from anywhere and the hours are very flexible throughout the day. The forms of communication will be email, Basecamp (project management system), and occasionally Skype. This person is required to have a stable and accessible internet connection as the team is based remotely and our primary form of communication will be completely digital. Responsiveness is key.</p>
+
+              <p>If interested please contact us with your CV, a cover letter and qualifications, as well as any details that could help us understand your offering.</p>
+
+              <a href="mailto:director@mideastyouth.com" target="_blank">APPLY NOW</a>
+
+              <p class="deadline">Please send your application via email before December 15, 2015.</p>
             </div>
           </div>
-
-          <div class="majal__slide">
-            <div class="majal_slide-elements">
-              <div class="majal_elements">
-                <img src="/assets/logos/AHWAA-logo-1x.png">
-                <p>Over 5,900 members in the Arab world, having shared over 1,800 stories.</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="majal__slide">
-            <div class="majal_slide-elements">
-              <div class="majal_elements">
-                <img src="/assets/logos/MRorg-Logo-1x.png">
-                <p>Continues to improve media coverage and challenge narratives on </p>
-                <p>migration in the GCC, while supporting and encouraging grassroots, citizen</p>
-                <p> and migrant-led contributions to combat racism and discrimination.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="majal__slide">
-            <div class="majal_slide-elements">
-              <div class="majal_elements">
-                <img src="/assets/logos/mo-logo-1x.png">
-                <p>The Making of a Century iPad app is being used in several high schools to educate young</p>
-                <p> students on global social movements and revolutionary leaders in an interactive way.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="majal__job-efforts-text">
-          <p>To recognize these efforts, Majal was the recipient of several awards such as the Human Rights Tulip, the 2015 'Most Courageous Media' Prize by Free Press Unlimited, the Berkman Award for internet innovation, amongst many others in the past decade.<br><b>With your help, we can achieve more!</b></p>
-        </div>
-
-        <div class="majal__job-description">
-          <div class="description-header">
-            <h2>We are looking for a</h2>
-            <h1>Director Of Operations</h1>
-            <h3>Full time 40 hr/week · Remote</h3>
-          </div>
-          <div class="majal__job-responsabilities"></div>
-          <div class="majal__job-skills"></div>
-          <div class="majal__job-desirable"></div>
-          <div class="majal__job-call-to-action">
-            <p>The salary is negotiable based on the person's location, expertise and previous experience in the same or similar position at a different nonprofit or corporation.</p>
-
-            <p>The main perk is that the person may work from anywhere and the hours are very flexible throughout the day. The forms of communication will be email, Basecamp (project management system), and occasionally Skype. This person is required to have a stable and accessible internet connection as the team is based remotely and our primary form of communication will be completely digital. Responsiveness is key.</p>
-
-            <p>If interested please contact us with your CV, a cover letter and qualifications, as well as any details that could help us understand your offering.</p>
-
-            <a href="mailto:director@mideastyouth.com" target="_blank">APPLY NOW</a>
-
-            <p class="deadline">Please send your application via email before December 15, 2015.</p>
-          </div>
-        </div>
-      </main>
-      <footer class="center">
-      <a href="/index.html" class="majal__back-to-home active">Back to home</a>
-      <span class="bar">|</span>
-      <a class="majal__talk-to-us" href="mailto:director@mideastyouth.com" target="_blank">Talk To Us!</a>
-      <span class="bar">|</span>
-      <a onclick="popupCenter('http://twitter.com/share?text=Amplifying underrepresented voices -&url=http://majal.org/','myPop1',550,450);" href="javascript:void(0);">
-        <svg>
-          <use xlink:href="/assets/logos/twitter.svg#twitter"></use>
-        </svg>
-      </a>
-      <a onclick="popupCenter('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmajal.org', 'myPop1',550,450);" href="javascript:void(0);">
-        <svg>
-          <use xlink:href="/assets/logos/facebook.svg#facebook-icon"></use>
-        </svg>
-      </a>
-    </footer>
+        </main>
+        <footer class="center">
+        <a href="/index.html" class="majal__back-to-home active">Back to home</a>
+        <span class="bar">|</span>
+        <a class="majal__talk-to-us" href="mailto:director@mideastyouth.com" target="_blank">Talk To Us!</a>
+        <span class="bar">|</span>
+        <a onclick="popupCenter('http://twitter.com/share?text=Amplifying underrepresented voices -&url=http://majal.org/','myPop1',550,450);" href="javascript:void(0);">
+          <svg>
+            <use xlink:href="/assets/logos/twitter.svg#twitter"></use>
+          </svg>
+        </a>
+        <a onclick="popupCenter('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmajal.org', 'myPop1',550,450);" href="javascript:void(0);">
+          <svg>
+            <use xlink:href="/assets/logos/facebook.svg#facebook-icon"></use>
+          </svg>
+        </a>
+      </footer>
+      </div>
     </div>
 
     <script src="/js/vendor/neon/neon.js"></script>
@@ -179,6 +201,8 @@
     
     <script src="/js/ui/JobList.js"></script>
     <script src="/js/ui/ListItem.js"></script>
+    <script src="/js/ui/App.js"></script>
+    <script src="/js/application.js"></script>
     
   </body>
 </html>
