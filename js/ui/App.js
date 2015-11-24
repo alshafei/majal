@@ -4,14 +4,125 @@ Class('App').inherits(Widget)({
             this.el = this.element[0];
             this.spinContainer = this.el.querySelector('.majal__spinning-text-container');
             this.logosContainer = this.el.querySelector('.majal__logos-container');
+            this.workWithUs = this.el.querySelector('.majal__work-with-us');
+
+            this.jobResponsabilities = this.el.querySelector('.majal__job-responsabilities');
+            this.jobSkills = this.el.querySelector('.majal__job-skills');
+            this.jobDesirable = this.el.querySelector('.majal__job-desirable');
+            this.carouselContainer = this.el.querySelector('.majal__job-carousel-container');
+
+            var job = function () { this._jobPage(); };
+            var home = function () { this._homePage(); };
+
+            var routes = {
+                '/job': job.bind(this),
+                '/' : home.bind(this)
+            };
+
+            this.router = Router(routes).configure({
+                html5history: true,
+                run_handler_in_init: true
+            });
+
+            this.router.init();
+
+            this.appendChild(new JobList({
+                name : 'jobResponsabilitiesList'
+            })).render(this.jobResponsabilities);
+
+            this.jobResponsabilitiesList.setupTitle([
+                {
+                    listTitle : 'RESPONSABILITIES'
+                }
+            ]);
+
+            this.jobResponsabilitiesList.setup([
+                {
+                    listItem : 'Set up and manage effective financial management systems.'
+                },
+                {
+                    listItem : 'Review and monitor budgets, record expenditures, process invoices, and regularly report to management.'
+                },
+                {
+                    listItem : 'Oversee financial management of grants, including disbursement, expenditures, donor reporting and monitoring of deliverables; ensure earmarked funding is spent accordingly.'
+                },
+                {
+                    listItem : 'Liaise with auditors.'
+                },
+                {
+                    listItem : 'Develop and implement high-quality internal systems and procedures, covering admin, finance, HR and monitoring and evaluation.'
+                },
+                {
+                    listItem : 'Creating and maintaining an organized archive of files such as proposals, budgets, staff contracts and other related documents. '
+                },
+                {
+                    listItem : 'Human resources management and administration including: staffing, HR policies and systems, and office management.'
+                },
+                {
+                    listItem : 'Implement and manage payroll.'
+                }
+            ]);
+
+            this.appendChild(new JobList({
+                name : 'jobSkillsList'
+            })).render(this.jobSkills);
+
+            this.jobSkillsList.setupTitle([
+                {
+                    listTitle : 'Skills'
+                }
+            ]);
+
+            this.jobSkillsList.setup([
+                {
+                    listItem : 'Budget monitoring and providing narratives to financial figures.'
+                },
+                {
+                    listItem : 'Strong analytical skills; confidence in financial analysis and quantitative data.'
+                },
+                {
+                    listItem : 'IT skills including Excel, Word, Outlook email, PowerPoint, databases.'
+                },
+                {
+                    listItem : 'High organisation skills with meticulous attention to detail.'
+                },
+                {
+                    listItem : 'Proactive, problem solving approach; ability to work on own initiative in a decentralised team.'
+                },
+                {
+                    listItem : 'Strong interpersonal skills and cultural awareness.'
+                },
+                {
+                    listItem : 'Ability to work under pressure and to strict deadlines.'
+                },
+                {
+                    listItem : 'Excellent written and oral communication skills in English'
+                }
+            ]);
+
+            this.appendChild(new JobList({
+                name : 'jobDesirableList'
+            })).render(this.jobDesirable);
+
+            this.jobDesirableList.setupTitle([
+                {
+                    listTitle : 'Desirable'
+                }
+            ]);
+
+            this.jobDesirableList.setup([
+                {
+                    listItem : 'Interest in regional human rights issues.'
+                },
+                {
+                    listItem : 'Flexibility and the ability to work remotely'
+                },
+            ]);
 
             this.appendChild(new SpinningText({
                 name : 'descriptionSpinnerWidget'
             })).render(this.spinContainer);
 
-            this.appendChild(new LogosFooter({
-                name : 'logosFooterWidget'
-            })).render(this.logosContainer);
 
             this.descriptionSpinnerWidget.setup([
                 {
@@ -22,6 +133,10 @@ Class('App').inherits(Widget)({
                     descriptionText : 'Our vision is to help build informed communities that celebrate and protect diversity and promote social justice.'
                 }
             ]);
+
+            this.appendChild(new LogosFooter({
+                name : 'logosFooterWidget'
+            })).render(this.logosContainer);
 
             this.logosFooterWidget.setup([
                 {
@@ -84,13 +199,39 @@ Class('App').inherits(Widget)({
                         poster : 'assets/img/videoStills/CVB_img.jpg'
                     } 
                 },
-
-
             ]);
 
             this.descriptionSpinnerWidget.spinDescription();
+            this._bindEvents();
 
             return this;
+        },
+
+        _bindEvents : function _bindEvents() {
+            this.workWithUs.addEventListener('click', this._setJobRoute.bind(this));
+            this.jobResponsabilitiesList.bind('backToHome', this._setHomeRoute.bind(this));
+        },
+
+        _setJobRoute : function _setJobRoute(ev){
+            ev.preventDefault();
+            this.router.setRoute('/job');
+        },
+
+        _setHomeRoute : function _setHomeRoute(ev){
+            ev.preventDefault();
+            this.router.setRoute('/');
+        },
+
+        _jobPage : function _jobPage(){
+            this.homeContent = $(this.element).children().detach();
+            this.el.innerHTML = '<object type="text/html" data="job.html" ></object>';
+        },
+
+        _homePage : function _homePage(){
+            if (this.homeContent){
+                $(this.element).children().remove();
+                $(this.element).append(this.homeContent); 
+            }
         }
     }
 });

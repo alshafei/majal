@@ -1,5 +1,5 @@
 (function() {
     window.AppInstance = new App({
-        element : document.getElementsByTagName("main")
+        element : document.getElementsByTagName("body")
     }).run();
 })();

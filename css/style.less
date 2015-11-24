@@ -3,37 +3,37 @@
 ************************************************************************/
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Regular.otf');
+  src: url('/assets/fonts/Graphik-Regular.otf');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Bold.otf');
+  src: url('/assets/fonts/Graphik-Bold.otf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Semibold.otf');
+  src: url('/assets/fonts/Graphik-Semibold.otf');
   font-weight: 600;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Light.otf');
+  src: url('/assets/fonts/Graphik-Light.otf');
   font-weight: lighter;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Medium.otf');
+  src: url('/assets/fonts/Graphik-Medium.otf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: "graphik";
-  src: url('../assets/fonts/Graphik-Extralight.otf');
+  src: url('/assets/fonts/Graphik-Extralight.otf');
   font-weight: 300;
 }
 
@@ -43,6 +43,10 @@ html, body {
   margin: 0 auto;
   color: #fff;
   font-family: "graphik", sans-serif;
+  object {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .center{
@@ -270,6 +274,10 @@ footer{
   a.majal__talk-to-us:hover{
     text-decoration: underline;
   }
+
+  a.majal__back:hover{
+    text-decoration: underline;
+  }
 } 
 /***********************************************************************
  Media Queries
@@ -450,3 +458,137 @@ footer{
     margin-top: 15vh;
   }
 }
+
+/***********************************************************************
+ Job Styles
+************************************************************************/
+body.job{
+  background: url('/assets/img/job-bg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.majal__job-intro-text{
+  max-width: 590px;
+  margin: 0 auto;
+  margin-bottom: 65px;
+  padding: 10px;
+  p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+.majal__job-efforts-text{
+  max-width: 610px;
+  margin: 0 auto;
+  margin-top:30px;
+  margin-bottom: 65px;
+  padding: 15px;
+  p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+.majal__job-description{
+  max-width: 701px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  .description-header{
+    h2{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 17px;
+      margin: 0px;
+      font-weight: normal;
+    }
+    h1{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 27px;
+      margin-top: 17px;
+      font-weight: bold;
+      margin-bottom: 17px;
+    }
+    h3{
+      margin: 0px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      color: rgba(255,255,255,0.5);
+    }
+  }
+}
+
+.list-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.majal__job-list{
+  li{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+  }
+}
+.majal__slide{
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.10);
+  height: 300px !important;
+  margin: 5px;
+  padding: 60px; 
+  .majal_slide-elements{
+    width: 100%;
+    height: 100%;
+    display: table;
+    .majal_elements{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }  
+}
+
+.majal__job-call-to-action{
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  a{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: #68A1DB;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    width: 200px;
+    height: 25px;
+    padding-top: 10px;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  a:hover{
+    background-color: darken(#68A1DB, 10%)
+  }
+
+  p.deadline{
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+  }
+}
+
