@@ -310,24 +310,29 @@ body.job .app-wrapper .container {
   line-height: 26px;
 }
 .majal__job-efforts-text {
-  max-width: 610px;
+  max-width: 682px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 60px;
 }
 .majal__job-efforts-text p {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   font-size: 14px;
+  font-weight: lighter;
   line-height: 26px;
+}
+.majal__job-efforts-text p b {
+  font-size: 20px;
+  line-height: 50px;
 }
 .majal__job-description {
   color: black;
   max-width: 701px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 40px;
+  padding-top: 80px;
 }
 .majal__job-description .description-header h2 {
   font-family: 'Open Sans', sans-serif;
@@ -391,7 +396,7 @@ body.job .app-wrapper .container {
   padding-bottom: 40px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 30px;
+  padding-top: 60px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -638,6 +643,15 @@ body.job .app-wrapper .container {
     line-height: 24px;
     margin: 0px;
   }
+  .majal__job-efforts-text {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .majal__job-efforts-text p b {
+    font-size: 15px;
+    line-height: 50px;
+  }
 }
 @media only screen and (max-width: 419px) {
   header h2 {
@@ -699,5 +713,14 @@ body.job .app-wrapper .container {
     font-size: 12px;
     line-height: 24px;
     margin: 0px;
+  }
+  .majal__job-efforts-text {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .majal__job-efforts-text p b {
+    font-size: 15px;
+    line-height: 50px;
   }
 }
