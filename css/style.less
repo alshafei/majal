@@ -268,12 +268,13 @@ footer{
     font-weight: 400;
     text-decoration: none;
     color: rgba(256,256,256,1);
-    margin: 8px;
+    margin: 4px;
     svg{
       fill: rgba(256,256,256,1);
-      vertical-align: sub;
+      vertical-align: bottom;
       width: 16px;
       height: 16px;
+      padding: 4px;
     }
   }
   .majal__back-to-home, .majal__work-with-us{
@@ -293,17 +294,20 @@ footer{
   }
 } 
 footer.job-menu{
+  a{
+    margin: 4px;
+  }
   a, span{
-    text-shadow: 0 0px 0 #ccc, 0 0px 0 #c9c9c9, 0 1px 0 #bbb, 0 0px 0 #b9b9b9, 0 0px 0 #aaa, 0 0px 0px rgba(0,0,0,.1), 0 0 0px rgba(0,0,0,.1), 0 0px 3px rgba(0,0,0,.3), 0 0px 5px rgba(0,0,0,.2), 0 0px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    text-shadow: 0 0px 0 #ccc, 0 0px 0 #c9c9c9, 0 1px 0 #bbb, 0 0px 0 #b9b9b9, 0 0px 0 #aaa, 0 0px 0px rgba(0, 0, 0, 0.1), 0 0 0px rgba(0, 0, 0, 0.1), 0 0px 3px rgba(0, 0, 0, 0.3), 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 10px rgba(0, 0, 0, 0.25), 0 2px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
   }
   svg{
     fill: #ffffff;
-    vertical-align: bottom;
+    vertical-align: sub;
     width: 16px;
     height: 16px;
     background: rgba(0,0,0,0.2);
     border-radius: 5px;
-    padding: 4px;
+    padding: 2px;
   }
 }
 /***********************************************************************
@@ -452,7 +456,7 @@ body.job{
     display: inline-block;
     padding-bottom: 10px;
   }
-  a:hover{
+  a.apply-now:hover{
     background-color: darken(#68A1DB, 10%)
   }
 
