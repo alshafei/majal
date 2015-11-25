@@ -415,7 +415,7 @@ body.job .app-wrapper .container {
   line-height: 26px;
   font-weight: normal;
 }
-.majal__job-call-to-action a {
+.majal__job-call-to-action a.apply-now {
   margin-top: 15px;
   margin-bottom: 15px;
   border: 1px solid transparent;
@@ -665,6 +665,10 @@ body.job .app-wrapper .container {
     font-size: 15px;
     line-height: 50px;
   }
+  .job-menu {
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 @media only screen and (max-width: 419px) {
   header h2 {
@@ -700,6 +704,10 @@ body.job .app-wrapper .container {
     line-height: 24px;
     margin: 0px;
   }
+  .job-menu {
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 @media only screen and (max-width: 320px) {
   header {
@@ -726,6 +734,10 @@ body.job .app-wrapper .container {
     font-size: 12px;
     line-height: 24px;
     margin: 0px;
+  }
+  .job-menu {
+    margin-top: 0px;
+    padding-bottom: 0px;
   }
   .majal__job-efforts-text {
     max-width: 320px;
