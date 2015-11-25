@@ -286,7 +286,11 @@ footer .majal__work-with-us:hover {
 /***********************************************************************
  Job Styles
 ************************************************************************/
-body.job {
+body.job .app-wrapper {
+  width: initial;
+  height: initial;
+}
+body.job .app-wrapper .container {
   background: url('/assets/img/job-bg.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -308,9 +312,7 @@ body.job {
 .majal__job-efforts-text {
   max-width: 610px;
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 65px;
-  padding: 15px;
+  padding: 30px;
 }
 .majal__job-efforts-text p {
   font-family: 'Open Sans', sans-serif;
@@ -319,37 +321,38 @@ body.job {
   line-height: 26px;
 }
 .majal__job-description {
+  color: black;
   max-width: 701px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 40px;
 }
 .majal__job-description .description-header h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   margin: 0px;
-  font-weight: normal;
 }
 .majal__job-description .description-header h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 27px;
-  margin-top: 17px;
+  margin-top: 5px;
   font-weight: bold;
-  margin-bottom: 17px;
+  margin-bottom: 5px;
 }
 .majal__job-description .description-header h3 {
   margin: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .list-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: bold;
+  margin: 0px;
 }
 .majal__job-list li {
   font-family: 'Open Sans', sans-serif;
@@ -377,16 +380,26 @@ body.job {
 .majal__slide .majal_slide-elements .majal_elements img {
   margin-bottom: 30px;
 }
+.majal__job-cta-wrapper {
+  color: #4D4D4D;
+  width: 100%;
+  background-color: #f2f2f2;
+}
 .majal__job-call-to-action {
-  margin-top: 50px;
+  max-width: 701px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 30px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
 }
 .majal__job-call-to-action a {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border: 1px solid transparent;
   border-radius: 20px;
   background: #68A1DB;
@@ -395,7 +408,7 @@ body.job {
   font-size: 14px;
   text-decoration: none;
   width: 200px;
-  height: 25px;
+  height: 20px;
   padding-top: 10px;
   text-align: center;
   display: inline-block;
@@ -408,7 +421,7 @@ body.job {
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #999999;
 }
 /***********************************************************************
  Media Queries
