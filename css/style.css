@@ -646,7 +646,7 @@ body.job .app-wrapper .container {
   .majal__job-efforts-text {
     max-width: 450px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 40px;
   }
   .majal__job-efforts-text p b {
     font-size: 15px;
@@ -717,7 +717,7 @@ body.job .app-wrapper .container {
   .majal__job-efforts-text {
     max-width: 320px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 40px;
   }
   .majal__job-efforts-text p b {
     font-size: 15px;
