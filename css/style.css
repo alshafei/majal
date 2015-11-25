@@ -501,7 +501,7 @@ body.job .app-wrapper .container {
 }
 @media only screen and (max-width: 1599px) {
   .majal__slide {
-    padding: 0 30px;
+    padding: 0 15px;
   }
   .majal__slide .majal_slide-elements .majal_elements img {
     width: 160px;
