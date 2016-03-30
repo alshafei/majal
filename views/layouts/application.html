@@ -135,7 +135,7 @@
     $('#donate-250').on('click', function(){
       $('#custom-donation-input').maskMoney('mask', 250.00)
     })
-   
+
     $('#donate-custom').on('click', function(){
       var value = +$('#custom-donation-input').val().replace(',', '')
       if (value && value > 0)
@@ -169,6 +169,6 @@
 
   // Close when changing page
   $(window).on('popstate', handler.close);
-})(jQuery, 'pk_test_ppzmcCB4Yf0NqV9zlQZNBEuZ', '/donation');
+})(jQuery, 'pk_live_OUNLOYzvQiSDZ4rDpCQEmCml', '/donation');
 
 </script>
