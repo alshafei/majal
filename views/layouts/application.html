@@ -137,7 +137,7 @@
     })
    
     $('#donate-custom').on('click', function(){
-      var value = +$('#custom-donation-input').val()
+      var value = +$('#custom-donation-input').val().replace(',', '')
       if (value && value > 0)
       {
         handler.open({
