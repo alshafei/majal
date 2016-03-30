@@ -1,0 +1,27 @@
+{
+  apps : [
+    {
+      name      : "Majal.org",
+      script    : "bin/server.js",
+      env: {
+        "NODE_ENV" : "production",
+        "PORT" : "3000"
+      }
+    }
+  ],
+
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment/
+   */
+  deploy : {
+    production : {
+      user : "deploy",
+      host : "23.253.100.36",
+      ref  : "origin/master",
+      repo : "git@github.com:Empathya/majal.git",
+      path : "/data/majal",
+      "post-deploy" : "npm install ; npm install webpack@1.7.3 -g; pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
