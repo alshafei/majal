@@ -1,5 +1,57 @@
-<p><i>HomeController.js:index() (/views/home/index.html)</i></p>
+<div class="app-wrapper">
+  <div class="video-wrapper"></div>
+  <div class="container">
+    <header class="center">
+      <h1>MAJAL</h1>
+      <h2><span>AMPLIFYING UNDERREPRESENTED VOICES</span></h2>
+    </header>
 
-<% posts.forEach(function(post) { %>
-    <p>Post : <%= post %></p>
-<% }) %>
+    <main>
+      <div class="majal__spinning-text-container center"></div>
+
+      <div class="majal__logos-container">
+        <p class="center">
+          And this is our work<br>
+          <svg class ="center" width="60" height="1">
+            <rect x="0" y="0" width="60" height="1" fill="rgba(255,255,255,0.3)" />
+          </svg>
+        </p>
+      </div>
+    </main>
+  </div>
+
+
+<div class="majal__donate_selection_cont">
+  <h3>Choose an amount to donate:</h3>
+  <span id="donate-10" class="donation-amount">$10</span>
+  <span id="donate-20" class="donation-amount">$20</span>
+  <span id="donate-30" class="donation-amount">$30</span>
+  <br>
+  <br>
+  <span id="donate-50" class="donation-amount">$50</span>
+  <span id="donate-100" class="donation-amount">$100</span>
+  <span id="donate-250" class="donation-amount">$250</span>
+  <h3>Tweak your amount:</h3>
+  <input id="custom-donation-input" type="text" value="10.00"></input>
+  <span id="donate-custom">Donate</span>
+</div>
+
+  <footer class="center">
+    <!-- <a href="/job.html" class="majal__work-with-us active">Work With Us!</a> -->
+    <!-- <span class="bar">|</span> -->
+    <a class="majal__talk-to-us" href="mailto:director@mideastyouth.com" target="_blank">Talk To Us!</a>
+    <span class="bar">|</span>
+    <a onclick="popupCenter('http://twitter.com/share?text=Amplifying underrepresented voices -&url=http://majal.org/','myPop1',550,450);" href="javascript:void(0);">
+      <svg>
+        <use xlink:href="/assets/logos/twitter.svg#twitter"></use>
+      </svg>
+    </a>
+    <a onclick="popupCenter('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmajal.org', 'myPop1',550,450);" href="javascript:void(0);">
+      <svg>
+        <use xlink:href="/assets/logos/facebook.svg#facebook-icon"></use>
+      </svg>
+    </a>
+    <span class="bar">|</span>
+    <a class="majal__donate_button" href="#donate">Donate</a>
+  </footer>
+</div>

@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new CompressionPlugin({
-      asset: "{file}.gz",
+      asset: "bundle.gz",
       algorithm: "gzip",
       regExp: /\.js$|\.html$/,
       threshold: 10240,

@@ -1,25 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Majal | Amplifying underrepresented voices</title>
+    <meta name="description" content="Amplifying underrepresented voices">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Neonode</title>
-    <link rel="icon" type="image/gif" href="/img/favicon.gif" />
+    <!-- Facebook OG Tags-->
+    <meta property="og:url"                content="http://majal.org/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Majal" />
+    <meta property="og:description"        content="Amplifying underrepresented voices" />
+    <meta property="og:image"              content="" />
 
-    <!-- webpack -d -->
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="Majal" />
+    <meta name="twitter:description" content="Amplifying underrepresented voices" />
+    <meta name="twitter:image" content="" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/dist/bundle.js"></script>
-</head>
 
-<body>
-    <header>
-        <h1><img src="/img/neon-logo.png" width="80" /><span>It works!</span></h1>
-    </header>
-    <div class="yield">
-        <%= yield %>
-    </div>
-    <footer>
-        <p><a href="http://github.com/sgarza/generator-neonode" target="_blank"><span>Neonode</span></a></p>
-    </footer>
-</body>
+    <script>
+    function popupCenter(url, title, w, h) {
+      var left = (screen.width/2)-(w/2);
+      var top = (screen.height/2)-(h/2);
+      return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+    }
+    </script>
 
+    <!-- Start of StatCounter Code for Default Guide -->
+      <script type="text/javascript">
+        var sc_project=1773462;
+        var sc_invisible=1;
+        var sc_security="1185db00";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+      </script>
+      <noscript>
+        <div class="statcounter">
+          <a title="web stats" href="http://statcounter.com/free-web-stats/" target="_blank">
+            <img class="statcounter" src="http://c.statcounter.com/1773462/0/1185db00/1/" alt="web stats">
+          </a>
+        </div>
+      </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+
+  </head>
+  <body>
+    <%= yield %>
+
+  </body>
+
+  <!-- Start of StatCounter Code for Default Guide -->
+  <script type="text/javascript">
+  var sc_project=10882853;
+  var sc_invisible=1;
+  var sc_security="e5e65ffd";
+  var scJsHost = (("https:" == document.location.protocol) ?
+  "https://secure." : "http://www.");
+  document.write("<sc"+"ript type='text/javascript' src='" +
+  scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+  </script>
+  <noscript><div class="statcounter"><a title="web analytics"
+  href="http://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="http://c.statcounter.com/10882853/0/e5e65ffd/1/"
+  alt="web analytics"></a></div></noscript>
+  <!-- End of StatCounter Code for Default Guide -->
 </html>
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script>
+  (function($, STRIPE_KEY, ENDPOINT){
+    // Stripe Handler
+    var handler = StripeCheckout.configure({
+      key: STRIPE_KEY,
+      image: '/assets/img/M_for_majal.png',
+      locale: 'auto',
+      token: function(token) {
+        $.ajax({
+          method: 'POST',
+          url: ENDPOINT,
+          data: token
+        })
+      }
+    });
+
+    // Open Stripe w/custom amount
+    function open_config(amount)
+    {
+      return {
+        name: 'Donation',
+        description: '',
+        currency: 'USD',
+        amount: amount,
+        panelLabel: 'Donate {{amount}}'
+      }
+    }
+
+    $(function onDOMLoaded(){
+      // Open Donation Selection
+      $('.majal__donate_button').on('click', console.error.bind(console))
+
+      $('#donate-10').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 10.00)
+      })
+      $('#donate-20').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 20.00)
+      })
+      $('#donate-50').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 50.00)
+      })
+      $('#donate-100').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 100.00)
+      })
+      $('#donate-250').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 250.00)
+      })
+
+      $('#donate-custom').on('click', function(){
+        var value = +$('#custom-donation-input').val()
+        console.log('value', value)
+        if (value && value > 0)
+        {
+          handler.open(open_config(value * 100))
+        }
+      })
+
+      $('#custom-donation-input').maskMoney({
+        allowZero:false,
+        allowNegative: false
+      })
+      .on('keydown', function(e){
+        var value = +(this.value) || 1.00
+        if (e.keyCode === 38)
+        {
+          $(this).maskMoney('mask', value + 1.00)
+        }
+        else if (e.keyCode === 40 && value - 1.00 > 0)
+        {
+          $(this).maskMoney('mask', value - 1.00)
+        }
+      })
+    })
+
+    // Close when changing page
+    $(window).on('popstate', handler.close);
+  })(jQuery, 'pk_test_ppzmcCB4Yf0NqV9zlQZNBEuZ', 'http://localhost/example/endpoint');
+
+</script>
