@@ -77,9 +77,26 @@
           </div>
         </main>
       </div>
+
+
+    <div class="majal__donate_selection_cont">
+      <h3>Choose an amount to donate:</h3>
+      <span id="donate-10" class="donation-amount">$10</span>
+      <span id="donate-20" class="donation-amount">$20</span>
+      <span id="donate-30" class="donation-amount">$30</span>
+      <br>
+      <br>
+      <span id="donate-50" class="donation-amount">$50</span>
+      <span id="donate-100" class="donation-amount">$100</span>
+      <span id="donate-250" class="donation-amount">$250</span>
+      <h3>Tweak your amount:</h3>
+      <input id="custom-donation-input" type="text" value="10.00"></input>
+      <span id="donate-custom">Donate</span>
+    </div> 
+
       <footer class="center">
-        <a href="/job.html" class="majal__work-with-us active">Work With Us!</a>
-        <span class="bar">|</span>
+        <!-- <a href="/job.html" class="majal__work-with-us active">Work With Us!</a> -->
+        <!-- <span class="bar">|</span> -->
         <a class="majal__talk-to-us" href="mailto:director@mideastyouth.com" target="_blank">Talk To Us!</a>
         <span class="bar">|</span>
         <a onclick="popupCenter('http://twitter.com/share?text=Amplifying underrepresented voices -&url=http://majal.org/','myPop1',550,450);" href="javascript:void(0);">
@@ -92,6 +109,8 @@
             <use xlink:href="/assets/logos/facebook.svg#facebook-icon"></use>
           </svg>
         </a>
+        <span class="bar">|</span>
+        <a class="majal__donate_button" href="#donate">Donate</a>
       </footer>
     </div>
 
@@ -130,3 +149,86 @@
   alt="web analytics"></a></div></noscript>
   <!-- End of StatCounter Code for Default Guide -->
 </html>
+
+
+<script src="/js/vendor/jquery.maskMoney.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script>
+  (function($, STRIPE_KEY, ENDPOINT){
+    // Stripe Handler
+    var handler = StripeCheckout.configure({
+      key: STRIPE_KEY,
+      image: '/assets/img/M_for_majal.png',
+      locale: 'auto',
+      token: function(token) {
+        $.ajax({
+          method: 'POST',
+          url: ENDPOINT,
+          data: token
+        })
+      }
+    });
+
+    // Open Stripe w/custom amount
+    function open_config(amount)
+    {
+      return {
+        name: 'Donation',
+        description: '',
+        currency: 'USD',
+        amount: amount,
+        panelLabel: 'Donate {{amount}}'
+      }
+    }
+
+    $(function onDOMLoaded(){
+      // Open Donation Selection
+      $('.majal__donate_button').on('click', console.error.bind(console))
+
+      $('#donate-10').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 10.00)
+      })
+      $('#donate-20').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 20.00)
+      })
+      $('#donate-50').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 50.00)
+      })
+      $('#donate-100').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 100.00)
+      })
+      $('#donate-250').on('click', function(){
+        $('#custom-donation-input').maskMoney('mask', 250.00)
+      })
+     
+      $('#donate-custom').on('click', function(){
+        var value = +$('#custom-donation-input').val()
+        console.log('value', value)
+        if (value && value > 0)
+        {
+          handler.open(open_config(value * 100))
+        }
+      })
+
+      $('#custom-donation-input').maskMoney({
+        allowZero:false,
+        allowNegative: false
+      })
+      .on('keydown', function(e){
+        var value = +(this.value) || 1.00
+        if (e.keyCode === 38)
+        {
+          $(this).maskMoney('mask', value + 1.00)
+        }
+        else if (e.keyCode === 40 && value - 1.00 > 0)
+        {
+          $(this).maskMoney('mask', value - 1.00)
+        }
+      })
+    })
+
+    // Close when changing page
+    $(window).on('popstate', handler.close);
+  })(jQuery, 'pk_test_ppzmcCB4Yf0NqV9zlQZNBEuZ', 'http://localhost/example/endpoint');
+
+</script>

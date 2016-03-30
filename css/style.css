@@ -106,7 +106,7 @@ body object {
   Header Styles
 ************************************************************************/
 header {
-  padding-top: 65px;
+  padding-top: 100px;
   margin-bottom: 93px;
 }
 header h1 {
@@ -114,6 +114,7 @@ header h1 {
   color: white;
   margin-top: 0px;
   margin-bottom: 18px;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 header h2 {
@@ -245,9 +246,13 @@ header h2 span:after {
 footer {
   position: fixed;
   top: 0 ;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-right: 20px;
   right: 0;
+}
+footer .bar {
+  vertical-align: middle;
+  margin: 0 10px;
 }
 footer span {
   color: rgba(255, 255, 255, 0.25);
@@ -255,6 +260,7 @@ footer span {
   font-weight: 100;
 }
 footer a {
+  vertical-align: middle;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -264,7 +270,8 @@ footer a {
 }
 footer a svg {
   fill: #ffffff;
-  vertical-align: bottom;
+  vertical-align: middle;
+  vertical-align: text-bottom;
   width: 16px;
   height: 16px;
   padding: 4px;
@@ -445,6 +452,135 @@ body.job .app-wrapper .container {
   font-size: 14px;
   color: #999999;
 }
+.majal__donate_button,
+.stripe-button-el {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 2.6;
+  font-family: 'Open Sans', sans-serif;
+  width: 100px;
+  height: 30px;
+  background-color: #3eace0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 0px white;
+}
+.majal__donate_selection_cont {
+  text-align: center;
+  position: absolute;
+  position: fixed;
+  z-index: 9;
+  min-width: 300px;
+  min-height: 100px;
+  padding: 20px;
+  top: 100px;
+  right: 20px;
+  background-color: #e8e9eb;
+  border-radius: 4px;
+}
+.majal__donate_selection_cont h3 {
+  text-align: center;
+  color: #334;
+  font-weight: normal;
+}
+.majal__donate_selection_cont .donation-amount {
+  display: inline-block;
+  width: 100px;
+  height: 44px;
+  font-size: 22px;
+  line-height: 2;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #3eace0;
+  cursor: pointer;
+  background-image: -moz-linear-gradient(#45b1e8, #3097de);
+  background-image: -ms-linear-gradient(#45b1e8, #3097de);
+  background-image: -o-linear-gradient(#45b1e8, #3097de);
+  background-image: -webkit-linear-gradient(#45b1e8, #3097de);
+  box-shadow: 0 1px 0 rgba(46, 86, 153, 0.15), 0 0 4px rgba(86, 149, 219, 0), inset 0 2px 0 rgba(41, 102, 20, 0);
+  text-shadow: 0 -1px 0 rgba(46, 86, 153, 0.3);
+  border-radius: 4px;
+}
+.majal__donate_selection_cont .donation-amount:active {
+  background-color: #338DB8;
+}
+.majal__donate_selection_cont input {
+  height: 44px;
+  width: 200px;
+  width: 140px;
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 8px;
+  letter-spacing: 1px;
+  color: #555;
+  text-align: right;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid #cececf;
+  border-top-color: #b5b5b6;
+  border-bottom-color: #dededf;
+  -webkit-box-shadow: inset 0 1px 1px rgba(124, 124, 127, 0.1), 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 4px rgba(86, 149, 219, 0);
+  -moz-box-shadow: inset 0 1px 1px rgba(124, 124, 127, 0.1), 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 4px rgba(86, 149, 219, 0);
+  -ms-box-shadow: inset 0 1px 1px rgba(124, 124, 127, 0.1), 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 4px rgba(86, 149, 219, 0);
+  -o-box-shadow: inset 0 1px 1px rgba(124, 124, 127, 0.1), 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 4px rgba(86, 149, 219, 0);
+  box-shadow: inset 0 1px 1px rgba(124, 124, 127, 0.1), 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 4px rgba(86, 149, 219, 0);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: border-color 0.15s linear, box-shadow 0.15s linear;
+  -moz-transition: border-color 0.15s linear, box-shadow 0.15s linear;
+  -ms-transition: border-color 0.15s linear, box-shadow 0.15s linear;
+  -o-transition: border-color 0.15s linear, box-shadow 0.15s linear;
+  transition: border-color 0.15s linear, box-shadow 0.15s linear;
+}
+.majal__donate_selection_cont #custom-donation-input {
+  width: 100%;
+  box-shadow: border-box;
+  box-sizing: border-box;
+  display: block;
+  color: #888;
+}
+.majal__donate_selection_cont #donate-custom {
+  height: 44px;
+  font-size: 22px;
+  line-height: 2;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #3eace0;
+  cursor: pointer;
+  padding: 0 20px;
+  display: block;
+  font-weight: bold;
+  background-image: -moz-linear-gradient(#45b1e8, #3097de);
+  background-image: -ms-linear-gradient(#45b1e8, #3097de);
+  background-image: -o-linear-gradient(#45b1e8, #3097de);
+  background-image: -webkit-linear-gradient(#45b1e8, #3097de);
+  box-shadow: 0 1px 0 rgba(46, 86, 153, 0.15), 0 0 4px rgba(86, 149, 219, 0), inset 0 2px 0 rgba(41, 102, 20, 0);
+  text-shadow: 0 -1px 0 rgba(46, 86, 153, 0.3);
+  border-radius: 4px;
+}
+.majal__donate_selection_cont #donate-custom:active {
+  background-color: #338DB8;
+}
+.majal__donate_selection_cont .stripe-ish {
+  background-image: -moz-linear-gradient(#45b1e8, #3097de);
+  background-image: -ms-linear-gradient(#45b1e8, #3097de);
+  background-image: -o-linear-gradient(#45b1e8, #3097de);
+  background-image: -webkit-linear-gradient(#45b1e8, #3097de);
+  box-shadow: 0 1px 0 rgba(46, 86, 153, 0.15), 0 0 4px rgba(86, 149, 219, 0), inset 0 2px 0 rgba(41, 102, 20, 0);
+  text-shadow: 0 -1px 0 rgba(46, 86, 153, 0.3);
+  border-radius: 4px;
+}
+.majal__donate_selection_cont .or {
+  margin: 20px auto;
+  margin-top: 30px;
+  width: 80%;
+  text-align: center;
+  color: #888;
+}
 /***********************************************************************
  Media Queries
 ************************************************************************/
@@ -608,6 +744,9 @@ body.job .app-wrapper .container {
   }
 }
 @media only screen and (max-width: 599px) {
+  header {
+    margin-bottom: 50px;
+  }
   .animated-description {
     line-height: 30px;
   }
@@ -641,6 +780,7 @@ body.job .app-wrapper .container {
     margin: 0 auto;
     margin-top: 40px;
     padding-bottom: 35px;
+    padding-right: 0px;
     max-width: 800px;
     height: auto;
     left: 0px;
@@ -675,8 +815,14 @@ body.job .app-wrapper .container {
   }
 }
 @media only screen and (max-width: 419px) {
+  header {
+    margin-bottom: 50px;
+  }
   header h2 {
     margin: 0 10px;
+  }
+  footer {
+    padding-right: 0;
   }
   .majal-product-logo {
     width: 130px;
@@ -717,12 +863,16 @@ body.job .app-wrapper .container {
   header {
     margin-top: 70px;
     padding-top: 0px;
+    margin-bottom: 50px;
   }
   header h2 {
     font-size: 12px;
   }
   header h2 span {
     padding: 0 5px;
+  }
+  footer {
+    padding-right: 0;
   }
   .majal__logos-container {
     margin-top: 15vh;
