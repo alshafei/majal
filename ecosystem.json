@@ -21,7 +21,7 @@
       ref  : "origin/master",
       repo : "git@github.com:Empathya/majal.git",
       path : "/home/deploy/majal",
-      "post-deploy" : "npm install ; npm install webpack@1.7.3 -g; pm2 startOrRestart ecosystem.json --env production"
+      "post-deploy" : "npm install ; npm install webpack@1.7.3 -g; webpack -p -c --progress; pm2 startOrRestart ecosystem.json --env production"
     }
   }
 }
