@@ -72,7 +72,7 @@ html, body {
   bottom: 0;
   height: 100%;
   overflow: hidden;
-  video , .videoBackground{
+  video , .videoBackground{ 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -97,7 +97,7 @@ html, body {
     float:left;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(4,30,53,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(4,30,53,0.8) 100%); 
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.9)), to(rgba(4,30,53,0.8)));
     background: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(4,30,53,0.8));
     background: -moz-linear-gradient(top, rgba(0,0,0,0.9), rgba(4,30,53,0.8));
@@ -157,7 +157,7 @@ header {
   }
 }
 /***********************************************************************
-  Spinning descriptions CSS -
+  Spinning descriptions CSS - 
 ************************************************************************/
 .majal__spinning-text-container{
   font-family: 'Open Sans', sans-serif;
@@ -302,7 +302,7 @@ footer{
   .majal__back-to-home:hover, .majal__work-with-us:hover{
     text-decoration: underline;
   }
-}
+} 
 footer.job-menu{
   a{
     margin: 4px;
@@ -328,7 +328,7 @@ body.job{
     width: initial;
     height: initial;
     .container{
-      background: url('/assets/img/job-bg.png') no-repeat center center fixed;
+      background: url('/assets/img/job-bg.png') no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -417,7 +417,7 @@ body.job{
   border: 1px solid rgba(255,255,255,0.10);
   height: 300px !important;
   margin: 5px;
-  padding: 60px;
+  padding: 60px; 
   font-size: 14px;
   .majal_slide-elements{
     width: 100%;
@@ -430,7 +430,7 @@ body.job{
         margin-bottom: 30px;
       }
     }
-  }
+  }  
 }
 
 .majal__job-cta-wrapper{
@@ -492,10 +492,14 @@ body.job{
   font-weight: bold;
   text-align: center;
   text-shadow: 0px 0px white;
+  &:active{
+    background-color: #338DB8;
+  }
 }
 
 .majal__donate_selection_cont
 {
+  display: none;
   text-align: center;
   position: absolute;
   position: fixed;
@@ -503,7 +507,7 @@ body.job{
   min-width: 300px;
   min-height: 100px;
   padding: 20px;
-
+  
   top: 100px;
   right: 20px;
   background-color: #e8e9eb;
@@ -518,9 +522,7 @@ body.job{
 
   .donation-amount
   {
-    &:active{
-      background-color: #338DB8;
-    }
+    transition: background .3s ease;
     display: inline-block;
     width: 100px;
     height: 44px;
@@ -531,6 +533,11 @@ body.job{
     background-color: #3eace0;
     cursor: pointer;
     .stripe-ish();
+    &:active{
+      background-color: #338ABB;
+      background-image: none;
+      box-shadow: none;
+    }
   }
 
   input
@@ -547,8 +554,7 @@ body.job{
     box-sizing: border-box;
     margin-bottom: 20px;
 
-
-border: 1px solid #cececf;
+    border: 1px solid #cececf;
     border-top-color: #b5b5b6;
     border-bottom-color: #dededf;
     -webkit-box-shadow: inset 0 1px 1px rgba(124,124,127,0.1),0 1px 0 rgba(255,255,255,0.7),0 0 4px rgba(86,149,219,0);
@@ -566,7 +572,6 @@ border: 1px solid #cececf;
     -ms-transition: border-color .15s linear,box-shadow .15s linear;
     -o-transition: border-color .15s linear,box-shadow .15s linear;
     transition: border-color .15s linear,box-shadow .15s linear;
-
   }
 
   #custom-donation-input
@@ -576,9 +581,7 @@ border: 1px solid #cececf;
 
   #donate-custom
   {
-    &:active{
-      background-color: #338DB8;
-    }
+    transition: background .3s ease;
     height: 44px;
     font-size: 22px;
     line-height: 2;
@@ -588,6 +591,10 @@ border: 1px solid #cececf;
     cursor: pointer;
     padding: 0 20px;display: block;font-weight: bold;
     .stripe-ish();
+    &:active{
+      background-color: #338DB8;
+      background-image: none;
+    }
   }
 
   .stripe-ish
@@ -597,21 +604,23 @@ border: 1px solid #cececf;
     background-image: -ms-linear-gradient(#45b1e8,#3097de);
     background-image: -o-linear-gradient(#45b1e8,#3097de);
     background-image: -webkit-linear-gradient(#45b1e8,#3097de);
-
     box-shadow: 0 1px 0 rgba(46,86,153,0.15),0 0 4px rgba(86,149,219,0),inset 0 2px 0 rgba(41,102,20,0);
     text-shadow: 0 -1px 0 rgba(46,86,153,0.3);
     border-radius: 4px;
   }
 
-  .or
-  {
-    margin: 20px auto;
-    margin-top: 30px;
-    width: 80%;
-    text-align: center;
-    color: #888;
+  &:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 42px;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: #E8E9EB transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
   }
-
 }
 /***********************************************************************
  Media Queries
@@ -632,7 +641,7 @@ border: 1px solid #cececf;
   .job-header{
     margin-bottom: 100px;
   }
-
+  
   .majal__spinning-text-container{
     font-size: 48px;
     .majal__spinning-text{
@@ -676,8 +685,8 @@ border: 1px solid #cececf;
       }
     }
   }
-
 }
+
 @media only screen and (max-width: 1599px){
   .majal__slide{
     padding: 0 15px;
@@ -696,6 +705,7 @@ border: 1px solid #cececf;
     }
   }
 }
+
 @media only screen and (max-width: 1199px){
   .majal-product-logo{
     width: 280px;
@@ -744,6 +754,10 @@ border: 1px solid #cececf;
 }
 
 @media only screen and (max-width: 800px){
+  .majal__donate_selection_cont
+  {
+    position: absolute;
+  }
   .majal__spinning-text-container{
     font-size: 29px;
     .animated-description{
@@ -782,7 +796,6 @@ border: 1px solid #cececf;
   }
 }
 
-
 @media only screen and (max-width: 768px){
   .majal__spinning-text-container{
     font-size: 28px;
@@ -793,6 +806,33 @@ border: 1px solid #cececf;
 }
 
 @media only screen and (max-width: 600px){
+  .majal__donate_selection_cont
+  {
+    box-sizing: border-box;
+    width: 360px;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+
+    &:after 
+    {
+      content: "";
+      position: absolute;
+      top: auto;
+      bottom: -15px;
+      right: 60px;
+      border-style: solid;
+      border-width: 15px 15px 0;
+      border-color: #E8E9EB transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+    }
+  }
+
   .majal__spinning-text-container{
     font-size: 22px;
     .animated-description{
@@ -818,7 +858,7 @@ border: 1px solid #cececf;
 }
 
 @media only screen and (max-width: 599px){
-  header
+  header 
   {
     margin-bottom: 50px;
   }
@@ -903,7 +943,7 @@ border: 1px solid #cececf;
 }
 
 @media only screen and (max-width: 419px){
-  header
+  header 
   {
     margin-bottom: 50px;
     h2{

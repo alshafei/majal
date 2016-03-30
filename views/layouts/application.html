@@ -55,6 +55,7 @@
 
   </head>
   <body>
+
     <%= yield %>
 
   </body>
@@ -80,81 +81,94 @@
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
-  (function($, STRIPE_KEY, ENDPOINT){
-    // Stripe Handler
-    var handler = StripeCheckout.configure({
-      key: STRIPE_KEY,
-      image: '/assets/img/M_for_majal.png',
-      locale: 'auto',
-      token: function(token) {
-        $.ajax({
-          method: 'POST',
-          url: ENDPOINT,
-          data: token
-        })
-      }
-    });
-
-    // Open Stripe w/custom amount
-    function open_config(amount)
-    {
-      return {
-        name: 'Donation',
-        description: '',
-        currency: 'USD',
-        amount: amount,
-        panelLabel: 'Donate {{amount}}'
-      }
+(function($, STRIPE_KEY, ENDPOINT){
+  var currentAmount = 0
+  var handler = StripeCheckout.configure({
+    key: STRIPE_KEY,
+    image: '/assets/img/M_for_majal.png',
+    locale: 'auto',
+    token: function onstripesuccess(token) {
+      token.amount = currentAmount
+      $.ajax({
+        method: 'POST',
+        url: ENDPOINT,
+        data: token
+      })
     }
+  });
 
-    $(function onDOMLoaded(){
-      // Open Donation Selection
-      $('.majal__donate_button').on('click', console.error.bind(console))
-
-      $('#donate-10').on('click', function(){
-        $('#custom-donation-input').maskMoney('mask', 10.00)
-      })
-      $('#donate-20').on('click', function(){
-        $('#custom-donation-input').maskMoney('mask', 20.00)
-      })
-      $('#donate-50').on('click', function(){
-        $('#custom-donation-input').maskMoney('mask', 50.00)
-      })
-      $('#donate-100').on('click', function(){
-        $('#custom-donation-input').maskMoney('mask', 100.00)
-      })
-      $('#donate-250').on('click', function(){
-        $('#custom-donation-input').maskMoney('mask', 250.00)
-      })
-
-      $('#donate-custom').on('click', function(){
-        var value = +$('#custom-donation-input').val()
-        console.log('value', value)
-        if (value && value > 0)
-        {
-          handler.open(open_config(value * 100))
+  $(function onDOMLoaded(){
+    // Open Donation Selection
+    $('.majal__donate_button').on('click', function(e){
+      if ($('.majal__donate_selection_cont').is(':visible'))
+      {
+        $('.majal__donate_selection_cont').hide()
+      }
+      else
+      {
+        $('.majal__donate_selection_cont').show()
+        var handler = function(event){
+          if($(event.target).is('.majal__donate_selection_cont, .majal__donate_selection_cont *')) return;
+          $(document).off('click', handler);
         }
-      })
 
-      $('#custom-donation-input').maskMoney({
-        allowZero:false,
-        allowNegative: false
-      })
-      .on('keydown', function(e){
-        var value = +(this.value) || 1.00
-        if (e.keyCode === 38)
-        {
-          $(this).maskMoney('mask', value + 1.00)
-        }
-        else if (e.keyCode === 40 && value - 1.00 > 0)
-        {
-          $(this).maskMoney('mask', value - 1.00)
-        }
-      })
+        $(document).on('click', handler);
+      }
+      e.preventDefault()
     })
 
-    // Close when changing page
-    $(window).on('popstate', handler.close);
-  })(jQuery, 'pk_test_ppzmcCB4Yf0NqV9zlQZNBEuZ', 'http://localhost/example/endpoint');
+    $('#donate-10').on('click', function(){
+      $('#custom-donation-input').maskMoney('mask', 10.00)
+    })
+    $('#donate-20').on('click', function(){
+      $('#custom-donation-input').maskMoney('mask', 20.00)
+    })
+    $('#donate-30').on('click', function(){
+      $('#custom-donation-input').maskMoney('mask', 30.00)
+    })
+    $('#donate-50').on('click', function(){
+      $('#custom-donation-input').maskMoney('mask', 50.00)
+    })
+    $('#donate-100').on('click', function(){
+      $('#custom-donation-input').maskMoney('mask', 100.00)
+    })
+    $('#donate-250').on('click', function(){
+      $('#custom-donation-input').maskMoney('mask', 250.00)
+    })
+   
+    $('#donate-custom').on('click', function(){
+      var value = +$('#custom-donation-input').val()
+      if (value && value > 0)
+      {
+        handler.open({
+          name: 'Donation',
+          description: '',
+          currency: 'USD',
+          amount: currentAmount = value * 100,
+          panelLabel: 'Donate {{amount}}'
+        })
+      }
+    })
+
+    $('#custom-donation-input').maskMoney({
+      allowZero:false,
+      allowNegative: false
+    })
+    .on('keydown', function(e){
+      var value = +(this.value) || 1.00
+      if (e.keyCode === 38)
+      {
+        $(this).maskMoney('mask', value + 1.00)
+      }
+      else if (e.keyCode === 40 && value - 1.00 > 0)
+      {
+        $(this).maskMoney('mask', value - 1.00)
+      }
+    })
+  })
+
+  // Close when changing page
+  $(window).on('popstate', handler.close);
+})(jQuery, 'pk_test_ppzmcCB4Yf0NqV9zlQZNBEuZ', '/donation');
 
 </script>

@@ -45,6 +45,7 @@
     "redis": "^2.6.0-0",
     "req-flash": "0.0.2",
     "rimraf": "^2.5.2",
+    "stripe": "^4.5.0",
     "style-loader": "^0.13.1",
     "thulium": "^2.0.0",
     "thulium-express": "^1.0.3",
