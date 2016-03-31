@@ -94,6 +94,7 @@
         url: ENDPOINT,
         data: token
       })
+      $('.majal__donate_selection_cont').hide()
     }
   });
 
@@ -107,33 +108,52 @@
       else
       {
         $('.majal__donate_selection_cont').show()
-        var handler = function(event){
-          if($(event.target).is('.majal__donate_selection_cont, .majal__donate_selection_cont *')) return;
-          $(document).off('click', handler);
+
+        var onDocumentClickHandler = function(event){
+          if( !$(event.target).is('.majal__donate_button, .majal__donate_selection_cont, .majal__donate_selection_cont *') )
+          {
+            $('.majal__donate_selection_cont').hide()
+            $(document).off('click', onDocumentClickHandler);
+          }
         }
 
-        $(document).on('click', handler);
+        $(document).on('click', onDocumentClickHandler);
       }
       e.preventDefault()
     })
 
+    // Updates check.svg icon placement
+    function set_checked_value(value)
+    {
+      $('.majal__donate_selection_cont .checked').removeClass('checked')
+
+      $target = $('#donate-' + value)
+
+      if ($target.length)
+      {
+        $target.addClass('checked')
+      }
+
+      return value
+    }
+
     $('#donate-10').on('click', function(){
-      $('#custom-donation-input').maskMoney('mask', 10.00)
+      $('#custom-donation-input').maskMoney('mask', set_checked_value(10.00))
     })
     $('#donate-20').on('click', function(){
-      $('#custom-donation-input').maskMoney('mask', 20.00)
+      $('#custom-donation-input').maskMoney('mask', set_checked_value(20.00))
     })
     $('#donate-30').on('click', function(){
-      $('#custom-donation-input').maskMoney('mask', 30.00)
+      $('#custom-donation-input').maskMoney('mask', set_checked_value(30.00))
     })
     $('#donate-50').on('click', function(){
-      $('#custom-donation-input').maskMoney('mask', 50.00)
+      $('#custom-donation-input').maskMoney('mask', set_checked_value(50.00))
     })
     $('#donate-100').on('click', function(){
-      $('#custom-donation-input').maskMoney('mask', 100.00)
+      $('#custom-donation-input').maskMoney('mask', set_checked_value(100.00))
     })
     $('#donate-250').on('click', function(){
-      $('#custom-donation-input').maskMoney('mask', 250.00)
+      $('#custom-donation-input').maskMoney('mask', set_checked_value(250.00))
     })
 
     $('#donate-custom').on('click', function(){
@@ -142,7 +162,7 @@
       {
         handler.open({
           name: 'Donation',
-          description: '',
+          description: 'Majal donation of ' + value + ' USD',
           currency: 'USD',
           amount: currentAmount = value * 100,
           panelLabel: 'Donate {{amount}}'
@@ -158,17 +178,17 @@
       var value = +(this.value) || 1.00
       if (e.keyCode === 38)
       {
-        $(this).maskMoney('mask', value + 1.00)
+        $(this).maskMoney('mask', set_checked_value(value + 1.00))
       }
       else if (e.keyCode === 40 && value - 1.00 > 0)
       {
-        $(this).maskMoney('mask', value - 1.00)
+        $(this).maskMoney('mask', set_checked_value(value - 1.00))
       }
     })
   })
 
   // Close when changing page
   $(window).on('popstate', handler.close);
-})(jQuery, 'pk_live_OUNLOYzvQiSDZ4rDpCQEmCml', '/donation');
+})(jQuery, '<%= CONFIG[CONFIG.environment].stripePublic %>', '/donation');
 
 </script>

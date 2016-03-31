@@ -522,6 +522,7 @@ body.job{
 
   .donation-amount
   {
+    position: relative;
     transition: background .3s ease;
     display: inline-block;
     width: 100px;
@@ -533,6 +534,17 @@ body.job{
     background-color: #3eace0;
     cursor: pointer;
     .stripe-ish();
+    &.checked:after
+    {
+      content: '';
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      background-image: url(../assets/img/check.svg);
+    }
+
     &:active{
       background-color: #338ABB;
       background-image: none;

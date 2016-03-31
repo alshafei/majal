@@ -1,4 +1,4 @@
-var stripe = require('stripe')(CONFIG[CONFIG.environment].stripeApiKey)
+var stripe = require('stripe')(CONFIG[CONFIG.environment].stripeSecret)
 var HomeController = Class('HomeController').inherits(BaseController)({
   beforeActions : [
     // {
