@@ -1,0 +1,27 @@
+{
+  "name": "majal",
+  "version": "0.0.0",
+  "scripts": {
+    "watch": "tarima -wdV -P localhost:8001",
+    "build": "tarima -f",
+    "start": "npm run build && node app.js"
+  },
+  "tarima": {
+    "filter": [
+      "!_*/**",
+      "!**/_*/**",
+      "!**/_*"
+    ],
+    "ignoreFiles": [
+      ".gitignore"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "ractive": "^0.7.3"
+  },
+  "devDependencies": {
+    "pug": "^2.0.0-alpha1",
+    "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next"
+  }
+}

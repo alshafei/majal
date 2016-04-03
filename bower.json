@@ -1,0 +1,7 @@
+{
+  "name": "majal",
+  "version": "0.0.0",
+  "devDependencies": {
+    "ractive": "^0.7.3"
+  }
+}
