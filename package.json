@@ -2,7 +2,8 @@
   "name": "majal",
   "version": "0.0.0",
   "scripts": {
-    "watch": "tarima -wdV -P localhost:8001",
+    "proxy": "tarima -wdV -P localhost:8001 -- node app.js",
+    "watch": "tarima -wsdV",
     "build": "tarima -f",
     "start": "npm run build && node app.js"
   },
@@ -14,7 +15,12 @@
     ],
     "ignoreFiles": [
       ".gitignore"
-    ]
+    ],
+    "serverOptions": {
+      "routes": {
+        "/vendor": "bower_components"
+      }
+    }
   },
   "dependencies": {
     "express": "^4.13.4",

@@ -21,3 +21,7 @@ app.get('/*', function (req, res) {
 app.listen(8001, function () {
   console.log('Listening on http://localhost:8001');
 });
+
+process.on('SIGINT', function() {
+  process.exit();
+});
