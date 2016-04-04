@@ -16,7 +16,7 @@ module.exports = Ractive.extend({
     };
   },
   onrender: function() {
-    var initialPath = this.get('currentPath');
+    var currentPath = this.get('currentPath');
 
     var self = this;
 
@@ -25,13 +25,14 @@ module.exports = Ractive.extend({
     }
 
     this.observe('currentPath', function(newPath, oldPath) {
-      if (oldPath && newPath !== initialPath) {
+      if (oldPath && newPath !== currentPath) {
+        currentPath = newPath;
         attach(newPath);
       }
     });
 
-    if (initialPath) {
-      attach(initialPath);
+    if (currentPath) {
+      attach(currentPath);
     }
   }
 });

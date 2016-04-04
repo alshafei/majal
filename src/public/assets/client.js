@@ -1,4 +1,4 @@
-var Application = require('./_app');
+var Application = require('../../_app');
 
 var app = new Application({
   el: '#app',
