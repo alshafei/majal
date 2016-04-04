@@ -1,0 +1,12 @@
+h1 It works!
+fieldset
+  legend Path:
+  input(value='{{currentPath}}')
+
+  |{{#if currentComponent}}
+  |{{>getComponent(currentComponent.name)}}
+  |{{else}}
+  | LOADING...
+  |{{/if}}
+
+  pre {{JSON.stringify(currentComponent, null, 2)}}
