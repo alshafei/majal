@@ -1,18 +1,15 @@
-// Majal.assets = {
-//   layout: require('./_resources/layout'),
-//   templates: require('./_resources')
-// };
+var Application = require('./_app');
 
-// Majal.view = function(path, locals) {
-//   var tpl = Majal.assets.templates[path];
+var components = require('./_app/components');
 
-//   if (!tpl) {
-//     throw new Error('Probably a 404: /' + path);
-//   }
-
-//   return Majal.assets.layout()
-//     .replace('__APP__', (new Ractive({
-//       template: tpl,
-//       data: locals
-//     })).toHTML());
-// }
+Majal.render = function(path) {
+  return require('./_app/resources/layout')()
+    .replace('__APP__', (new Application({
+      data: function() {
+        return {
+          currentPath: path,
+          currentComponent: components.findComponent(path)
+        };
+      }
+    })).toHTML());
+};

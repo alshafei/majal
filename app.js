@@ -10,12 +10,11 @@ var express = require('express');
 
 var app = express();
 
-app.use('/', express.static('build/dist'));
+// app.use('/', express.static('build/dist'));
 app.use('/vendor', express.static('bower_components'));
 
 app.get('/*', function (req, res) {
-  // TODO: implement basic router for this
-  res.send(Majal.view(req.params[0], req.query));
+  res.send(Majal.render(req.url));
 });
 
 app.listen(8001, function () {
