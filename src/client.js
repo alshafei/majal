@@ -1,4 +1,4 @@
-var templates = require('./_templates')
+var templates = require('./_resources')
 
 function main() {
   var app = new Ractive({

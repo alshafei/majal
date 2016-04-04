@@ -1,6 +1,6 @@
 Majal.assets = {
-  layout: require('./_templates/layout'),
-  templates: require('./_templates')
+  layout: require('./_resources/layout'),
+  templates: require('./_resources')
 };
 
 Majal.view = function(path, locals) {

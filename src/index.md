@@ -1,5 +1,5 @@
 ---
-_render: _templates/layout.jade
+_render: _resources/layout.jade
 ---
 
 # OFF-LINE!
