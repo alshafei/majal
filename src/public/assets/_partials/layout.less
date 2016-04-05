@@ -1,0 +1,69 @@
+@import '_config';
+
+.rows {
+  display: table;
+  width: 100%;
+
+  .cell {
+    display: table-cell;
+  }
+}
+
+.right {
+  &.floated {
+    float: right;
+  }
+
+  &.aligned {
+    text-align: right;
+  }
+}
+
+&.vertically {
+  &.aligned .cell {
+    vertical-align: middle;
+  }
+
+  &.centered {
+    width: 100%;
+    display: table;
+
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.segment {
+  padding: 1em;
+  overflow: auto;
+
+  &.translucent {
+    color: @sampleGray;
+    position: relative;
+    z-index: 1;
+
+    .action.button {
+      color: @sampleGray;
+      border-color: @sampleGray;
+    }
+
+    &:before {
+      background-color: rgba(0, 0, 0, .8);
+      position: absolute;
+      z-index: -1;
+      content: ' ';
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.centered {
+  .container {
+    text-align: center;
+  }
+}

@@ -1,0 +1,29 @@
+@import '_config';
+
+.label {
+  color: @sampleBlue;
+  text-transform: uppercase;
+}
+
+.action {
+  padding: .5em;
+  display: inline-block;
+
+  &.button {
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @sampleBlue;
+    border: @sampleBlue 1px solid;
+  }
+
+  &.main {
+    color: white;
+    font-weight: bold;
+
+    &.button {
+      background: @sampleBlue;
+    }
+  }
+}
