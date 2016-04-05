@@ -1,11 +1,13 @@
-header
-  |HEADER
-  |Path:
-  input(value='{{currentPath}}')
+header.vertically.centered.section
+  .container
+    |HEADER
 
-main
-  |{{#if currentComponent}}
-  |{{>getComponent(currentComponent.name)}}
-  |{{else}}Loading stuff...{{/if}}
+main.section
+  .container
+    |{{#if currentComponent}}
+    |{{>getComponent(currentComponent.name)}}
+    |{{else}}Loading stuff...{{/if}}
 
-footer FOOTER
+footer.vertically.centered.section
+  .container
+    |FOOTER

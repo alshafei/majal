@@ -1,3 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 header, footer {
   background: gray;
+}
+
+#app {
+  height: 100%;
+  background: silver;
+}
+
+.section {
+  .container {
+    padding: 10px;
+  }
+}
+
+.centered {
+  .container {
+    text-align: center;
+  }
+
+  &.vertically {
+    width: 100%;
+    display: table;
+
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
 }
