@@ -6,34 +6,6 @@ html, body {
   height: 100%;
 }
 
-.right {
-  &.floated {
-    float: right;
-  }
-
-  &.aligned {
-    text-align: right;
-  }
-}
-
-.vertically {
-  &.centered {
-    width: 100%;
-    display: table;
-
-    .rows .cell, .container {
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
-}
-
-.section {
-  &.centered {
-    text-align: center;
-  }
-}
-
 .actions {
   margin: 5px 0;
 }
@@ -81,6 +53,7 @@ html, body {
     color: @textColorInverted;
 
     .action.button {
+      background: none;
       color: @textColorInverted;
       border-color: @textColorInverted;
     }
@@ -88,5 +61,9 @@ html, body {
 
   &.dim {
     background-color: @grayBackgroundLight;
+  }
+
+  &.big {
+    min-height: 320px;
   }
 }

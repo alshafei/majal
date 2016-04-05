@@ -1,16 +1,55 @@
-.rows {
-  clear: both;
-  width: 100%;
+// .rows {
+//   clear: both;
+//   width: 100%;
 
-  .cell {
-    display: inline-block;
-  }
-}
+//   .cell {
+//     display: inline-block;
+//   }
+// }
 
 .column {
   &.rows {
     &.two {
       .one.cell.column { width: 50%; }
     }
+  }
+}
+
+.right {
+  &.floated {
+    float: right;
+  }
+
+  &.aligned {
+    text-align: right;
+  }
+
+  &.top {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.vertically {
+  &.centered {
+    width: 100%;
+    display: table;
+
+    .rows .cell, .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.centered {
+  &.section,
+  &.container {
+    text-align: center;
   }
 }
