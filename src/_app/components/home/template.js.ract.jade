@@ -1,1 +1,17 @@
-| OOOOOk! {{someValue}}
+//-
+  ---
+  sectionTitle: Foo & Bar Co.
+  description: We make problems to other to solve for us
+  linkAction:
+    text: Press this to be OK
+    href: '#'
+  ---
+
+- var styles = backgroundImage ? 'background-image:url(' + backgroundImage + ')' : null
+- var classes = transluscentCover ? 'translucent' : null
+
+.segment(style=styles class=classes on-click='showMe')
+  h3.label= sectionTitle
+  p.text= description
+
+  a.main.action.button(href=linkAction.href)= linkAction.text

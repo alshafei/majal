@@ -7,6 +7,11 @@ module.exports = {
       return {
         someValue: 'OSOM'
       };
+    },
+    onrender: function() {
+      this.on('showMe', function() {
+        alert('Hey dude!');
+      });
     }
   }
 };

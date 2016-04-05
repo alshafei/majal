@@ -10,12 +10,24 @@ header, footer {
 
 #app {
   height: 100%;
-  background: silver;
+  background: white;
 }
 
-.section {
-  .container {
-    padding: 10px;
+.segment {
+  padding: 1em;
+
+  &.translucent {
+    position: relative;
+
+    &:before {
+      background-color: rgba(0, 0, 0, .33);
+      position: absolute;
+      content: ' ';
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
   }
 }
 
@@ -32,5 +44,25 @@ header, footer {
       display: table-cell;
       vertical-align: middle;
     }
+  }
+}
+
+.label {
+  color: #4685C9;
+}
+
+.action {
+  padding: .5em;
+  display: inline-block;
+
+  &.button {
+    padding: 1em 1.5em;
+    text-decoration: none;
+  }
+
+  &.main {
+    color: white;
+    font-weight: bold;
+    background: #4685C9;
   }
 }
