@@ -1,16 +1,15 @@
 //-
   ---
-  sectionTitle: Foo & Bar Co.
-  description: We make problems to other to solve for us
-  linkAction:
-    text: Press this to be OK
+  data: !include data.yml
   ---
 
 section.segment.translucent(intro='fade')
   .right.floated
-    a.action.button(href='#') Close
+    a.action.button(href='#') Open
 
-section.segment(intro='fly')
-  h3= sectionTitle
-  p= description
-  a.main.action.button(href='#')= linkAction.text
+each item in data.items
+  section.segment(intro='fly')
+    h3= item.sectionTitle
+    p= item.description
+    a.main.action.button(href=item.linkAction.href || '#')
+      = item.linkAction.text
