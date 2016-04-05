@@ -6,6 +6,32 @@ html, body {
   height: 100%;
 }
 
+.list {
+  .item {
+    width: 50%;
+    display: inline-block;
+
+    .container {
+      height: 1px;
+      min-height: 260px;
+      margin-bottom: 1em;
+    }
+
+    &:nth-child(even) .container {
+      margin-left: 1em;
+    }
+  }
+
+  &.segment {
+    padding-bottom: 0 ;
+  }
+
+  // @media screen and @marginChangeRule {
+  //     margin-left: -@mobileContentPadding;
+  //     margin-right: -(@mobileContentPadding + @mobileRightMargin);
+  //   }
+}
+
 .actions {
   margin: 5px 0;
 }

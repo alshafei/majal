@@ -1,0 +1,59 @@
+@import '_config';
+
+@media print {
+  .no-print { display: none; }
+}
+
+body::before {
+  display: none;
+}
+
+@media screen and @mobileOnly {
+  body::before {
+    content: 'mobile-plain';
+  }
+
+  .tablet-up, .computer-up, .tablet-only, .computer-only {
+    display: none;
+  }
+}
+
+@media screen and @tabletOnly {
+  body::before {
+    content: 'tablet-plain';
+  }
+
+  .mobile-down, .mobile-only, .computer-up, .computer-only {
+    display: none;
+  }
+}
+
+@media screen and @computerOnly {
+  .mobile-down, .mobile-only, .tablet-down, .tablet-only {
+    display: none;
+  }
+}
+
+@media screen and (min-width: @computerBreakpoint) and (max-width: (@computerXGABreakpoint - 1px)) {
+  body::before {
+    content: 'computer-plain';
+  }
+}
+
+@media screen and (min-width: @computerXGABreakpoint) and (max-width: (@largeMonitorBreakpoint - 1px)) {
+  body::before {
+    content: 'computer-xga';
+  }
+}
+
+@media screen and (min-width: @largeMonitorBreakpoint) and (max-width: (@widescreenMonitorBreakpoint - 1px)) {
+  body::before {
+    content: 'computer-large';
+  }
+}
+
+@media screen and (min-width: @widescreenMonitorBreakpoint) {
+  body::before {
+    content: 'computer-wide';
+  }
+}
