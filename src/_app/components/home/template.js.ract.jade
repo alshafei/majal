@@ -9,7 +9,7 @@ section.segment.translucent(intro='fade')
 
 each item, i in data.items
   section.segment(intro='fly:{"x":-' + ((i * 400) + 100) + '}')
-    h3= item.sectionTitle
+    h3.label= item.sectionTitle
     p= item.description
     a.main.action.button(href=item.linkAction.href || '#')
       = item.linkAction.text
