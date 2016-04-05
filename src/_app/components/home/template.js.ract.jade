@@ -6,19 +6,19 @@
     text: Press this to be OK
   ---
 
-segment(classes='translucent')
+section.segment.translucent(intro='fade')
   .right.floated
     a.action.button(href='#') Donate
 
-segment
+section.segment(intro='fly')
   h3= sectionTitle
   p= description
   a.main.action.button(href='#')= linkAction.text
 
-segment(label='Some sub section')
+section.segment(intro='fly:{x:-100}')
   .vertically.aligned.rows
     .cell
-      h3 Some title
+      h3 Some sub section
       p Some decription
     .right.aligned.cell
       a.action.button(href='#') Donate

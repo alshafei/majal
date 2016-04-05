@@ -1,7 +1,6 @@
 var fixedComponents = [
   require('./home'),
-  require('./example'),
-  require('./segment')
+  require('./example')
 ];
 
 var components = {};

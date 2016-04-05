@@ -2,6 +2,8 @@
   "name": "majal",
   "version": "0.0.0",
   "devDependencies": {
-    "ractive": "^0.7.3"
+    "ractive": "^0.7.3",
+    "ractive-transitions-fly": "^0.3.0",
+    "ractive-transitions-fade": "^0.3.1"
   }
 }
