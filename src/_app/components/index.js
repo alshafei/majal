@@ -1,6 +1,7 @@
 var fixedComponents = [
   require('./home'),
-  require('./example')
+  require('./example'),
+  require('./segment')
 ];
 
 var components = {};
@@ -17,7 +18,7 @@ module.exports.findComponent = function(path) {
   for (var key in fixedComponents) {
     var handler = fixedComponents[key];
 
-    if (handler.matches.test(path)) {
+    if (handler.matches && handler.matches.test(path)) {
       return handler.name;
     }
   }
