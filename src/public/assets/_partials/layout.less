@@ -56,6 +56,10 @@ html, body {
       background: none;
       color: @textColorInverted;
       border-color: @textColorInverted;
+
+      &.main {
+        border-color: @importantColor;
+      }
     }
   }
 
@@ -64,6 +68,7 @@ html, body {
   }
 
   &.big {
+    height: 1px;
     min-height: 320px;
   }
 }
