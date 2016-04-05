@@ -2,16 +2,14 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: white;
   color: @textColor;
 }
 
 h1, h2, h3 {
+  color: @darkestBackground;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-header {
-  background: @textColorInverted;
 }
 
 .label {
@@ -52,5 +50,57 @@ header {
 
   h1, h2, h3, p {
     margin: 1em;
+  }
+
+  ~ .card {
+    margin-top: 1em;
+  }
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, .8);
+  box-shadow: 0 0 50px rgba(0, 0, 0, .33);
+}
+
+.segment {
+  padding: 1em;
+
+  &.main {
+    background-color: @darkestBackground;
+  }
+
+  &.light {
+    &:before {
+      background-color: rgba(255, 255, 255, .85);
+    }
+  }
+
+  &.dark {
+    h1, h2, h3, p {
+      color: @textColorInverted;
+    }
+
+    &:before {
+      background-color: rgba(0, 0, 0, .65);
+    }
+
+    .action.button {
+      background: none;
+      color: @textColorInverted;
+      border-color: @textColorInverted;
+
+      &.main {
+        border-color: @importantColor;
+      }
+    }
+  }
+
+  &.dim {
+    background-color: @grayBackgroundLight;
+  }
+
+  &.big {
+    height: 1px;
+    min-height: 13em;
   }
 }

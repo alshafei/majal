@@ -3,11 +3,11 @@
   _render: ../_app/resources/layout.jade
   ---
 
-header.vertically.centered.section
-  .translucent.segment
+header.vertically.centered.big.main.segment
+  .centered.container
     |HEADER
 
-main.section
+main
   .vertically.centered.big.dark.segment(style='background-image:url(//placeimg.com/400/300/tech)')
     .centered.container
       .top.right
@@ -21,11 +21,16 @@ main.section
         h3 Some product title
         p Some product description
 
-  .segment.light(style='background-image:url(//placeimg.com/1000/480/arch)')
+    .vertically.centered.card(style='background-image:url(//placeimg.com/400/300/tech)')
       .container
-        h3 Another large subtitle here
-        p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
-        p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
+        h3 Some product title
+        p Some product description
+
+  .vertically.centered.big.light.segment(style='background-image:url(//placeimg.com/1000/480/arch)')
+    .container
+      h3 Another large subtitle here
+      p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
+      p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
   .vertically.centered.segment.dim
     .two.column.rows
@@ -35,13 +40,13 @@ main.section
       .one.column.right.aligned.cell
         a.main.action.button(href='#') Get to know MAJAL
 
-  .segment.dark(style='background-image:url(//placeimg.com/1000/480/arch)')
+  .dark.segment(style='background-image:url(//placeimg.com/1000/480/arch)')
     .two.column.rows
       .one.column.cell
         h3 Another large subtitle here
         p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
         p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
-footer.vertically.centered.section
-  .segment
+footer.vertically.centered.big.main.segment
+  .centered.container
     |FOOTER
