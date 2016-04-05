@@ -5,8 +5,10 @@ header.vertically.centered.section
 main.section
   .container
     |{{#if currentComponent}}
-    |{{>getComponent(currentComponent.name)}}
-    |{{else}}Loading stuff...{{/if}}
+    |{{>getComponent(currentComponent)}}
+    |{{else}}
+    |Loading stuff...
+    |{{/if}}
 
 footer.vertically.centered.section
   .container

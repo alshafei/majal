@@ -17,13 +17,8 @@ module.exports.findComponent = function(path) {
   for (var key in fixedComponents) {
     var handler = fixedComponents[key];
 
-    var matches = path.match(handler.matches);
-
-    if (matches) {
-      return {
-        name: handler.name,
-        params: matches.slice(1)
-      };
+    if (handler.matches.test(path)) {
+      return handler.name;
     }
   }
 };
