@@ -31,6 +31,9 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
+    "browserify": "^13.0.0",
+    "kramed": "^0.5.6",
+    "less": "^2.6.1",
     "pug": "^2.0.0-alpha1",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next"
   }
