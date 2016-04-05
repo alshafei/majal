@@ -1,10 +1,14 @@
 var Application = require('../../_app');
 
-var app = new Application({
+function main() {
+  var app = new Application({
   el: '#app',
-  data: function() {
-    return {
-      currentPath: document.location.pathname
-    };
-  }
-});
+    data: function() {
+      return {
+        currentPath: document.location.pathname
+      };
+    }
+  });
+}
+
+setTimeout(main, 1000);

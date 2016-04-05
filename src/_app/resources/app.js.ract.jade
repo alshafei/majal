@@ -1,12 +1,11 @@
-h1 It works!
-fieldset
-  legend Path:
+header
+  |HEADER
+  |Path:
   input(value='{{currentPath}}')
 
+main
   |{{#if currentComponent}}
   |{{>getComponent(currentComponent.name)}}
-  |{{else}}
-  | LOADING...
-  |{{/if}}
+  |{{else}}Loading stuff...{{/if}}
 
-  pre {{JSON.stringify(currentComponent, null, 2)}}
+footer FOOTER
