@@ -7,8 +7,8 @@ section.segment.translucent(intro='fade')
   .right.floated
     a.action.button(href='#') Open
 
-each item in data.items
-  section.segment(intro='fly')
+each item, i in data.items
+  section.segment(intro='fly:{"x":-' + ((i * 400) + 100) + '}')
     h3= item.sectionTitle
     p= item.description
     a.main.action.button(href=item.linkAction.href || '#')

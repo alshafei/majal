@@ -1,10 +1,10 @@
-header.vertically.centered.section
+header.vertically.centered
   .translucent.container.segment
     a.main.action(href='/' on-click='navigate') Home
     | |
     a.main.action(href='/x' on-click='navigate') Example
 
-main.section
+main
   .container
     |{{#if currentComponent}}
     |{{>getComponent(currentComponent)}}
@@ -12,6 +12,6 @@ main.section
     |Loading stuff...
     |{{/if}}
 
-footer.vertically.centered.section
+footer.vertically.centered
   .container
     |FOOTER
