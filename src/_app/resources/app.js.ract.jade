@@ -1,20 +1,18 @@
 header.vertically.centered
-  .translucent.container.segment
+  .translucent.segment
     a.main.action(href='/' on-click='navigate') Home
     | |
     a.main.action(href='/x' on-click='navigate') Example
 
 main
-  .container
-    |{{#if currentComponent}}
-    |{{>getComponent(currentComponent)}}
-    |{{else}}
-    |Loading stuff...
-    |{{/if}}
+  |{{#if currentComponent}}
+  |{{>getComponent(currentComponent)}}
+  |{{else}}
+  |Loading stuff...
+  |{{/if}}
 
 footer.vertically.centered
-  .container
-    |FOOTER
+  |FOOTER
 
 |{{#if showSidebar}}
 |{{>getComponent('sidebar')}}

@@ -1,12 +1,9 @@
 @import '_config';
 
-.rows {
-  display: table;
-  width: 100%;
-
-  .cell {
-    display: table-cell;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .right {
@@ -19,20 +16,26 @@
   }
 }
 
-&.vertically {
-  &.aligned .cell {
-    vertical-align: middle;
-  }
-
+.vertically {
   &.centered {
     width: 100%;
     display: table;
 
-    .container {
+    .rows .cell, .container {
       display: table-cell;
       vertical-align: middle;
     }
   }
+}
+
+.section {
+  &.centered {
+    text-align: center;
+  }
+}
+
+.actions {
+  margin: 5px 0;
 }
 
 .sidebar {
@@ -48,21 +51,12 @@
 }
 
 .segment {
+  position: relative;
   padding: 1em;
-  overflow: auto;
+  z-index: 1;
 
-  &.translucent {
-    color: @sampleGray;
-    position: relative;
-    z-index: 1;
-
-    .action.button {
-      color: @sampleGray;
-      border-color: @sampleGray;
-    }
-
+  &.light, &.dark {
     &:before {
-      background-color: rgba(0, 0, 0, .8);
       position: absolute;
       z-index: -1;
       content: ' ';
@@ -72,10 +66,27 @@
       top: 0;
     }
   }
-}
 
-.centered {
-  .container {
-    text-align: center;
+  &.light {
+    &:before {
+      background-color: rgba(255, 255, 255, .85);
+    }
+  }
+
+  &.dark {
+    &:before {
+      background-color: rgba(0, 0, 0, .65);
+    }
+
+    color: @textColorInverted;
+
+    .action.button {
+      color: @textColorInverted;
+      border-color: @textColorInverted;
+    }
+  }
+
+  &.dim {
+    background-color: @grayBackgroundLight;
   }
 }

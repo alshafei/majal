@@ -1,0 +1,16 @@
+.rows {
+  clear: both;
+  width: 100%;
+
+  .cell {
+    display: inline-block;
+  }
+}
+
+.column {
+  &.rows {
+    &.two {
+      .one.cell.column { width: 50%; }
+    }
+  }
+}
