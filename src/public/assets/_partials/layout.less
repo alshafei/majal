@@ -11,13 +11,24 @@ html, body {
     width: 50%;
     display: inline-block;
 
-    .container {
+    .wrapper {
       height: 1px;
       min-height: 260px;
       margin-bottom: 1em;
+      display: table;
+      width: 100%;
+
+      .container {
+        padding: 1em;
+        display: table-cell;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
     }
 
-    &:nth-child(even) .container {
+    &:nth-child(even) .wrapper {
+      padding-right: 1em;
       margin-left: 1em;
     }
   }

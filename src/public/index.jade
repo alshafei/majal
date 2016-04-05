@@ -8,7 +8,7 @@ header.vertically.centered.big.main.segment
     |HEADER
 
 main
-  .vertically.centered.big.dark.segment(style='background-image:url(//placeimg.com/400/300/tech)')
+  .vertically.centered.big.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
     .centered.container
       .top.right
         a.main.action.button(href='#') Click me
@@ -18,9 +18,10 @@ main
   .segment.list
     each x in Array.from({ length: 4 })
       .item
-        .container(style='background-image:url(//placeimg.com/400/300/arch)')
-          h3 Some product title
-          p Some product description
+        .wrapper
+          .container(style='background-image:url(//placeimg.com/400/300/arch)')
+            h3 Some product title
+            p Some product description
 
   .vertically.centered.big.light.segment(style='background-image:url(//placeimg.com/1000/480/arch)')
     .container
