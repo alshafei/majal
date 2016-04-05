@@ -1,15 +1,3 @@
-//-
-  ---
-  sectionTitle: Support MAJAL
-  description: |
-    MAJAL is a grassroots not-for-profit movement that operates
-    independently of any partisan, corporate, national or regional government,
-    institution or organization. Althought some of our costs are covered by
-    certain foundations such as the Omidyar Network or the Shuttleworth Foundation,
-    we need your support to maintain our primry expenses so that we may focus solely
-    on improving our work.
-  ---
-
 header.vertically.centered
   .translucent.container.segment
     a.main.action(href='/' on-click='navigate') Home
@@ -28,9 +16,6 @@ footer.vertically.centered
   .container
     |FOOTER
 
-aside.sidebar
-  h3= sectionTitle
-  p= description
-
-
-  | DONATION WIDGET WILL BE HERE
+|{{#if showSidebar}}
+|{{>getComponent('sidebar')}}
+|{{/if}}

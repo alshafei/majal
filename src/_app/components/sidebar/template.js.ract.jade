@@ -1,0 +1,13 @@
+//-
+  ---
+  data: !include data.yml
+  ---
+
+aside.sidebar(intro-outro='fade')
+  .right.floated
+      a.action.button(href='#' on-click='toggleSidebar') Close
+
+  h3= data.sectionTitle
+  p= data.description
+
+  |{{>getComponent('donation')}}

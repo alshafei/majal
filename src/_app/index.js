@@ -34,6 +34,10 @@ module.exports = Ractive.extend({
       }
     });
 
+    this.on('*.toggleSidebar', function() {
+      this.toggle('showSidebar');
+    });
+
     this.on('navigate', function(e) {
       var segment = e.node.href.split('/').slice(3).join('/');
 
