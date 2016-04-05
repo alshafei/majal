@@ -21,7 +21,10 @@ module.exports = Ractive.extend({
     var self = this;
 
     function attach(path) {
-      self.set('currentComponent', components.findComponent(path));
+      self.set('currentComponent', components.findComponent(path))
+        .then(function() {
+          window.history.pushState(document.title, null, path);
+        });
     }
 
     this.observe('currentPath', function(newPath, oldPath) {
@@ -29,6 +32,14 @@ module.exports = Ractive.extend({
         currentPath = newPath;
         attach(newPath);
       }
+    });
+
+    this.on('navigate', function(e) {
+      var segment = e.node.href.split('/').slice(3).join('/');
+
+      attach('/' + segment);
+
+      return false;
     });
 
     if (currentPath) {
