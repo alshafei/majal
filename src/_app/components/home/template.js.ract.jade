@@ -4,14 +4,21 @@
   description: We make problems to other to solve for us
   linkAction:
     text: Press this to be OK
-    href: '#'
   ---
 
-- var styles = backgroundImage ? 'background-image:url(' + backgroundImage + ')' : null
-- var classes = transluscentCover ? 'translucent' : null
+segment(classes='translucent')
+  .right.floated
+    a.action.button(href='#') Donate
 
-.segment(style=styles class=classes on-click='showMe')
-  h3.label= sectionTitle
-  p.text= description
+segment
+  h3= sectionTitle
+  p= description
+  a.main.action.button(href='#')= linkAction.text
 
-  a.main.action.button(href=linkAction.href)= linkAction.text
+segment(label='Some sub section')
+  .vertically.aligned.rows
+    .cell
+      h3 Some title
+      p Some decription
+    .right.aligned.cell
+      a.action.button(href='#') Donate

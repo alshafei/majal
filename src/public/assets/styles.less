@@ -1,11 +1,18 @@
+@sampleBlue: #4685C9;
+@sampleGray: #6D6D6D;
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-header, footer {
-  background: gray;
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+header {
+  background: @sampleGray;
 }
 
 #app {
@@ -13,15 +20,84 @@ header, footer {
   background: white;
 }
 
+.label {
+  color: @sampleBlue;
+  text-transform: uppercase;
+}
+
+.rows {
+  display: table;
+  width: 100%;
+
+  .cell {
+    display: table-cell;
+  }
+}
+
+.right {
+  &.floated {
+    float: right;
+  }
+
+  &.aligned {
+    text-align: right;
+  }
+}
+
+&.vertically {
+  &.aligned .cell {
+    vertical-align: middle;
+  }
+
+  &.centered {
+    width: 100%;
+    display: table;
+
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.action {
+  padding: .5em;
+  display: inline-block;
+
+  &.button {
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @sampleBlue;
+    border: @sampleBlue 1px solid;
+  }
+
+  &.main {
+    color: white;
+    font-weight: bold;
+    background: @sampleBlue;
+  }
+}
+
 .segment {
   padding: 1em;
+  overflow: auto;
 
   &.translucent {
+    color: @sampleGray;
     position: relative;
+    z-index: 1;
+
+    .action.button {
+      color: @sampleGray;
+      border-color: @sampleGray;
+    }
 
     &:before {
-      background-color: rgba(0, 0, 0, .33);
+      background-color: rgba(0, 0, 0, .8);
       position: absolute;
+      z-index: -1;
       content: ' ';
       bottom: 0;
       right: 0;
@@ -34,35 +110,5 @@ header, footer {
 .centered {
   .container {
     text-align: center;
-  }
-
-  &.vertically {
-    width: 100%;
-    display: table;
-
-    .container {
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
-}
-
-.label {
-  color: #4685C9;
-}
-
-.action {
-  padding: .5em;
-  display: inline-block;
-
-  &.button {
-    padding: 1em 1.5em;
-    text-decoration: none;
-  }
-
-  &.main {
-    color: white;
-    font-weight: bold;
-    background: #4685C9;
   }
 }
