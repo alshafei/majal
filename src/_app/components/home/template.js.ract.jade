@@ -7,6 +7,9 @@ section.segment.translucent(intro='fade')
   .right.floated
     a.action.button(href='#' on-click='toggleSidebar') Open
 
+section
+  != imageSprite('images/ahwaa-picture')
+
 each item, i in data.items
   section.segment(intro='fly:{"x":-' + ((i * 400) + 100) + '}')
     h3.label= item.sectionTitle
