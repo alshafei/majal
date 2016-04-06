@@ -25,29 +25,12 @@ module.exports = Ractive.extend({
 
     var self = this;
 
-    function resolveImages() {
-      self.findAll('img[srcset]').forEach(function(img) {
-        var sources = img.getAttribute('srcset').split(/\s*,\s*/)
-          .map(function(source) {
-            var parts = source.split(/\s+/);
-
-            return { src: parts[0], size: parseInt(parts[1], 10) };
-          });
-
-        for (var i in sources) {
-          if (Math.round(window.devicePixelRatio) === sources[i].size) {
-            img.setAttribute('src', sources[i].src);
-            break;
-          }
-        }
-      });
-    }
-
     function attach(path) {
       self.set('currentComponent', components.findComponent(path))
         .then(function() {
+          self.fire('componentRendered');
+
           window.history.pushState(document.title, null, path);
-          resolveImages();
         });
     }
 
