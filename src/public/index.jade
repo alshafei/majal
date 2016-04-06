@@ -5,51 +5,54 @@
 
 header.vertically.centered.big.main.segment
   .centered.container
-    |HEADER
+    .top.right
+      a.main.action.button(href='#') Click me
+    h1 Heading level 1
 
 main
-  .vertically.centered.big.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
+  .vertically.centered.big.main.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
     .centered.container
-      .top.right
-        a.main.action.button(href='#') Click me
-
       h1 Here is the main title
 
-  .segment.list
-    each x in Array.from({ length: 4 })
-      .item
-        .wrapper
-          .container(style='background-image:url(//placeimg.com/400/300/arch)')
-            h3 Some product title
-            p Some product description
-
-  .vertically.centered.big.light.segment(style='background-image:url(//placeimg.com/1000/480/arch)')
-    .container
-      h3 Another large subtitle here
-      p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
-      p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-  .segment
-    each x in Array.from({ length: 4 })
-      .vertically.centered.card(style='background-image:url(//placeimg.com/400/300/tech)')
-        .container
-          h3 Some product title
-          p Some product description
-
-  .vertically.centered.segment.dim
+  section.vertically.centered.segment
     .two.column.rows
       .one.column.cell
-        h3.label Sub heading label
-        p Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.
+        header
+          h3.main AMPLIFIYING UNDERREPRESENTED VOICES FOR OVER A DECADE
+        p With team members and initiatives in India, Mexico, and beyond, we’ve scaled our projects to a broader, more global audience and rebranded as Majal in 2015 to reflect our transnational positioning.
       .one.column.right.aligned.cell
-        a.main.action.button(href='#') Get to know MAJAL
+        a.main.action.button(href='#') GET TO KNOW MAJAL
 
-  .dark.segment(style='background-image:url(//placeimg.com/1000/480/arch)')
+  section
+    ul
+      li
+
+        .media
+          .figure
+            img(src='//placehold.it/50')
+          .body
+            p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      li
+        .media
+          .right.figure
+            img(src='//placehold.it/50')
+          .body
+            p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      li
+        .centered.media
+          .figure
+            img(src='//placehold.it/50')
+          .body
+            p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+
+  section.vertically.centered.segment.dim
     .two.column.rows
       .one.column.cell
-        h3 Another large subtitle here
-        p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.
-        p Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
+        header
+          h3.main HELP CROWDVOICE.BY GROW
+        p With your help we can add awesome features to crowdvoice.by and develope a mobile version.
+      .one.column.right.aligned.cell
+        a.main.action.button(href='#') SUPPORT PROJECT
 
 footer.vertically.centered.big.main.segment
   .centered.container
