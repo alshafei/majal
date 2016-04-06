@@ -10,7 +10,7 @@ body::before {
 
 @media screen and @mobileOnly {
   body::before {
-    content: 'mobile-plain';
+    content: 'mobile';
   }
 
   .tablet-up, .computer-up, .tablet-only, .computer-only {
@@ -20,7 +20,7 @@ body::before {
 
 @media screen and @tabletOnly {
   body::before {
-    content: 'tablet-plain';
+    content: 'tablet';
   }
 
   .mobile-down, .mobile-only, .computer-up, .computer-only {
@@ -36,7 +36,7 @@ body::before {
 
 @media screen and (min-width: @computerBreakpoint) and (max-width: (@computerXGABreakpoint - 1px)) {
   body::before {
-    content: 'computer-plain';
+    content: 'computer';
   }
 }
 

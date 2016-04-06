@@ -145,8 +145,10 @@ p {
   }
 }
 
-h1, h2, h3, .container {
-  &.centered {
-    text-align: center;
+@media screen and @tabletUp {
+  h1, h2, h3, p {
+    &.half {
+      width: 50%;
+    }
   }
 }
