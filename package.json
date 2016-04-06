@@ -25,7 +25,7 @@
         "/vendor": "bower_components"
       }
     },
-    "require": "./retina-helpers.js"
+    "require": "./util"
   },
   "dependencies": {
     "express": "^4.13.4",
