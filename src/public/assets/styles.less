@@ -3,3 +3,47 @@
 @import '_partials/common';
 @import '_partials/layout';
 @import '_partials/elements';
+
+.brand {
+  overflow: hidden;
+  padding: 0 1em;
+  height: 1px;
+  min-height: 18em;
+
+  .container {
+    height: 100%;
+  }
+
+  img {
+    transition: bottom .3s;
+    position: absolute;
+    display: block;
+    bottom: -100px;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    img {
+      bottom: -90px;
+    }
+  }
+}
+
+@media screen and @tabletUp {
+  .brand {
+    img {
+      right: 0;
+      left: auto;
+      bottom: -30px;
+    }
+
+    &:hover {
+      img {
+        bottom: -20px;
+      }
+    }
+  }
+}
