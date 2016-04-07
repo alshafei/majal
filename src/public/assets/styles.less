@@ -14,7 +14,7 @@
     padding: 1em 0;
   }
 
-  img {
+  .cover {
     transition: bottom .3s;
     position: absolute;
     display: block;
@@ -24,7 +24,7 @@
   }
 
   &:hover {
-    img {
+    .cover {
       bottom: -20px;
     }
   }
@@ -32,7 +32,7 @@
 
 @media screen and @mobileOnly {
   .brand {
-    img {
+    .cover {
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -40,7 +40,7 @@
     }
 
     &:hover {
-      img {
+      .cover {
         bottom: -90px;
       }
     }
