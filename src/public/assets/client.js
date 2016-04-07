@@ -1,3 +1,9 @@
+/**
+---
+_bundle: true
+---
+*/
+
 import Application from '../../_app';
 
 function resolveImages(nodes) {
