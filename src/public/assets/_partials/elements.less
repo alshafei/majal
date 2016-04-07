@@ -8,12 +8,10 @@ body {
 
 h1, h2, h3 {
   color: @darkestBackground;
-  text-transform: uppercase;
   font-family: Lato-Black;
 
   &.main {
     color: @importantColor;
-    text-transform: uppercase;
   }
 }
 
@@ -88,9 +86,9 @@ input, select, textarea {
 }
 
 .button {
+  font-weight: bold;
   white-space: nowrap;
   text-decoration: none;
-  text-transform: uppercase;
   color: @importantColor;
 
   &:hover {
@@ -159,7 +157,7 @@ input, select, textarea {
       color: @textColorInverted;
     }
 
-    .button {
+    .main.button {
       color: @bodyBackground;
     }
 
