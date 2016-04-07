@@ -3,79 +3,71 @@
   _render: ../_app/resources/layout.jade
   ---
 
-header.vertically.centered.big.main.segment
-  .centered.container
-    .top.right
-      a.main.action.button(href='#') Click me
-    h1 Heading level 1
+|OK
 
-main
-  section.vertically.centered.big.main.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
-    .centered.container
-      h1 Here is the main title
+//- header.vertically.centered.big.main.segment
+//-   .centered.container
+//-     .top.right
+//-       a.action.button(href='#') DONATE
+//-     h1 Heading level 1 (TODO)
 
-  section.vertically.centered.segment
-    .container
-      header
-        h3.main.half AMPLIFIYING UNDERREPRESENTED VOICES FOR OVER A DECADE
-      p.half With team members and initiatives in India, Mexico, and beyond, we’ve scaled our projects to a broader, more global audience and rebranded as Majal in 2015 to reflect our transnational positioning.
-      .actions
-        a.main.action.button(href='#') GET TO KNOW MAJAL
+//- main
+//-   //-   section.vertically.centered.big.main.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
+//-   //-     .centered.container
+//-   //-       h1 Here is the main title
 
-  section
-    ul
-      each x in Array.from({ length: 4 })
-        li.padded
-          .vertically.centered.brand
-            .container
-              header
-                h3 Some sub heading
-              p.half Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-              .actions
-                a.action.button(href='#') Call to action
-                != imageTag('images/ahwaa-picture')
+//-   section.vertically.centered.segment
+//-     .container
+//-       header
+//-         h3.main.half AMPLIFIYING UNDERREPRESENTED VOICES FOR OVER A DECADE
+//-       p.half With team members and initiatives in India, Mexico, and beyond, we’ve scaled our projects to a broader, more global audience and rebranded as Majal in 2015 to reflect our transnational positioning.
+//-       .actions
+//-         a.main.action.button(href='#') GET TO KNOW MAJAL
 
-  section
-    ul
-      li
-        .media
-          .figure
-            img(src='//placehold.it/50')
-          .body
-            p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-      li
-        .media
-          .right.figure
-            img(src='//placehold.it/50')
-          .body
-            p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-      li
-        .centered.media
-          .figure
-            img(src='//placehold.it/50')
-          .body
-            p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+//-   //- section
+//-   //-   ul
+//-   //-     each p in data.products
+//-   //-       li.padded
+//-   //-         .vertically.centered.brand
+//-   //-           .container
+//-   //-             != imageTag(p.image)
+//-   //-             = p.logo
+//-   //-             p.half= p.copy
+//-   //-             .actions
+//-   //-               a.action.button(href='#') Go To Case Study
+//-   //-             != imageTag(p.cover, 'cover')
 
-  section
-    .two.column.rows
-      .one.column.cell
-        header
-          h3.main HELP CROWDVOICE.BY GROW
-        p With your help we can add awesome features to crowdvoice.by and develope a mobile version.
-      .one.column.cell
-        .right.aligned.actions
-          a.main.action.button(href='#') SUPPORT PROJECT
+//- //-   section
+//- //-     ul
+//- //-       li
+//- //-         .media
+//- //-           .figure
+//- //-             img(src='//placehold.it/50')
+//- //-           .body
+//- //-             p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+//- //-       li
+//- //-         .media
+//- //-           .right.figure
+//- //-             img(src='//placehold.it/50')
+//- //-           .body
+//- //-             p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+//- //-       li
+//- //-         .centered.media
+//- //-           .figure
+//- //-             img(src='//placehold.it/50')
+//- //-           .body
+//- //-             p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 
-  section.vertically.centered.big.segment
-    form.centered.container
-      input.field(type='email' placeholder='you@example.com')
-      input.button(type='submit' value='Subscribe')
+//- //-   section.vertically.centered.big.segment
+//- //-     form.centered.container
+//- //-       input.field(type='email' placeholder='you@example.com')
+//- //-       input.button(type='submit' value='Subscribe')
 
-footer.vertically.centered.big.main.segment
-  form.centered.container
-    header
-      h3.main KEEP GETTING NEWS
-    p Subscribe to our newsletter and keep tabs on all of our current and future projects.
+//- //- footer.vertically.centered.big.main.segment
+//- //-   form.centered.container
+//- //-     header
+//- //-       h3.main KEEP GETTING NEWS
+//- //-     p Subscribe to our newsletter and keep tabs on all of our current and future projects.
 
-    input.field(type='email' placeholder='you@example.com')
-    input.button(type='submit' value='Subscribe')
+//- //-     input.field(type='email' placeholder='you@example.com')
+//- //-     input.main.button(type='submit' value='Subscribe')

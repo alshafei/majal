@@ -13,6 +13,10 @@ h1, h2, h3 {
   &.main {
     color: @importantColor;
   }
+
+  &.centered {
+    text-align: center;
+  }
 }
 
 h1 {
@@ -133,13 +137,46 @@ input, select, textarea {
   }
 }
 
+.cover {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.brand {
+  padding: 0 1em;
+  height: 1px;
+  min-height: 18em;
+  border-bottom: 1px solid @altBorderColor;
+
+  &.vertically.centered .container {
+    overflow: hidden;
+    padding: 1em 0;
+  }
+
+  .cover {
+    transition: bottom .3s;
+    bottom: -30px;
+    left: auto;
+  }
+
+  &:hover {
+    .cover {
+      bottom: -20px;
+    }
+  }
+}
+
 .sidebar {
   background: rgba(255, 255, 255, .8);
   box-shadow: 0 0 50px rgba(0, 0, 0, .33);
 }
 
 .segment {
-  padding: 1em;
+  padding: 3em;
 
   &.main {
     background-color: @darkestBackground;
@@ -162,7 +199,7 @@ input, select, textarea {
     }
 
     .field {
-      border-color: @altBorderColorInverted;
+      border-color: @textColorInverted;
     }
   }
 
@@ -194,6 +231,27 @@ input, select, textarea {
   h1, h2, h3, p {
     &.half {
       width: 50%;
+    }
+  }
+}
+
+@media screen and @mobileOnly {
+  .brand {
+    .cover {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -100px;
+    }
+
+    &:hover {
+      .cover {
+        bottom: -90px;
+      }
+    }
+
+    &.vertically.centered .container {
+      vertical-align: top;
     }
   }
 }

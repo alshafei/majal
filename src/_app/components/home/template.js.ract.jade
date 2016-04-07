@@ -1,19 +1,55 @@
 //-
   ---
-  data: !include data.yml
+  data: !include ../../resources/products/all.yml
   ---
 
-section.segment.translucent(intro='fade')
-  .right.floated
-    a.action.button(href='#' on-click='toggleSidebar') Open
-    button(on-click='showMe') D:
+header.vertically.centered.big.main.segment
+  .centered.container
+    .top.right
+      a.action.button(href='#') DONATE
+    h1 Heading level 1 (TODO)
 
-section
-  != imageTag('images/ahwaa-picture')
+section.vertically.centered.segment
+  .container
+    header
+      h2.main.half AMPLIFIYING UNDERREPRESENTED VOICES FOR OVER A DECADE
+    p.half With team members and initiatives in India, Mexico, and beyond, we’ve scaled our projects to a broader, more global audience and rebranded as Majal in 2015 to reflect our transnational positioning.
+    .actions
+      a.main.action.button(href='#') GET TO KNOW MAJAL
 
-each item, i in data.items
-  section.segment(intro='fly:{"x":-' + ((i * 400) + 100) + '}')
-    h3.label= item.sectionTitle
-    p= item.description
-    a.main.action.button(href=item.linkAction.href || '#')
-      = item.linkAction.text
+section.segment
+  header
+    h2.centered AND THIS IS OUR WORK
+
+  //- TODO: shit... bad paddings and such!!
+  ul
+    each p in data.products
+      li
+        .vertically.centered.brand
+          .container
+            != imageTag(p.image)
+            = p.logo
+            p.half= p.copy
+            .actions
+              a.action.button(href='#') Go To Case Study
+            != imageTag(p.cover, 'cover')
+
+section.dim.segment
+  .two.column.rows
+    .one.column.cell
+      header
+        h3.main HELP CROWDVOICE.BY GROW
+      p With your help we can add awesome features to crowdvoice.by and develope a mobile version.
+    .one.column.cell
+      .right.aligned.actions
+        a.main.action.button(href='#') SUPPORT PROJECT
+
+footer.vertically.centered.big.main.segment
+  form.centered.container
+    header
+      h3.main KEEP GETTING NEWS
+    p Subscribe to our newsletter and keep tabs on all of our current and future projects.
+    .actions
+      input.field(type='email' placeholder='you@example.com')
+      input.main.button(type='submit' value='Subscribe')
+  != imageTag('images/waves', 'cover')
