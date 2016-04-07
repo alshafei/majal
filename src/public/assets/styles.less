@@ -5,45 +5,48 @@
 @import '_partials/elements';
 
 .brand {
-  overflow: hidden;
   padding: 0 1em;
   height: 1px;
   min-height: 18em;
 
-  .container {
-    height: 100%;
+  &.vertically.centered .container {
+    overflow: hidden;
+    padding: 1em 0;
   }
 
   img {
     transition: bottom .3s;
     position: absolute;
     display: block;
-    bottom: -100px;
-    z-index: -1;
-    left: 0;
     right: 0;
-    margin: 0 auto;
+    bottom: -30px;
+    z-index: -1;
   }
 
   &:hover {
     img {
-      bottom: -90px;
+      bottom: -20px;
     }
   }
 }
 
-@media screen and @tabletUp {
+@media screen and @mobileOnly {
   .brand {
     img {
+      left: 0;
       right: 0;
-      left: auto;
-      bottom: -30px;
+      margin: 0 auto;
+      bottom: -100px;
     }
 
     &:hover {
       img {
-        bottom: -20px;
+        bottom: -90px;
       }
+    }
+
+    &.vertically.centered .container {
+      vertical-align: top;
     }
   }
 }
