@@ -12,6 +12,8 @@ var fixedComponents = [
 
 var components = {};
 
+/* global Ractive */
+
 fixedComponents.forEach(function(handler) {
   components[handler.name] = Ractive.extend(handler.component);
 });

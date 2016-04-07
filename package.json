@@ -2,6 +2,7 @@
   "name": "majal",
   "version": "0.0.0",
   "scripts": {
+    "eslint": "eslint app.js src util",
     "proxy": "tarima -wdV -P localhost:8001 -- node app.js",
     "watch": "tarima -wsdV",
     "build": "tarima -f",
@@ -32,6 +33,7 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
+    "eslint": "^2.7.0",
     "fast-image-size": "^0.1.2",
     "kramed": "^0.5.6",
     "less": "^2.6.1",

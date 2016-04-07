@@ -1,4 +1,4 @@
-Ractive = require('ractive/ractive.runtime');
+global.Ractive = require('ractive/ractive.runtime');
 
 var server = require('./build/server');
 

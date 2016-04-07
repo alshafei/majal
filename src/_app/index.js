@@ -1,7 +1,7 @@
 import { findComponent, getComponents } from './components';
 import template from './resources/app';
 
-var MEDIA_QUERY = '(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)';
+/* global Ractive */
 
 export default Ractive.extend({
   components: getComponents(),
@@ -11,7 +11,7 @@ export default Ractive.extend({
       currentComponent: null,
       getComponent: function(componentName) {
         if (!this.partials[componentName]) {
-          this.partials[componentName] = { v: 3, t: [ { t: 7, e: componentName } ] }
+          this.partials[componentName] = { v: 3, t: [ { t: 7, e: componentName } ] };
         }
 
         return componentName;
@@ -19,9 +19,6 @@ export default Ractive.extend({
     };
   },
   onrender: function() {
-    var isRetina = window.devicePixelRatio > 1 ||
-      (window.matchMedia && window.matchMedia(MEDIA_QUERY).matches);
-
     var currentPath = this.get('currentPath');
 
     var self = this;

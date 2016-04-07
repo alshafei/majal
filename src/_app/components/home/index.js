@@ -1,5 +1,7 @@
 import template from './template';
 
+/* global alert */
+
 export default {
   name: 'home',
   matches: /^\/$/,
