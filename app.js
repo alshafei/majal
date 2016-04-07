@@ -1,10 +1,6 @@
-// global namespace
-Majal = {};
-
 Ractive = require('ractive/ractive.runtime');
 
-// precompiled assets
-require('./build/server');
+var server = require('./build/server');
 
 var express = require('express'),
     serveIndex = require('serve-index');
@@ -19,7 +15,7 @@ app.use('/source', express.static('src'));
 app.use('/source', serveIndex('src'));
 
 app.get('/*', function (req, res) {
-  res.send(Majal.render(req.url));
+  res.send(server.Majal.render(req.url));
 });
 
 app.listen(8001, function () {
