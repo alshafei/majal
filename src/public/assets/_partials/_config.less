@@ -22,4 +22,5 @@
 @mobileAndTablet: @tabletDown;
 
 @computerUp: ~"(min-width: @{computerBreakpoint})";
+@computerDown: ~"(max-width:"(@computerXGABreakpoint - 1px)~")";
 @computerOnly: @computerUp;
