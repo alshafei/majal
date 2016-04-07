@@ -49,20 +49,25 @@ a {
   }
 }
 
+input, select, textarea {
+  font-size: 18px;
+}
+
+.field, .button {
+  padding: 14px 24px;
+  border-radius: 5px;
+  background-color: @bodyBackground;
+  border: @importantColor 2px solid;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+
+  & + .field,
+  & + .button {
+    margin-left: .5em;
+  }
+}
+
 .action {
   display: inline-block;
-
-  &.button {
-    padding: 14px 24px;
-    white-space: nowrap;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    text-transform: uppercase;
-    color: @importantColor;
-    border: @importantColor 1px solid;
-    background-color: @bodyBackground;
-  }
 
   &.main {
     box-shadow: 0 2px 4px 0 rgba(62, 61, 61, 0.5);
@@ -76,6 +81,17 @@ a {
       background: @importantColor;
     }
   }
+}
+
+.button {
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @importantColor;
+}
+
+.field {
+  border-color: @altBorderColor;
 }
 
 .media {
@@ -120,15 +136,23 @@ a {
 
     h1, h2, h3, p {
       color: @textColorInverted;
-    }
-
-    .action.button {
-      background: none;
-      color: @textColorInverted;
 
       &.main {
-        border-color: @importantColor;
+        color: @bodyBackground;
       }
+    }
+
+    .field, .button {
+      background: none;
+      color: @textColorInverted;
+    }
+
+    .button {
+      color: @bodyBackground;
+    }
+
+    .field {
+      border-color: @altBorderColorInverted;
     }
   }
 

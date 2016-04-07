@@ -10,7 +10,7 @@ header.vertically.centered.big.main.segment
     h1 Heading level 1
 
 main
-  .vertically.centered.big.main.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
+  section.vertically.centered.big.main.dark.segment(style='background-image:url(//placeimg.com/1000/480/tech)')
     .centered.container
       h1 Here is the main title
 
@@ -66,6 +66,16 @@ main
         .right.aligned.actions
           a.main.action.button(href='#') SUPPORT PROJECT
 
+  section.vertically.centered.big.segment
+    form.centered.container
+      input.field(type='email' placeholder='you@example.com')
+      input.button(type='submit' value='Subscribe')
+
 footer.vertically.centered.big.main.segment
-  .centered.container
-    |FOOTER
+  form.centered.container
+    header
+      h3.main KEEP GETTING NEWS
+    p Subscribe to our newsletter and keep tabs on all of our current and future projects.
+
+    input.field(type='email' placeholder='you@example.com')
+    input.button(type='submit' value='Subscribe')
