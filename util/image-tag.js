@@ -3,7 +3,7 @@ var fs = require('fs'),
     imageSize = require('fast-image-size');
 
 module.exports = function(publicDir) {
-  return function(imageSrc) {
+  return function(imageSrc, attributes) {
     var baseImg = path.join(publicDir, imageSrc),
         foundImages = [baseImg + '.png', baseImg + '@2x.png'].filter(fs.existsSync);
 
@@ -21,11 +21,23 @@ module.exports = function(publicDir) {
       }).join(', ') + '"';
     }
 
+    var attrs = '';
+
+    if (typeof attributes === 'string') {
+      attrs += ' class="' + attributes + '"';
+      attributes = arguments[2];
+    }
+
+    for (var prop in attributes) {
+      attrs += ' ' + prop + '="' + attributes[prop] + '"';
+    }
+
     return [
       '<img src="/', imageSrc, '.png"',
       ' height="', dimensions.height, '"',
       ' width="', dimensions.width, '"',
       srcSet,
+      attrs,
       '>'
     ].join('');
   };
