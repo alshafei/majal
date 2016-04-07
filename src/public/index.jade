@@ -28,9 +28,12 @@ main
         li.padded
           .vertically.centered.brand
             .container
-              h3 Some sub heading
-              p.half Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur.
-              != imageTag('images/ahwaa-picture')
+              header
+                h3 Some sub heading
+              p.half Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+              .actions
+                a.action.button(href='#') Call to action
+                != imageTag('images/ahwaa-picture')
 
   section
     ul

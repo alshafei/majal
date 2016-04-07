@@ -2,7 +2,7 @@
 
 body {
   font-family: Lato-Regular, sans-serif;
-  background-color: white;
+  background-color: @bodyBackground;
   color: @textColor;
 }
 
@@ -40,26 +40,37 @@ p {
   }
 }
 
+a {
+  color: @importantColor;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .action {
-  height: 1px;
-  min-height: 50px;
-  line-height: 25px;
-  padding: 13px 73px;
   display: inline-block;
 
   &.button {
+    padding: 14px 24px;
     white-space: nowrap;
     border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(62, 61, 61, 0.5);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     text-decoration: none;
     text-transform: uppercase;
     color: @importantColor;
     border: @importantColor 1px solid;
+    background-color: @bodyBackground;
   }
 
   &.main {
-    color: white;
+    box-shadow: 0 2px 4px 0 rgba(62, 61, 61, 0.5);
+    color: @bodyBackground;
     font-weight: bold;
+    padding: 13px 73px;
+    line-height: 2em;
+    font-size: 18px;
 
     &.button {
       background: @importantColor;
