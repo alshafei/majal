@@ -64,6 +64,10 @@ input, select, textarea {
   & + .button {
     margin-left: .5em;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .action {
@@ -88,10 +92,18 @@ input, select, textarea {
   text-decoration: none;
   text-transform: uppercase;
   color: @importantColor;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .field {
   border-color: @altBorderColor;
+
+  &:focus {
+    border-color: @importantColor !important;
+  }
 }
 
 .media {
