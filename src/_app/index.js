@@ -5,11 +5,11 @@ import template from './resources/app';
 
 export default Ractive.extend({
   components: getComponents(),
-  template: template,
-  data: function() {
+  template,
+  data() {
     return {
       currentComponent: null,
-      getComponent: function(componentName) {
+      getComponent(componentName) {
         if (!this.partials[componentName]) {
           this.partials[componentName] = { v: 3, t: [ { t: 7, e: componentName } ] };
         }
@@ -18,33 +18,33 @@ export default Ractive.extend({
       }
     };
   },
-  onrender: function() {
-    var currentPath = this.get('currentPath');
+  onrender() {
+    const currentPath = this.get('currentPath');
 
-    var self = this;
+    const self = this;
 
     function attach(path) {
       self.set('currentComponent', findComponent(path))
-        .then(function() {
+        .then(() => {
           self.fire('componentRendered');
 
           window.history.pushState(document.title, null, path);
         });
     }
 
-    this.observe('currentPath', function(newPath, oldPath) {
+    this.observe('currentPath', (newPath, oldPath) => {
       if (oldPath && newPath !== currentPath) {
         currentPath = newPath;
         attach(newPath);
       }
     });
 
-    this.on('*.toggleSidebar', function() {
+    this.on('*.toggleSidebar', () => {
       this.toggle('showSidebar');
     });
 
-    this.on('navigate', function(e) {
-      var segment = e.node.href.split('/').slice(3).join('/');
+    this.on('navigate', (e) => {
+      const segment = e.node.href.split('/').slice(3).join('/');
 
       attach('/' + segment);
 

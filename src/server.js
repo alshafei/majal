@@ -11,7 +11,7 @@ import { findComponent } from './_app/components';
 export function render(path) {
   return layout()
     .replace('__APP__', (new Application({
-      data: function() {
+      data() {
         return {
           currentPath: path,
           currentComponent: findComponent(path)
