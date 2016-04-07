@@ -1,8 +1,13 @@
+import home from './home';
+import example from './example';
+import sidebar from './sidebar';
+import donation from './donation';
+
 var fixedComponents = [
-  require('./home'),
-  require('./example'),
-  require('./sidebar'),
-  require('./donation')
+  home,
+  example,
+  sidebar,
+  donation
 ];
 
 var components = {};
@@ -11,11 +16,11 @@ fixedComponents.forEach(function(handler) {
   components[handler.name] = Ractive.extend(handler.component);
 });
 
-module.exports.getComponents = function() {
+export function getComponents() {
   return components;
-};
+}
 
-module.exports.findComponent = function(path) {
+export function findComponent(path) {
   for (var key in fixedComponents) {
     var handler = fixedComponents[key];
 
@@ -23,4 +28,4 @@ module.exports.findComponent = function(path) {
       return handler.name;
     }
   }
-};
+}

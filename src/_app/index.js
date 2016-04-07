@@ -1,10 +1,11 @@
+import { findComponent, getComponents } from './components';
+import template from './resources/app';
+
 var MEDIA_QUERY = '(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)';
 
-var components = require('./components');
-
-module.exports = Ractive.extend({
-  components: components.getComponents(),
-  template: require('./resources/app'),
+export default Ractive.extend({
+  components: getComponents(),
+  template: template,
   data: function() {
     return {
       currentComponent: null,
@@ -26,7 +27,7 @@ module.exports = Ractive.extend({
     var self = this;
 
     function attach(path) {
-      self.set('currentComponent', components.findComponent(path))
+      self.set('currentComponent', findComponent(path))
         .then(function() {
           self.fire('componentRendered');
 

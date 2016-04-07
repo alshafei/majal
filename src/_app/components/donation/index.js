@@ -1,6 +1,8 @@
-module.exports = {
+import template from './template';
+
+export default {
   name: 'donation',
   component: {
-    template: require('./template')
+    template: template
   }
 };

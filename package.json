@@ -32,12 +32,12 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
-    "browserify": "^13.0.0",
     "fast-image-size": "^0.1.2",
     "kramed": "^0.5.6",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha1",
+    "rollup": "^0.25.8",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next"
   }
 }

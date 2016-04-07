@@ -1,14 +1,14 @@
-var Application = require('./_app');
-
-var components = require('./_app/components');
+import Application from './_app';
+import layout from './_app/resources/layout';
+import { findComponent } from './_app/components';
 
 Majal.render = function(path) {
-  return require('./_app/resources/layout')()
+  return layout()
     .replace('__APP__', (new Application({
       data: function() {
         return {
           currentPath: path,
-          currentComponent: components.findComponent(path)
+          currentComponent: findComponent(path)
         };
       }
     })).toHTML());

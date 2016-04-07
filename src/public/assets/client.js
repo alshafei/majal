@@ -1,4 +1,4 @@
-var Application = require('../../_app');
+import Application from '../../_app';
 
 function resolveImages(nodes) {
   nodes.forEach(function(img) {
