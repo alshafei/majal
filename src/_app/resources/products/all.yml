@@ -3,7 +3,23 @@ products:
     image: images/logo-ahwaa
     cover: images/moq-ahwaa
     copy: Serving The Arab LGBT Community.
-  - label: AHWAA
-    image: images/logo-ahwaa
-    cover: images/moq-ahwaa
-    copy: Serving The Arab LGBT Community.
+  - label: MideasT-TuneS
+    image: images/mideast-tunes-logo
+    cover: images/img-met
+    copy: A Web & Mobile App Showcasing Underground Musicians In The Middle East & North Africa Who Use Music As A Tool For Social Change.
+  - label: X
+    image: images/logo-cvorg
+    cover: images/img-cvorg
+    copy: Harnessing The Power Of Crowdsourced Media To Contextualize Social Movements Throughout The World.
+  - label: X
+    image: images/logo-cvorg
+    cover: images/img-cvorg
+    copy: Enabling Activists And Grassroots Organizations To Collaboratively Curate Media Related To Their Causes.
+  - label: X
+    image: images/logo-mrorg
+    cover: images/img-mrorg
+    copy: Advocating And Promoting Awareness On Migrant Issues Across The GCC & Wider Middle East.
+  - label: X
+    image: images/makingof
+    cover: images/ipad-pro
+    copy: Enabling Activists And Grassroots Organizations To Collaboratively Curate Media Related To Their Causes.
