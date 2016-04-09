@@ -139,35 +139,51 @@ input, select, textarea {
 }
 
 .cover {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+  border: 1px solid red;
+  position: relative;
+  display: inline-block;
+  padding-top: 30px;
+  overflow: hidden;
+  height: 1px;
+  width: 100%;
+  min-height: 300px;
+
+  img {
+    position: absolute;
+    xbottom: -30px;
+  }
 }
 
+// .xcover {
+//   position: absolute;
+//   z-index: -1;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   margin: 0 auto;
+// }
+
 .brand {
-  height: 1px;
-  min-height: 480px;
+  // height: 1px;
+  // min-height: 480px;
   border-bottom: 1px solid @altBorderColor;
 
   &.vertically.centered .container {
-    overflow: hidden;
+    // overflow: hidden;
     padding: 1em 0;
   }
 
   .cover {
-    transition: bottom .3s;
-    bottom: -30px;
-    left: auto;
+    // transition: bottom .3s;
+    // bottom: -30px;
+    // left: auto;
   }
 
-  &:hover {
-    .cover {
-      bottom: -20px;
-    }
-  }
+  // &:hover {
+  //   .cover {
+  //     bottom: -20px;
+  //   }
+  // }
 }
 
 .sidebar {

@@ -6,7 +6,7 @@
 header.vertically.centered.big.main.segment
   .centered.container
     .top.right
-      a.action.button(href='#') DONATE
+      a.action.button(href='#' on-click='toggleSidebar') DONATE
     h1 Heading level 1 (TODO)
 
 section.vertically.centered.segment
@@ -32,7 +32,7 @@ section.segment
             p.half= p.copy
             .actions
               a.action.button(href='#') Go To Case Study
-            != imageTag(p.cover, 'cover')
+            figure.cover!= imageTag(p.cover)
 
 section.dim.segment
   .two.column.rows
@@ -52,4 +52,4 @@ footer.vertically.centered.big.main.segment
     .actions
       input.field(type='email' placeholder='you@example.com')
       input.main.button(type='submit' value='Subscribe')
-  != imageTag('images/waves', 'cover')
+  figure.cover!= imageTag('images/waves')

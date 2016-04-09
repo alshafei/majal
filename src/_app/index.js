@@ -19,7 +19,7 @@ export default Ractive.extend({
     };
   },
   onrender() {
-    const currentPath = this.get('currentPath');
+    let currentPath = this.get('currentPath');
 
     const self = this;
 
