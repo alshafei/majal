@@ -64,6 +64,7 @@ input, select, textarea {
   background-color: @bodyBackground;
   border: @importantColor 2px solid;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all .3s;
 
   & + .field,
   & + .button {
@@ -81,7 +82,7 @@ input, select, textarea {
   text-decoration: none;
   color: @importantColor;
   background: transparent;
-  box-shadow: 0 2px 4px 0 rgba(62, 61, 61, 0.5);
+  box-shadow: 0 1px 4px 0 rgba(62, 61, 61, 0.5);
 
   &.main {
     color: @bodyBackground;
@@ -150,6 +151,7 @@ input, select, textarea {
 }
 
 .cover {
+  z-index: -1;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -165,10 +167,6 @@ input, select, textarea {
     left: 0;
     margin: auto;
   }
-
-  &:hover img {
-    bottom: 0;
-  }
 }
 
 .brand {
@@ -178,6 +176,10 @@ input, select, textarea {
 
   &.vertically.centered .container {
     padding: 1em 0;
+  }
+
+  &:hover .cover img {
+    bottom: 0;
   }
 }
 
