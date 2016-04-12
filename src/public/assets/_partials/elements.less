@@ -139,51 +139,35 @@ input, select, textarea {
 }
 
 .cover {
-  border: 1px solid red;
   position: relative;
   display: inline-block;
-  padding-top: 30px;
   overflow: hidden;
   height: 1px;
   width: 100%;
   min-height: 300px;
 
   img {
+    transition: bottom .2s;
     position: absolute;
-    xbottom: -30px;
+    bottom: -30px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &:hover img {
+    bottom: 0;
   }
 }
 
-// .xcover {
-//   position: absolute;
-//   z-index: -1;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   margin: 0 auto;
-// }
-
 .brand {
-  // height: 1px;
-  // min-height: 480px;
+  height: 1px;
+  min-height: 300px;
   border-bottom: 1px solid @altBorderColor;
 
   &.vertically.centered .container {
-    // overflow: hidden;
     padding: 1em 0;
   }
-
-  .cover {
-    // transition: bottom .3s;
-    // bottom: -30px;
-    // left: auto;
-  }
-
-  // &:hover {
-  //   .cover {
-  //     bottom: -20px;
-  //   }
-  // }
 }
 
 .sidebar {
@@ -249,25 +233,15 @@ input, select, textarea {
       width: 50%;
     }
   }
-}
 
-@media screen and @mobileOnly {
-  .brand {
-    .cover {
-      left: 0;
+  .brand .cover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    img {
       right: 0;
-      margin: 0 auto;
-      bottom: -100px;
-    }
-
-    &:hover {
-      .cover {
-        bottom: -90px;
-      }
-    }
-
-    &.vertically.centered .container {
-      vertical-align: top;
+      left: auto;
     }
   }
 }

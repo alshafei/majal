@@ -1,7 +1,7 @@
 products:
   - label: AHWAA
     image: images/logo-ahwaa
-    cover: images/moq-ahwaa
+    cover: images/img-ahwaa
     copy: Serving The Arab LGBT Community.
   - label: Mideast-tunes
     image: images/mideast-tunes-logo
