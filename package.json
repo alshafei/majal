@@ -26,10 +26,12 @@
         "/vendor": "bower_components"
       }
     },
-    "require": "./util",
-    "extensions": {
-      "js": "es6"
-    }
+    "bundleOptions": {
+      "extensions": {
+        "js": "es6"
+      }
+    },
+    "require": "./util"
   },
   "dependencies": {
     "express": "^4.13.4",
