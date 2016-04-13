@@ -23,7 +23,9 @@
     "serverOptions": {
       "routes": {
         "/": "build/public",
-        "/vendor": "bower_components"
+        "/vendor": "bower_components",
+        "/images": "build/public/images",
+        "/assets": "build/public/assets"
       }
     },
     "bundleOptions": {
@@ -38,10 +40,9 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
-    "babel-core": "^5.8.38",
+    "buble": "^0.4.11",
     "eslint": "^2.7.0",
     "fast-image-size": "^0.1.2",
-    "kramed": "^0.5.6",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha1",
