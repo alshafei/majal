@@ -8,22 +8,20 @@
 @grayBackgroundLight: #F7FBFC;
 
 @mobileBreakpoint: 320px;
-@mobileUpBreakpoint: 520px;
+@mobileTabletBreakpoint: 520px;
 @tabletBreakpoint: 768px;
 @computerBreakpoint: 992px;
 @computerXGABreakpoint: 1024px;
 @largeMonitorBreakpoint: 1400px;
 @widescreenMonitorBreakpoint: 1920px;
 
-@mobileOnly: ~"(max-width:"(@tabletBreakpoint - 1px)~")";
-@mobileUp: ~"(min-width:"(@mobileUpBreakpoint - 1px)~") and (max-width:"(@tabletBreakpoint - 1px)~")";
+@mobileOnly: ~"(max-width:"(@mobileTabletBreakpoint - 1px)~")";
+@mobileTabletUp: ~"(min-width: @{mobileTabletBreakpoint})";
+@mobileTabletDown: ~"@{mobileTabletUp} and @{mobileOnly}";
 
 @tabletUp: ~"(min-width: @{tabletBreakpoint})";
 @tabletDown: ~"(max-width:"(@computerBreakpoint - 1px)~")";
 @tabletOnly: ~"@{tabletUp} and @{tabletDown}";
 
-@mobileAndTablet: @tabletDown;
-
 @computerUp: ~"(min-width: @{computerBreakpoint})";
 @computerDown: ~"(max-width:"(@computerXGABreakpoint - 1px)~")";
-@computerOnly: @computerUp;
