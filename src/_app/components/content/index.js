@@ -2,26 +2,27 @@ import template from './template';
 
 import home from './pages/home';
 import about from './pages/about-us';
-import ahwaa from './pages/ahwaa';
-import cvby from './pages/crowdvoice-by';
-import cvorg from './pages/crowdvoice-org';
-import met from './pages/mideast-tunes';
-import mr from './pages/migrant-rights';
-import moac from './pages/moac';
 import press from './pages/press-room';
 import services from './pages/services';
+
+import ahwaa from './pages/products/ahwaa';
+import cvby from './pages/products/crowdvoice-by';
+import cvorg from './pages/products/crowdvoice-org';
+import met from './pages/products/mideast-tunes';
+import mr from './pages/products/migrant-rights';
+import moac from './pages/products/moac';
 
 const partials = {
   home,
   about,
+  press,
+  services,
   ahwaa,
   cvby,
   cvorg,
   met,
   mr,
-  moac,
-  press,
-  services
+  moac
 };
 
 var matches = new RegExp('^\\/(' + Object.keys(partials).join('|') + ')?$');
