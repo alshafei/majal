@@ -56,6 +56,30 @@ input, select, textarea {
   font-size: 18px;
 }
 
+blockquote {
+  margin-top: 60px;
+
+  .card {
+    padding: 1em;
+  }
+
+  cite {
+    color: @textColorInverted;
+  }
+
+  span {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+  }
+
+  img {
+    top: -40px;
+    left: -1em;
+    position: absolute;
+  }
+}
+
 .field, .button {
   margin-bottom: 5px;
   padding: 14px 24px;
@@ -115,10 +139,8 @@ input, select, textarea {
 }
 
 .card {
-  padding: 1em;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px 0 rgba(175, 175, 175, 0.5);
-  border: solid 1px @altBorderColor;
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .grid {
@@ -128,9 +150,8 @@ input, select, textarea {
   text-align: center;
 
   .item {
-    border: 1px solid @altBorderColor;
+    background: @bodyBackground;
     display: inline-block;
-    padding: 1em;
     margin: .5em;
     width: 100%;
 
@@ -138,6 +159,10 @@ input, select, textarea {
       margin: auto;
       display: block;
     }
+  }
+
+  &.bordered .item {
+    border: 1px solid @altBorderColor;
   }
 }
 

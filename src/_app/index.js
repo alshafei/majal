@@ -41,6 +41,7 @@ export default Ractive.extend({
 
     this.on('*.toggleSidebar', () => {
       this.toggle('showSidebar');
+      return false;
     });
 
     this.on('navigate', (e) => {
