@@ -57,7 +57,7 @@ input, select, textarea {
 }
 
 blockquote {
-  margin-top: 60px;
+  margin-top: 4em;
 
   .card {
     padding: 1em;
@@ -147,6 +147,7 @@ blockquote {
   list-style: none;
   padding: 0;
   margin: auto;
+  margin-left: -1em;
   text-align: center;
 
   .item {
@@ -235,7 +236,7 @@ blockquote {
 }
 
 .segment {
-  padding: 3em;
+  padding: 2em;
 
   &.main {
     background-color: @darkestBackground;
@@ -313,8 +314,20 @@ blockquote {
     }
   }
 
-  .grid .item {
-    width: 200px;
+  .grid {
+    margin: auto;
+
+    .item {
+      width: 200px;
+
+      &.big {
+        width: 45%;
+
+        & + .item.big {
+          margin-left: 1em;
+        }
+      }
+    }
   }
 }
 
@@ -350,6 +363,18 @@ blockquote {
   .cover.big {
     img {
       width: auto;
+    }
+  }
+
+  .grid {
+    margin-left: auto;
+
+    .item.big {
+      width: 30%;
+
+      & + .item.big {
+        margin-left: 2em;
+      }
     }
   }
 }

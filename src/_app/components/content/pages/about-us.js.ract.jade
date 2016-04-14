@@ -3,19 +3,19 @@ header.vertically.centered.big.main.segment
     .top.right
       a.action.button(href='#' on-click='toggleSidebar') DONATE
     header
-      h3 About Us
+      h2 About Us
     p.main We create platforms that amplify underrepresented voices
 
 section.vertically.centered.segment
   .half.container
     header
-      h2.main LOCAL ACTION BECAME GLOBAL
+      h3 LOCAL ACTION BECAME GLOBAL
     p Founded in Bahrain in 2006, Majal began as Mideast Youth, serving marginalized populations in the Middle East and North Africa. After a decade of local impact, credibility, and innovation, the scope of our work now goes well beyond the region.
 
 section.vertically.centered.segment
   .half.container
     header
-      h2.main A REMOTE TEAM THAT'S PRETTY CLOSE
+      h3 A REMOTE TEAM THAT'S PRETTY CLOSE
     p With team members and initiatives throughout the Middle East, India, Mexico, and beyond, we’ve scaled our projects to a broader, more global audience and rebranded as Majal in 2015 to reflect a renewed transnational positioning.
 
 section.segment
@@ -30,14 +30,14 @@ section.segment
 section.vertically.centered.segment
   .half.container
     header
-      h2.main A DARING ACT OF LOVE
+      h3 A DARING ACT OF LOVE
     p In Arabic and Farsi, Majal translates to "opportunity" or "to give way". In Hindi slang, it means daring or brave. When pronounced in Spanish, it’s “Mahal,” which in Tagalog means love. So in a word, Majal embodies what it is meant to be - a daring act of love that creates opportunities for people around the world.
 
 section.vertically.centered.container
   .half.segment.brand
     .container
       header
-        h2.main EVERY SINGLE PROJECT WE UNDERTAKE CONNECTS BACK TO OUR CORE BELIEFS.
+        h3 EVERY SINGLE PROJECT WE UNDERTAKE CONNECTS BACK TO OUR CORE BELIEFS.
       p With courage and innovation, Majal addresses issues that receive little or no attention:  The rights of the invisible lower income migrant workers, the ‘stigmatized’ LGBTQ community, and those seeking to express dissent through music.
   figure.big.right.cover!= imageTag('images/covers/macbook')
 
@@ -58,23 +58,25 @@ section.vertically.centered.segment
     header
       h3 WHAT MEDIA SAYS ABOUT US
 
-    blockquote
-      p.card
-        cite "CrowdVoice is a good resource for photos and videos of protests as well as links to news stories and reports."
-        span -The Guardian
-        != imageTag('images/logos/logo-theguardian')
-
-    blockquote
-      p.card
-        cite “CrowdVoice is a better resource for journalists wanting to report on social movements, even ones in countries where they don't speak the appropriate language.”
-        span -Wired
-        != imageTag('images/logos/logo-wired')
-
-    blockquote
-      p.card
-        cite "Ahwaa facilitates respectful conversations on a variety of topics surrounding homosexuality."
-        span -The Atlantic
-        != imageTag('images/logos/logo-atlantic')
+    ul.grid
+      li.big.item
+        blockquote
+          p.card
+            cite "CrowdVoice is a good resource for photos and videos of protests as well as links to news stories and reports."
+            span -The Guardian
+            != imageTag('images/logos/logo-theguardian')
+      li.big.item
+        blockquote
+          p.card
+            cite “CrowdVoice is a better resource for journalists wanting to report on social movements, even ones in countries where they don't speak the appropriate language.”
+            span -Wired
+            != imageTag('images/logos/logo-wired')
+      li.big.item
+        blockquote
+          p.card
+            cite "Ahwaa facilitates respectful conversations on a variety of topics surrounding homosexuality."
+            span -The Atlantic
+            != imageTag('images/logos/logo-atlantic')
 
     |TODO: paginate
 
