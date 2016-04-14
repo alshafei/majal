@@ -8,6 +8,7 @@
 @grayBackgroundLight: #F7FBFC;
 
 @mobileBreakpoint: 320px;
+@mobileUpBreakpoint: 520px;
 @tabletBreakpoint: 768px;
 @computerBreakpoint: 992px;
 @computerXGABreakpoint: 1024px;
@@ -15,6 +16,7 @@
 @widescreenMonitorBreakpoint: 1920px;
 
 @mobileOnly: ~"(max-width:"(@tabletBreakpoint - 1px)~")";
+@mobileUp: ~"(min-width:"(@mobileUpBreakpoint - 1px)~") and (max-width:"(@tabletBreakpoint - 1px)~")";
 
 @tabletUp: ~"(min-width: @{tabletBreakpoint})";
 @tabletDown: ~"(max-width:"(@computerBreakpoint - 1px)~")";

@@ -157,7 +157,7 @@ input, select, textarea {
   overflow: hidden;
   height: 1px;
   width: 100%;
-  min-height: 300px;
+  height: 0;
 
   img {
     transition: bottom .2s;
@@ -170,8 +170,6 @@ input, select, textarea {
 }
 
 .brand {
-  height: 1px;
-  min-height: 300px;
   border-bottom: 1px solid @altBorderColor;
 
   &.vertically.centered .container {
@@ -240,6 +238,26 @@ input, select, textarea {
   }
 }
 
+@media screen and @mobileOnly {
+  .brand .cover {
+    min-height: 180px;
+
+    img {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and @mobileUp {
+  .brand .cover {
+    min-height: 260px;
+
+    img {
+      width: 400px;
+    }
+  }
+}
+
 @media screen and @tabletUp {
   h1, h2, h3, p {
     &.half {
@@ -247,14 +265,20 @@ input, select, textarea {
     }
   }
 
-  .brand .cover {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+  .brand {
+    min-height: 300px;
 
-    img {
+    .cover {
+      position: absolute;
+      min-height: 300px;
       right: 0;
-      left: auto;
+      bottom: 0;
+
+      img {
+        right: 0;
+        left: auto;
+        width: auto;
+      }
     }
   }
 }
