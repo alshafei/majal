@@ -12,6 +12,7 @@
     "src": "src",
     "dest": "build",
     "cache": "build/index.json",
+    "public": "build/public",
     "filter": [
       "!_*/**",
       "!**/_*/**",
@@ -22,10 +23,7 @@
     ],
     "serverOptions": {
       "routes": {
-        "/": "build/public",
-        "/vendor": "bower_components",
-        "/images": "build/public/images",
-        "/assets": "build/public/assets"
+        "/vendor": "bower_components"
       }
     },
     "bundleOptions": {

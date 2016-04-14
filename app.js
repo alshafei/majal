@@ -6,9 +6,6 @@ var express = require('express');
 
 var app = express();
 
-app.use('/index.html', express.static('build/public/index.html'));
-app.use('/assets', express.static('build/public/assets'));
-app.use('/images', express.static('build/public/images'));
 app.use('/vendor', express.static('bower_components'));
 
 app.get('/*', function (req, res) {

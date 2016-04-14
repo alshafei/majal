@@ -1,11 +1,13 @@
 import content from './content';
 import sidebar from './sidebar';
 import donation from './donation';
+import error404 from './error404';
 
 var fixedComponents = [
   content,
   sidebar,
-  donation
+  donation,
+  error404
 ];
 
 var components = {};
