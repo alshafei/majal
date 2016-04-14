@@ -1,0 +1,109 @@
+@import '../_config';
+
+.media {
+  display: flex;
+  align-items: flex-start;
+
+  &.centered {
+    align-items: center;
+
+    .figure {
+      margin-top: 0;
+    }
+  }
+
+  .figure {
+    margin-left: 1em;
+    margin-top: .5em;
+    align-items: flex-start;
+
+    &.right {
+      margin-right: 1em;
+      order: 1;
+    }
+  }
+
+  .body {
+    padding: 0 1em;
+    flex: 1;
+  }
+}
+
+.cover {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition: bottom .2s;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &.right img {
+    left: auto;
+    right: 0;
+
+    &:hover {
+      bottom: 0;
+    }
+  }
+}
+
+.segment {
+  padding: 2em;
+
+  &.main {
+    background-color: @darkestBackground;
+
+    h1, h2, h3, p {
+      color: @textColorInverted;
+
+      &.main {
+        color: @bodyBackground;
+      }
+    }
+
+    .field {
+      background: none;
+      color: @textColorInverted;
+    }
+
+    .button {
+      color: @bodyBackground;
+    }
+
+    .field {
+      border-color: @textColorInverted;
+    }
+  }
+
+  &.light {
+    &:before {
+      background-color: rgba(255, 255, 255, .85);
+    }
+  }
+
+  &.dark {
+    background-color: none;
+
+    &:before {
+      background-color: rgba(0, 0, 0, .65);
+    }
+
+    .action {
+      color: @bodyBackground;
+    }
+  }
+
+  &.dim {
+    background-color: @grayBackgroundLight;
+  }
+
+  &.big .container {
+    padding-bottom: 10em;
+    padding-top: 6em;
+  }
+}

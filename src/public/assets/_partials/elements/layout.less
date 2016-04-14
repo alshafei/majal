@@ -1,0 +1,46 @@
+@import '../_config';
+
+.card {
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  margin-left: -1em;
+  text-align: center;
+
+  .item {
+    background: @bodyBackground;
+    display: inline-block;
+    margin: .5em;
+    width: 100%;
+
+    img {
+      margin: auto;
+      display: block;
+    }
+  }
+
+  &.bordered .item {
+    border: 1px solid @altBorderColor;
+  }
+}
+
+.brand {
+  .cover {
+    z-index: -1;
+    border-bottom: 1px solid @altBorderColor;
+  }
+
+  &:hover .cover img {
+    bottom: 0;
+  }
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, .8);
+  box-shadow: 0 0 50px rgba(0, 0, 0, .33);
+}

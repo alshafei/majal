@@ -1,0 +1,77 @@
+@import '../_config';
+
+body {
+  font-family: Lato-Regular, sans-serif;
+  background-color: @bodyBackground;
+  color: @textColor;
+}
+
+h1, h2, h3 {
+  color: @darkestBackground;
+  font-family: Lato-Black;
+
+  &.main {
+    color: @importantColor;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  letter-spacing: 2px;
+  font-size: 24px;
+  line-height: 1.7;
+}
+
+header + ul,
+header + p {
+  margin-top: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2em;
+
+  & + .actions {
+    margin-top: 38px;
+  }
+}
+
+a {
+  color: @importantColor;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input, select, textarea {
+  font-size: 18px;
+}
+
+blockquote {
+  margin-top: 4em;
+
+  cite {
+    color: @textColorInverted;
+  }
+
+  span {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+  }
+
+  img {
+    top: -40px;
+    left: -1em;
+    position: absolute;
+  }
+}

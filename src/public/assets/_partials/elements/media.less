@@ -1,0 +1,93 @@
+@import '../_config';
+
+@media screen and @mobileOnly {
+  .cover {
+    min-height: 190px;
+
+    &.big {
+      min-height: 250px;
+    }
+
+    img {
+      width: 345px;
+    }
+  }
+}
+
+@media screen and @mobileTabletUp {
+  .cover {
+    min-height: 260px;
+
+    &.big {
+      min-height: 360px;
+    }
+
+    img {
+      width: auto;
+    }
+  }
+
+  .grid {
+    margin: auto;
+
+    .item {
+      width: 200px;
+
+      &.big {
+        width: 45%;
+
+        & + .item.big {
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and @tabletUp {
+  .brand {
+    min-height: 300px;
+  }
+
+  .cover {
+    position: absolute;
+    min-height: 300px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+    img {
+      right: 0;
+      left: auto;
+      width: 50%;
+    }
+
+    &.big {
+      min-height: 360px;
+    }
+  }
+
+  .half {
+    width: 50%;
+  }
+}
+
+@media screen and @computerUp {
+  .cover.big {
+    img {
+      width: auto;
+    }
+  }
+
+  .grid {
+    margin-left: auto;
+
+    .item.big {
+      width: 30%;
+
+      & + .item.big {
+        margin-left: 2em;
+      }
+    }
+  }
+}
