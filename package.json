@@ -32,8 +32,8 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
-    "buble": "0.4.11",
-    "eslint": "^2.7.0",
+    "buble": "^0.4.17",
+    "eslint": "^2.8.0",
     "fast-image-size": "^0.1.2",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
