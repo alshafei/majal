@@ -25,11 +25,7 @@
       "extensions": {
         "js": "es6"
       }
-    },
-    "plugins": [
-      "tarima-fast-image",
-      "tarima-bower-files"
-    ]
+    }
   },
   "dependencies": {
     "express": "^4.13.4",
