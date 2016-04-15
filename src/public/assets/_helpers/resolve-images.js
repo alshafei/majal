@@ -1,8 +1,18 @@
 let hasCanvas = null;
 
-var sheet = window.document.styleSheets[0];
+let css = '.image{opacity:0}';
+let head = document.getElementsByTagName('head')[0];
+let style = document.createElement('style');
 
-sheet.insertRule('.image{opacity:0}');
+style.type = 'text/css';
+
+if (style.styleSheet) {
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+
+head.appendChild(style);
 
 function isCanvasSupported() {
   if (hasCanvas === null) {
