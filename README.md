@@ -1,7 +1,8 @@
 ## How to build & run
 
 ```bash
-npm i
+bower install
+npm install
 npm run build
 npm start
 ```
