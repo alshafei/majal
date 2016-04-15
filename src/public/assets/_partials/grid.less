@@ -1,3 +1,12 @@
+.left {
+  &.top {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+}
+
 .right {
   &.floated {
     float: right;
@@ -10,6 +19,7 @@
   &.top {
     position: absolute;
     overflow: visible;
+    z-index: -1;
     right: 0;
     top: 0;
   }
