@@ -7,7 +7,7 @@ header.vertically.centered.big.main.segment
   .centered.container
     .top.right
       a.action.button(href='#' on-click='toggleSidebar') DONATE
-    h1 Heading level 1 (TODO)
+    h1.thin Heading level 1 (TODO)
 
 section.vertically.centered.segment
   .half.container
@@ -21,7 +21,7 @@ section.segment
   header
     h2.centered AND THIS IS OUR WORK
 
-  ul
+  ul.list
     each p in data.products
       li.top.padded
         .vertically.centered.brand
@@ -29,9 +29,9 @@ section.segment
             != imageTag(p.image)
             = p.logo
             p.half= p.copy
+            figure.cover!= imageTag(p.cover)
             .actions
               a.action.button(href=p.link) Go To Case Study
-            figure.cover!= imageTag(p.cover)
 
 section.dim.segment
   .two.column.rows
