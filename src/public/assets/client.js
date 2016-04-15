@@ -6,9 +6,9 @@ _bundle: true
 
 import Application from '../../_app';
 
-import resolveImages from './_helpers/resolve-images';
+/* global fastImage */
 
-resolveImages(Array.prototype.slice.call(document.querySelectorAll('.fast-image')));
+fastImage(Array.prototype.slice.call(document.querySelectorAll('.fast-image')));
 
 function main() {
   const app = new Application({
@@ -21,7 +21,7 @@ function main() {
   });
 
   app.on('componentRendered', () => {
-    resolveImages(app.findAll('.fast-image'));
+    fastImage(app.findAll('.fast-image'));
   });
 }
 

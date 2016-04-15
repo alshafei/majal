@@ -25,7 +25,10 @@
       "extensions": {
         "js": "es6"
       }
-    }
+    },
+    "plugins": [
+      "fast-image-tag"
+    ]
   },
   "dependencies": {
     "express": "^4.13.4",
@@ -35,6 +38,7 @@
     "buble": "^0.4.17",
     "eslint": "^2.8.0",
     "fast-image-size": "^0.1.2",
+    "fast-image-tag": "0.0.0",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
     "main-bower-files": "^2.11.1",
