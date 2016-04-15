@@ -59,3 +59,11 @@ section.main.segment
   .centered.container
     header
       h3.thin SELECT OTHER CASE STUDY TO LEARN FROM
+
+footer
+  ul.grid.flex
+    each x in Array.from({ length: 5 })
+      li.item
+        a(href='#')
+          != imageTag('images/extras/bg-ahwaa-ft', 'back')
+          != imageTag('images/logos/logo-ahwaa-ft')

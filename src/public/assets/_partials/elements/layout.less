@@ -1,5 +1,9 @@
 @import '../_config';
 
+#app {
+  overflow: hidden;
+}
+
 .card {
   position: relative;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
@@ -13,7 +17,6 @@
 }
 
 .grid {
-  margin-left: -1em;
   text-align: center;
 
   .item {
@@ -30,6 +33,17 @@
 
   &.bordered .item {
     border: 1px solid @altBorderColor;
+  }
+
+  &.flex {
+    background: @darkestBackground;
+
+    .item {
+      background: rgba(0, 0, 0, .8);
+      margin: 0;
+      width: 50%;
+      position: relative;
+    }
   }
 }
 

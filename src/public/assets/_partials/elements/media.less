@@ -42,6 +42,10 @@
         }
       }
     }
+
+    &.flex .item {
+      width: 33.3%;
+    }
   }
 }
 
@@ -84,6 +88,11 @@
 
   .half {
     width: 40%;
+
+    &.centered {
+      width: 80%;
+      padding-left: 20%;
+    }
   }
 
   .actions {
@@ -116,6 +125,10 @@
       }
     }
   }
+
+  .grid.flex .item {
+    width: 25%;
+  }
 }
 
 @media screen and @computerUp {
@@ -141,6 +154,10 @@
       & + .item.big {
         margin-left: 2em;
       }
+    }
+
+    &.flex .item {
+      width: 20%;
     }
   }
 }
