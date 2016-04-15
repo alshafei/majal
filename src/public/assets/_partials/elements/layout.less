@@ -4,6 +4,32 @@
   overflow: hidden;
 }
 
+#menu {
+  padding: 0 2em;
+  line-height: 100px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+#toggle {
+  position: absolute;
+  z-index: 2;
+  color: white;
+}
+
+#target {
+  display: none;
+
+  &:checked + main {
+    margin-top: 100px;
+  }
+}
+
+main {
+  transition: margin .7s;
+}
+
 .card {
   position: relative;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
