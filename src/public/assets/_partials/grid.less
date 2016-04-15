@@ -1,3 +1,9 @@
+.top {
+  &.full img {
+    max-width: none;
+  }
+}
+
 .left {
   &.top {
     position: absolute;
@@ -16,10 +22,18 @@
     text-align: right;
   }
 
-  &.top {
+  &.bottom, &.top {
     position: absolute;
     overflow: visible;
     z-index: -1;
+  }
+
+  &.bottom {
+    bottom: 0;
+    right: 0;
+  }
+
+  &.top {
     right: 0;
     top: 0;
   }
