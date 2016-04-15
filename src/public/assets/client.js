@@ -8,7 +8,7 @@ import Application from '../../_app';
 
 import resolveImages from './_helpers/resolve-images';
 
-resolveImages(Array.prototype.slice.call(document.querySelectorAll('.image')));
+resolveImages(Array.prototype.slice.call(document.querySelectorAll('.fast-image')));
 
 function main() {
   const app = new Application({
@@ -21,7 +21,7 @@ function main() {
   });
 
   app.on('componentRendered', () => {
-    resolveImages(app.findAll('.image'));
+    resolveImages(app.findAll('.fast-image'));
   });
 }
 

@@ -1,6 +1,6 @@
 let hasCanvas = null;
 
-let css = '.image{opacity:0}';
+let css = '.fast-image{opacity:0;transition: opacity 1.33s;height:auto}';
 let head = document.getElementsByTagName('head')[0];
 let style = document.createElement('style');
 
@@ -23,23 +23,15 @@ function isCanvasSupported() {
   return hasCanvas;
 }
 
-function fixClassName(el) {
-  setTimeout(function() {
-    el.className += ' loaded';
-  });
-}
-
 function preload(el, src, width, height) {
   if (el.currentSrc.indexOf('data:') === -1) {
     el.style.opacity = 1;
-    fixClassName(el);
     return;
   }
 
   if (!isCanvasSupported()) {
     el.src = src;
     el.style.opacity = 1;
-    fixClassName(el);
     return;
   }
 
@@ -56,7 +48,6 @@ function preload(el, src, width, height) {
 
     el.src = canvas.toDataURL('image/png');
     el.style.opacity = 1;
-    fixClassName(el);
   };
 
   p.src = src;
