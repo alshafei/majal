@@ -27,7 +27,8 @@
       }
     },
     "plugins": [
-      "fast-image-tag"
+      "tarima-fast-image",
+      "tarima-bower-files"
     ]
   },
   "dependencies": {
@@ -37,13 +38,12 @@
   "devDependencies": {
     "buble": "^0.4.17",
     "eslint": "^2.8.0",
-    "fast-image-size": "^0.1.2",
-    "fast-image-tag": "0.0.0",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
-    "main-bower-files": "^2.11.1",
     "pug": "^2.0.0-alpha1",
     "rollup": "^0.25.8",
-    "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next"
+    "tarima-bower-files": "0.0.1",
+    "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
+    "tarima-fast-image": "0.0.1"
   }
 }
