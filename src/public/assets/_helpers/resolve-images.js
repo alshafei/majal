@@ -1,18 +1,23 @@
 let hasCanvas = null;
+let wasInjected = false;
 
-let css = '.fast-image{opacity:0;transition: opacity 1.33s;height:auto}';
-let head = document.getElementsByTagName('head')[0];
-let style = document.createElement('style');
+function injectStylesheetRules() {
+  let css = '.fast-image{opacity:0}';
+  let head = document.getElementsByTagName('head')[0];
+  let style = document.createElement('style');
 
-style.type = 'text/css';
+  style.type = 'text/css';
 
-if (style.styleSheet) {
-  style.styleSheet.cssText = css;
-} else {
-  style.appendChild(document.createTextNode(css));
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+
+  head.appendChild(style);
+
+  wasInjected = true;
 }
-
-head.appendChild(style);
 
 function isCanvasSupported() {
   if (hasCanvas === null) {
@@ -54,6 +59,10 @@ function preload(el, src, width, height) {
 }
 
 export default function(nodes) {
+  if (!wasInjected) {
+    injectStylesheetRules();
+  }
+
   nodes.forEach(function(img) {
     const sources = img.getAttribute('srcset').split(/\s*,\s*/)
       .map((source) => {
