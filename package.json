@@ -6,7 +6,7 @@
     "proxy": "tarima -wdV -P localhost:8001 -- node app.js",
     "watch": "tarima -wsdV",
     "build": "tarima -f",
-    "start": "npm run build && node app.js"
+    "start": "node app.js"
   },
   "tarima": {
     "src": "src",
