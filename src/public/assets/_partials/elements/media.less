@@ -16,7 +16,7 @@
 
 @media screen and @mobileTabletUp {
   .cover {
-    min-height: 260px;
+    min-height: 300px;
 
     &.big {
       min-height: 360px;
@@ -44,22 +44,36 @@
   }
 }
 
+@media screen and @tabletDown {
+  .cover + .actions {
+    margin-top: 1em;
+  }
+}
+
 @media screen and @tabletUp {
   .brand {
     min-height: 300px;
+
+    .cover {
+      position: absolute;
+      top: 0;
+    }
   }
 
   .cover {
-    position: absolute;
     min-height: 300px;
-    right: 0;
-    bottom: 0;
     width: 100%;
+
+    &.right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
 
     img {
       right: 0;
       left: auto;
-      width: 50%;
+      width: 55%;
     }
 
     &.big {
@@ -68,15 +82,21 @@
   }
 
   .half {
-    width: 50%;
+    width: 40%;
+  }
+
+  .actions {
+    margin-top: 38px;
   }
 }
 
 @media screen and @computerUp {
-  .cover.big {
-    img {
-      width: auto;
-    }
+  .half {
+    width: 50%;
+  }
+
+  .cover img {
+    width: auto;
   }
 
   .grid {

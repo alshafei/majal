@@ -20,7 +20,7 @@
 @mobileTabletDown: ~"@{mobileTabletUp} and @{mobileOnly}";
 
 @tabletUp: ~"(min-width: @{tabletBreakpoint})";
-@tabletDown: ~"(max-width:"(@computerBreakpoint - 1px)~")";
+@tabletDown: ~"(max-width:"(@tabletBreakpoint - 1px)~")";
 @tabletOnly: ~"@{tabletUp} and @{tabletDown}";
 
 @computerUp: ~"(min-width: @{computerBreakpoint})";

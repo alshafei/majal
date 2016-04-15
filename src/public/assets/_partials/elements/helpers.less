@@ -32,6 +32,7 @@
 .cover {
   position: relative;
   overflow: hidden;
+  z-index: -1;
 
   img {
     transition: bottom .2s;
@@ -42,13 +43,22 @@
     margin: auto;
   }
 
+  &.full {
+    overflow: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    img {
+      width: auto;
+      bottom: auto;
+    }
+  }
+
   &.right img {
     left: auto;
     right: 0;
-
-    &:hover {
-      bottom: 0;
-    }
   }
 }
 
@@ -103,7 +113,7 @@
   }
 
   &.big .container {
-    padding-bottom: 10em;
+    padding-bottom: 6em;
     padding-top: 6em;
   }
 }

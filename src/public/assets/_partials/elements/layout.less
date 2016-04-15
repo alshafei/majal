@@ -5,10 +5,14 @@
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.grid {
-  list-style: none;
+.grid, .list {
   padding: 0;
-  margin: auto;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
   margin-left: -1em;
   text-align: center;
 
@@ -33,9 +37,14 @@
   .cover {
     z-index: -1;
     border-bottom: 1px solid @altBorderColor;
+
+    img {
+      bottom: -30px;
+    }
   }
 
-  &:hover .cover img {
+  &:hover .cover img,
+  &:hover + .cover img {
     bottom: 0;
   }
 }
