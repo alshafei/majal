@@ -26,10 +26,10 @@ section.segment
       li.top.padded
         .vertically.centered.brand
           .container
-            != imageTag(p.image)
+            != fastImage(p.image)
             = p.logo
             p.half= p.copy
-            figure.cover!= imageTag(p.cover)
+            figure.cover!= fastImage(p.cover)
             .actions
               a.action.button(href=p.link) Go To Case Study
 

@@ -23,7 +23,7 @@ section.segment
     each x in Array.from({ length: 12 })
       li.item.padded
         figure
-          != imageTag('images/logos/esraa')
+          != fastImage('images/logos/esraa')
         span Esra'a Al Shafei
         small Founder &amp; Director
 
@@ -39,7 +39,7 @@ section.vertically.centered.container
       header
         h3 EVERY SINGLE PROJECT WE UNDERTAKE CONNECTS BACK TO OUR CORE BELIEFS.
       p With courage and innovation, Majal addresses issues that receive little or no attention:  The rights of the invisible lower income migrant workers, the ‘stigmatized’ LGBTQ community, and those seeking to express dissent through music.
-  figure.big.right.cover!= imageTag('images/covers/macbook')
+  figure.big.right.cover!= fastImage('images/covers/macbook')
 
 section.dim.segment
   .centered.container
@@ -50,7 +50,7 @@ section.dim.segment
       each x in Array.from({ length: 12 })
         li.item.card
           figure
-            != imageTag('images/logos/ashoka')
+            != fastImage('images/logos/ashoka')
     | TODO: paginate
 
 section.vertically.centered.segment
@@ -64,19 +64,19 @@ section.vertically.centered.segment
           p.padded.card
             cite "CrowdVoice is a good resource for photos and videos of protests as well as links to news stories and reports."
             span -The Guardian
-            != imageTag('images/logos/logo-theguardian')
+            != fastImage('images/logos/logo-theguardian')
       li.big.item
         blockquote
           p.padded.card
             cite “CrowdVoice is a better resource for journalists wanting to report on social movements, even ones in countries where they don't speak the appropriate language.”
             span -Wired
-            != imageTag('images/logos/logo-wired')
+            != fastImage('images/logos/logo-wired')
       li.big.item
         blockquote
           p.padded.card
             cite "Ahwaa facilitates respectful conversations on a variety of topics surrounding homosexuality."
             span -The Atlantic
-            != imageTag('images/logos/logo-atlantic')
+            != fastImage('images/logos/logo-atlantic')
 
     |TODO: paginate
 

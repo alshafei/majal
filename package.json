@@ -32,7 +32,7 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
-    "buble": "^0.4.17",
+    "buble": "^0.4.21",
     "eslint": "^2.8.0",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
@@ -40,6 +40,6 @@
     "rollup": "^0.25.8",
     "tarima-bower-files": "0.0.1",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-fast-image": "0.0.1"
+    "tarima-fast-image": "^0.1.0"
   }
 }
