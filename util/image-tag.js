@@ -8,7 +8,7 @@ module.exports = function(publicDir) {
         foundImages = [baseImg + '.png', baseImg + '@2x.png'].filter(fs.existsSync);
 
     if (!foundImages[0]) {
-      throw new Error('Missing sprite: ' + imageSrc);
+      throw new Error('Missing image source: ' + imageSrc);
     }
 
     var dimensions = imageSize(foundImages[0]);
@@ -33,9 +33,11 @@ module.exports = function(publicDir) {
     }
 
     return [
-      '<img src="/', imageSrc, '.png"',
+      '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="',
       ' height="', dimensions.height, '"',
       ' width="', dimensions.width, '"',
+      ' class="image"',
+      ' style="width:', dimensions.width, 'px;height:', dimensions.height, 'px"',
       srcSet,
       attrs,
       '>'
