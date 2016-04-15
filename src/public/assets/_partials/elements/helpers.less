@@ -49,6 +49,39 @@
   }
 }
 
+.tryad {
+  margin-bottom: -100px;
+
+  img:nth-child(1),
+  img:nth-child(3) {
+    z-index: -1;
+    position: absolute;
+  }
+
+  img:nth-child(1) {
+    top: -50px;
+    left: 50px;
+    transition: top .3s;
+  }
+
+  img:nth-child(3) {
+    top: -100px;
+    left: 100px;
+    z-index: -2;
+    transition: top .7s;
+  }
+
+  &:hover {
+    img:nth-child(1) {
+      top: -70px;
+    }
+
+    img:nth-child(3) {
+      top: -140px;
+    }
+  }
+}
+
 .segment {
   padding: 2em;
 
