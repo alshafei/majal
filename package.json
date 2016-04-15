@@ -30,8 +30,7 @@
       "extensions": {
         "js": "es6"
       }
-    },
-    "require": "./util"
+    }
   },
   "dependencies": {
     "express": "^4.13.4",
@@ -40,7 +39,6 @@
   "devDependencies": {
     "buble": "^0.4.11",
     "eslint": "^2.7.0",
-    "fast-image-size": "^0.1.2",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha1",
