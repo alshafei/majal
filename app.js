@@ -6,7 +6,10 @@ var express = require('express');
 
 var app = express();
 
-app.use('/vendor', express.static('bower_components'));
+app.use('/assets', express.static('build/public/assets'));
+app.use('/images', express.static('build/public/images'));
+app.use('/vendor', express.static('build/public/vendor'));
+app.use('/index.html', express.static('build/public/index.html'));
 
 app.get('/*', function (req, res) {
   res.send($.Majal.render(req.url));
