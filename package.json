@@ -25,6 +25,11 @@
       "extensions": {
         "js": "es6"
       }
+    },
+    "pluginOptions": {
+      "spritesmith": {
+        "filter": "**/logos/**/*.png"
+      }
     }
   },
   "dependencies": {
@@ -40,6 +45,7 @@
     "rollup": "^0.25.8",
     "tarima-bower-files": "0.0.1",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-fast-image": "^0.1.0"
+    "tarima-fast-image": "^0.1.0",
+    "tarima-spritesmith": "^0.0.1"
   }
 }
