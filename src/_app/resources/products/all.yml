@@ -1,31 +1,31 @@
 products:
   - label: AHWAA
     link: /ahwaa
-    image: images/logos/logo-ahwaa
+    image: logo-ahwaa
     cover: images/covers/img-ahwaa
     copy: Serving The Arab LGBT Community.
   - label: Mideast-tunes
     link: /met
-    image: images/logos/mideast-tunes-logo
+    image: mideast-tunes-logo
     cover: images/covers/img-met
     copy: A Web & Mobile App Showcasing Underground Musicians In The Middle East & North Africa Who Use Music As A Tool For Social Change.
   - label: CROWDVOICE
     link: /cvorg
-    image: images/logos/logo-cvorg
+    image: logo-cvorg
     cover: images/covers/img-cvorg
     copy: Harnessing The Power Of Crowdsourced Media To Contextualize Social Movements Throughout The World.
   - label: CrowdVoice.by
     link: /cvby
-    image: images/logos/logo-crowdvoiceby
+    image: logo-crowdvoiceby
     cover: images/covers/img-cvby
     copy: Enabling Activists And Grassroots Organizations To Collaboratively Curate Media Related To Their Causes.
   - label: Migrant-Rights.org
     link: /mr
-    image: images/logos/logo-mrorg
+    image: logo-mrorg
     cover: images/covers/img-mrorg
     copy: Advocating And Promoting Awareness On Migrant Issues Across The GCC & Wider Middle East.
   - label: Making-of-a-Century
     link: /moac
-    image: images/logos/makingof
+    image: makingof
     cover: images/covers/ipad-pro
     copy: Enabling Activists And Grassroots Organizations To Collaboratively Curate Media Related To Their Causes.

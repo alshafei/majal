@@ -26,8 +26,7 @@ section.segment
       li.top.padded
         .vertically.centered.brand
           .container
-            != fastImage(p.image)
-            = p.logo
+            h3: i(class='icon-' + p.image)= p.label
             p.half= p.copy
             figure.cover!= fastImage(p.cover)
             .actions

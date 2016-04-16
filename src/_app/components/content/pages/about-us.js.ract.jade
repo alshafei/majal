@@ -22,8 +22,7 @@ section.segment
   ul.bordered.grid
     each x in Array.from({ length: 12 })
       li.item.padded
-        figure
-          != fastImage('images/logos/esraa')
+        i.icon-esraa
         span Esra'a Al Shafei
         small Founder &amp; Director
 
@@ -49,8 +48,7 @@ section.dim.segment
     ul.grid
       each x in Array.from({ length: 12 })
         li.item.card
-          figure
-            != fastImage('images/logos/ashoka')
+          i.icon-ashoka
     | TODO: paginate
 
 section.vertically.centered.segment
@@ -64,19 +62,19 @@ section.vertically.centered.segment
           p.padded.card
             cite "CrowdVoice is a good resource for photos and videos of protests as well as links to news stories and reports."
             span -The Guardian
-            != fastImage('images/logos/logo-theguardian')
+            i.icon-logo-theguardian
       li.big.item
         blockquote
           p.padded.card
             cite “CrowdVoice is a better resource for journalists wanting to report on social movements, even ones in countries where they don't speak the appropriate language.”
             span -Wired
-            != fastImage('images/logos/logo-wired')
+            i.icon-logo-wired
       li.big.item
         blockquote
           p.padded.card
             cite "Ahwaa facilitates respectful conversations on a variety of topics surrounding homosexuality."
             span -The Atlantic
-            != fastImage('images/logos/logo-atlantic')
+            i.icon-logo-atlantic
 
     |TODO: paginate
 
