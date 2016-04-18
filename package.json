@@ -37,15 +37,15 @@
     "ractive": "^0.7.3"
   },
   "devDependencies": {
-    "buble": "^0.4.21",
+    "buble": "^0.5.0",
     "eslint": "^2.8.0",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
-    "pug": "^2.0.0-alpha1",
+    "pug": "^2.0.0-alpha4",
     "rollup": "^0.25.8",
-    "tarima-bower-files": "0.0.1",
+    "tarima-bower-files": "0.0.2",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-fast-image": "^0.1.0",
+    "tarima-fast-image": "^0.1.1",
     "tarima-spritesmith": "^0.0.1"
   }
 }
