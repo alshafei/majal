@@ -28,7 +28,14 @@
     },
     "pluginOptions": {
       "spritesmith": {
-        "filter": "**/logos/**/*.png"
+        "filter": "**/logos/**/*.png",
+        "dest": "assets/images"
+      },
+      "bowerFiles": {
+        "dest": "assets/vendor"
+      },
+      "fastImage": {
+        "base": "assets/images"
       }
     }
   },
@@ -43,9 +50,9 @@
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha4",
     "rollup": "^0.25.8",
-    "tarima-bower-files": "0.0.2",
+    "tarima-bower-files": "^0.1.0",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-fast-image": "^0.1.1",
-    "tarima-spritesmith": "^0.0.1"
+    "tarima-fast-image": "^0.3.0",
+    "tarima-spritesmith": "^0.0.2"
   }
 }
