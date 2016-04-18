@@ -28,7 +28,9 @@ export default Ractive.extend({
         .then(() => {
           self.fire('componentRendered');
 
-          window.history.pushState(document.title, null, path);
+          if (path !== currentPath) {
+            window.history.pushState(document.title, null, path);
+          }
         });
     }
 

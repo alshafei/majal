@@ -23,6 +23,10 @@ function main() {
   app.on('componentRendered', () => {
     fastImage(app.findAll('.fast-image'));
   });
+
+  window.addEventListener('popstate', () => {
+    app.set('currentPath', document.location.pathname);
+  });
 }
 
 main();
