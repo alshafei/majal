@@ -18,6 +18,7 @@
 @largeMonitorBreakpoint: 1400px;
 @widescreenMonitorBreakpoint: 1920px;
 
+@mobileUp: ~"(min-width:"(@mobileBreakpoint - 1px)~")";
 @mobileOnly: ~"(max-width:"(@mobileTabletBreakpoint - 1px)~")";
 @mobileTabletUp: ~"(min-width: @{mobileTabletBreakpoint})";
 @mobileTabletDown: ~"@{mobileTabletUp} and @{mobileOnly}";
