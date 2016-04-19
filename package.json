@@ -32,15 +32,17 @@
         "dest": "assets/images"
       },
       "bowerFiles": {
+        "bundle": true,
         "dest": "assets/vendor"
       },
       "fastImage": {
-        "base": "assets/images"
+        "cwd": "assets/images"
       }
     }
   },
   "dependencies": {
     "express": "^4.13.4",
+    "jquery": "^2.2.3",
     "ractive": "^0.7.3"
   },
   "devDependencies": {
@@ -50,9 +52,9 @@
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha4",
     "rollup": "^0.25.8",
-    "tarima-bower-files": "^0.1.0",
+    "tarima-bower-files": "^0.2.1",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-fast-image": "^0.3.0",
-    "tarima-spritesmith": "^0.0.2"
+    "tarima-fast-image": "^0.5.0",
+    "tarima-spritesmith": "^0.0.3"
   }
 }
