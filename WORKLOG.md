@@ -22,7 +22,7 @@
 ### Fri Apr 08, 2016
 
 * 10:20 - 10:46 <Alvaro Cabrera>
-* 11:32         <Alvaro Cabrera>
+* 11:32 - 02:10 <Alvaro Cabrera>
 
 ### Mon Apr 11, 2016
 
@@ -57,7 +57,7 @@
 * 09:27 - 10:23 <Alvaro Cabrera>
 * 10:40 - 11:55 <Alvaro Cabrera>
 * 12:10 - 15:40 <Alvaro Cabrera>
-* 23:24         <Alvaro Cabrera>
+* 23:24 - 01:20 <Alvaro Cabrera>
 
 ### Fri Apr 15, 2016
 
