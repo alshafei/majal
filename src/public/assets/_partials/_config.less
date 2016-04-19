@@ -10,6 +10,9 @@
 @greenLight: #BBC230;
 @greenDark: #D6DD38;
 
+@pageWidth: 1300px;
+@pageUp: ~"(min-width: @{pageWidth})";
+
 @mobileBreakpoint: 320px;
 @mobileTabletBreakpoint: 520px;
 @tabletBreakpoint: 768px;
@@ -18,7 +21,7 @@
 @largeMonitorBreakpoint: 1400px;
 @widescreenMonitorBreakpoint: 1920px;
 
-@mobileUp: ~"(min-width:"(@mobileBreakpoint - 1px)~")";
+@mobileUp: ~"(min-width: @{mobileBreakpoint})";
 @mobileOnly: ~"(max-width:"(@mobileTabletBreakpoint - 1px)~")";
 @mobileTabletUp: ~"(min-width: @{mobileTabletBreakpoint})";
 @mobileTabletDown: ~"@{mobileTabletUp} and @{mobileOnly}";
@@ -29,3 +32,7 @@
 
 @computerUp: ~"(min-width: @{computerBreakpoint})";
 @computerDown: ~"(max-width:"(@computerXGABreakpoint - 1px)~")";
+
+@computerXGA: ~"(min-width: @{computerXGABreakpoint})";
+@largeMonitor: ~"(min-width: @{largeMonitorBreakpoint})";
+@widescreenMonitor: ~"(min-width: @{widescreenMonitorBreakpoint})";
