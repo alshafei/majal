@@ -18,12 +18,20 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    & + header {
+      margin-top: 2em;
+    }
   }
 }
 
 .right {
   &.floated {
     float: right;
+
+    & + header {
+      margin-top: 2em;
+    }
   }
 
   &.aligned {
@@ -43,6 +51,10 @@
   &.top {
     right: 0;
     top: 0;
+
+    & + header {
+      margin-top: 2em;
+    }
   }
 }
 

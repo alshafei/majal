@@ -4,10 +4,12 @@
   ---
 
 aside.sidebar(intro-outro='fade')
-  .right.floated
-      a.action.button(href='#' on-click='toggleSidebar') Close
+  .container
+    .right.floated
+        a.action.button(href='#' on-click='toggleSidebar') Close
 
-  h3= data.sectionTitle
-  p= data.description
+    header
+      h3= data.sectionTitle
+      p= data.description
 
-  |{{>getComponent('donation')}}
+    |{{>getComponent('donation')}}
