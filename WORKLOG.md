@@ -65,3 +65,20 @@
 * 13:10 - 13:39 <Alvaro Cabrera>
 * 14:14 - 16:17 <Alvaro Cabrera>
 * 16:38 - 18:56 <Alvaro Cabrera>
+
+### Mon Apr 18, 2016
+
+* 09:56 - 11:10 <Alvaro Cabrera>
+* 11:56 - 12:38 <Alvaro Cabrera>
+* 14:31 - 15:16 <Alvaro Cabrera>
+* 15:29 - 16:05 <Alvaro Cabrera>
+* 16:32 - 17:25 <Alvaro Cabrera>
+* 22:36 - 00:15 <Alvaro Cabrera>
+
+### Tue Apr 19, 2016
+
+* 10:18 - 10:28 <Alvaro Cabrera>
+* 10:41 - 10:50 <Alvaro Cabrera>
+* 12:01 - 12:13 <Alvaro Cabrera>
+* 12:29 - 13:10 <Alvaro Cabrera>
+* 13:19 - 13:27 <Alvaro Cabrera>
