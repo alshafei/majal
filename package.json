@@ -27,16 +27,15 @@
       }
     },
     "pluginOptions": {
-      "spritesmith": {
-        "filter": "**/logos/**/*.png",
-        "dest": "assets/images"
+      "talavera": {
+        "dest": "assets/images",
+        "cwd": "public/assets/images",
+        "sprites": "**/images/logos/**/*.png",
+        "images": "**/images/{extras,covers}/**/*.{png,jpg,jpeg}"
       },
-      "bowerFiles": {
+      "bower": {
         "bundle": true,
         "dest": "assets/vendor"
-      },
-      "fastImage": {
-        "cwd": "assets/images"
       }
     }
   },
@@ -52,9 +51,8 @@
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha4",
     "rollup": "^0.25.8",
-    "tarima-bower-files": "^0.2.1",
+    "tarima-bower": "^0.3.0",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-fast-image": "^0.5.0",
-    "tarima-spritesmith": "^0.0.3"
+    "tarima-image": "^0.1.0"
   }
 }
