@@ -27,9 +27,9 @@ section.segment
       li.top.padded
         .vertically.centered.brand
           .container
-            h3: i(class='icon-' + p.image)= p.label
+            h3: i(class='x-' + p.image)= p.label
             p.half= p.copy
-            figure.cover!= fastImage(p.cover)
+            figure.cover!= talavera(p.cover)
             .actions
               a.action.button(href=p.link) Go To Case Study
 

@@ -1,16 +1,15 @@
 header.vertically.centered.big.main.segment
   .centered.container
     header
-      i.icon-logo-crowdvoiceby-light
+      i.x-logo-crowdvoiceby-light
     p.main.thin Enabling activists &amp; grassroots organizations to collaboratively curate media related to their causes
 
-section.vertically.centered.segment
+section.vertically.centered.segment.x-bg-crowdvoice
   .half.container
     header
       h2 A TOOL FOR SOCIAL JUSTICE
     p CrowdVoice.by was built for those working for social change in order to streamline the important task of collecting and disseminating information about their causes.
     p Its target audience is activists and grassroots collectives that engage in valuable, on-the-ground activities, but lack the resources to build their own tech with which to illustrate the importance and urgency of their work.
-  figure.top.right!= fastImage('extras/bg-crowdvoice')
 
 section.vertically.big.centered.segment
   .half.centered.container
@@ -18,22 +17,21 @@ section.vertically.big.centered.segment
       h2 CROWDVOICE BY
       p (NAME OF ORGANIZATION)
     p CrowdVoice.by helps grassroots campaigners organize and communicate their messages from a central hub across multiple platforms.
-  figure.top.left!= fastImage('extras/img-face')
+  figure.top.left!= talavera('extras/img-face')
 
 section.segment
   .centered.container
     figure.triad
-      != fastImage('covers/left-screen')
-      != fastImage('covers/middle-screen')
-      != fastImage('covers/right-screen')
+      != talavera('covers/left-screen')
+      != talavera('covers/middle-screen')
+      != talavera('covers/right-screen')
 
-section.vertically.centered.big.cut.main.segment
+section.vertically.centered.big.cut.main.segment.x-bg-crowd
   .container
     .half
       header
         h2.main HARNESS THE POWER OF THE CROWD
       p After its launch, CV.by will help to level the technological playing field for grassroots organizations and citizen journalists, amplifying new and diverse voices.  We look forward to revisit our newest platform case study in the future to add a lot of amazing impact it made
-  figure.fill!= fastImage('extras/bg-crowd')
 
 section.vertically.big.green.centered.segment
   .half.centered.container
@@ -42,8 +40,8 @@ section.vertically.big.green.centered.segment
     p After its launch, CV.by will help to level the technological playing field for grassroots organizations and citizen journalists, amplifying new and diverse voices.  We look forward to revisit our newest platform case study in the future to add a lot of amazing impact it made
     .actions
       a.main.action.button(href='#') JOIN CROWDVOICE.BY
-  figure.top.left!= fastImage('extras/img-wave')
-  figure.bottom.right!= fastImage('extras/imgconcentricos')
+  figure.top.left!= talavera('extras/img-wave')
+  figure.bottom.right!= talavera('extras/imgconcentricos')
 
 section.dim.green.segment
   .two.column.rows
@@ -64,6 +62,5 @@ footer
   ul.grid.flex
     each x in Array.from({ length: 5 })
       li.item
-        a(href='#')
-          i.icon-logo-ahwaa-ft
-          != fastImage('extras/bg-ahwaa-ft', 'back')
+        a.x-bg-ahwaa-ft(href='#')
+          i.x-logo-ahwaa-ft

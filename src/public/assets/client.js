@@ -6,9 +6,9 @@ _bundle: true
 
 import Application from '../../_app';
 
-/* global fastImage */
+/* global talavera */
 
-fastImage(Array.prototype.slice.call(document.querySelectorAll('.fast-image')));
+talavera(Array.prototype.slice.call(document.querySelectorAll('img[srcset]')));
 
 function main() {
   const app = new Application({
@@ -21,7 +21,7 @@ function main() {
   });
 
   app.on('componentRendered', () => {
-    fastImage(app.findAll('.fast-image'));
+    talavera(app.findAll('img[srcset]'));
   });
 
   window.addEventListener('popstate', () => {
