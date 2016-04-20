@@ -6,9 +6,9 @@ _bundle: true
 
 import Application from '../../_app';
 
-/* global talavera */
+/* global _imageTag */
 
-talavera(Array.prototype.slice.call(document.querySelectorAll('img[srcset]')));
+_imageTag(Array.prototype.slice.call(document.querySelectorAll('img[srcset]')));
 
 function main() {
   const app = new Application({
@@ -21,7 +21,7 @@ function main() {
   });
 
   app.on('componentRendered', () => {
-    talavera(app.findAll('img[srcset]'));
+    _imageTag(app.findAll('img[srcset]'));
   });
 
   window.addEventListener('popstate', () => {

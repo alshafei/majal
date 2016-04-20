@@ -27,7 +27,7 @@
       }
     },
     "pluginOptions": {
-      "talavera": {
+      "image": {
         "dest": "assets/images",
         "cwd": "public/assets/images",
         "sprites": "**/images/logos/**/*.png",
@@ -53,6 +53,6 @@
     "rollup": "^0.25.8",
     "tarima-bower": "^0.3.0",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-image": "^0.1.0"
+    "tarima-image": "^0.2.0"
   }
 }
