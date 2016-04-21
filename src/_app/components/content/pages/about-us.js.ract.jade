@@ -2,8 +2,6 @@ header.vertically.centered.big.main.segment
   .centered.container
     .top.right
       a.action.button(href='#' on-click='toggleSidebar') DONATE
-    header
-      h2.thin About Us
     p.main We create platforms that amplify underrepresented voices
 
 section.vertically.centered.segment
@@ -22,7 +20,7 @@ section.segment
   ul.bordered.grid
     each x in Array.from({ length: 12 })
       li.item.padded
-        i.x-esraa
+        != imageTag('esraa')
         span Esra'a Al Shafei
         small Founder &amp; Director
 
