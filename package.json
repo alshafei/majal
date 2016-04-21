@@ -30,7 +30,7 @@
       "image": {
         "dest": "assets/images",
         "cwd": "public/assets/images",
-        "sprites": "**/images/logos/**/*.png",
+        "sprites": "**/images/icons/**/*.png",
         "images": "**/images/{extras,covers}/**/*.{png,jpg,jpeg}"
       },
       "bower": {
@@ -53,6 +53,6 @@
     "rollup": "^0.25.8",
     "tarima-bower": "^0.3.0",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-image": "^0.2.0"
+    "tarima-images": "^0.2.0"
   }
 }
