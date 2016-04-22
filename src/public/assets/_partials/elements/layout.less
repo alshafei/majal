@@ -1,29 +1,84 @@
 @import '../_config';
 
+// TODO: improve id-selectors
 #app {
   overflow: hidden;
 }
 
 #menu {
-  padding: 0 2em;
-  line-height: 100px;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
+  transition: opacity .3s;
+  background: black;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+    display: flex;
+    background: black;
+    align-items: center;
+  }
+
+   ul {
+    margin: auto;
+    list-style: none;
+
+    li {
+      padding: 0 3em;
+      line-height: 50px;
+      border-bottom: 1px solid lighten(@darkestBackground, 5);
+
+      &.here {
+        a {
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  header, footer, ul {
+    text-align: center;
+  }
+
+  header {
+    padding-left: 50px;
+    line-height: 50px;
+  }
+
+  .right {
+    padding: 0 10px;
+    font-size: 50px;
+  }
 }
 
 #toggle {
   position: absolute;
-  z-index: 2;
-  color: white;
+  z-index: 3;
 }
 
 #target {
   display: none;
 
-  &:checked + main {
-    margin-top: 100px;
+  &:checked + #menu {
+    z-index: 4;
+    opacity: 1;
+
+    & ~ main {
+      position: fixed;
+    }
   }
+}
+
+main {
+  background: white;
 }
 
 main {

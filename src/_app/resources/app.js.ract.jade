@@ -1,29 +1,43 @@
-nav#menu.dark.segment
-  a.main.action(href='/ahwaa' on-click='navigate') ahwaa
-  |&nbsp;&nbsp;
-  a.main.action(href='/met' on-click='navigate') met
-  |&nbsp;&nbsp;
-  a.main.action(href='/cvorg' on-click='navigate') cvorg
-  |&nbsp;&nbsp;
-  a.main.action(href='/cvby' on-click='navigate') cvby
-  |&nbsp;&nbsp;
-  a.main.action(href='/mr' on-click='navigate') mr
-  |&nbsp;&nbsp;
-  a.main.action(href='/moac' on-click='navigate') moac
-  |&nbsp;&nbsp;
-  a.main.action(href='/about' on-click='navigate') about
-  |&nbsp;&nbsp;
-  a.main.action(href='/press' on-click='navigate') press
-  |&nbsp;&nbsp;
-  a.main.action(href='/services' on-click='navigate') services
-  |&nbsp;&nbsp;
-  a.main.action(href='/' on-click='navigate') HOME
+//-
+  ---
+  links:
+  - href: /
+    text: HOME
+  - href: /about
+    text: ABOUT US
+  - href: /blog
+    text: BLOG
+  - href: /press
+    text: PRESS ROOM
+  - href: /services
+    text: SERVICES
+  - href: /jobs
+    text: JOBS
+  ---
+
+input#target(type='checkbox')
+nav#menu
+  header
+    .right.floated
+      label(for='target') &times;
+    |MAJAL
+
+  main
+    ul
+      each link, i in links
+        li(class=i?'':'here')
+          a(href=link.href on-click='navigate')= link.text
+
+  footer
+    p.
+      Follow us on social media
+      <br>SOCIAL ICONS
+      <br>&copy; 2016 MAJAL - #[a(href='#') Privacy Policy]
 
 label#toggle(for='target')
   i.x-menu
 
-input#target(type='checkbox')
-main
+main(style='pointer-events:none')
   |{{#if currentComponent}}
   |{{>getComponent(currentComponent.name)}}
   |{{else}}
