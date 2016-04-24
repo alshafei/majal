@@ -27,7 +27,7 @@
       }
     },
     "pluginOptions": {
-      "image": {
+      "images": {
         "dest": "assets/images",
         "cwd": "public/assets/images",
         "sprites": "**/images/icons/**/*.png",
