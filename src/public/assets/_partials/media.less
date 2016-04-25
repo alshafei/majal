@@ -5,24 +5,20 @@
 }
 
 body::before {
-  display: none;
+  background: white;
+  position: fixed;
+  z-index: 9999;
+  padding: 1em;
+  // display: none;
 }
 
 @media screen and @mobileOnly {
-  body::before {
-    content: 'mobile';
-  }
-
   .tablet-up, .computer-up, .tablet-only, .computer-only {
     display: none;
   }
 }
 
 @media screen and @tabletOnly {
-  body::before {
-    content: 'tablet';
-  }
-
   .mobile-down, .mobile-only, .computer-up, .computer-only {
     display: none;
   }
@@ -31,6 +27,24 @@ body::before {
 @media screen and @computerUp {
   .mobile-down, .mobile-only, .tablet-down, .tablet-only {
     display: none;
+  }
+}
+
+@media screen and (max-width: (@mobileTabletBreakpoint - 1px)) {
+  body::before {
+    content: 'mobile';
+  }
+}
+
+@media screen and (min-width: @mobileTabletBreakpoint) and (max-width: (@tabletBreakpoint - 1px)) {
+  body::before {
+    content: 'mobile-tablet';
+  }
+}
+
+@media screen and (min-width: @tabletBreakpoint) and (max-width: (@computerBreakpoint - 1px)) {
+  body::before {
+    content: 'tablet';
   }
 }
 

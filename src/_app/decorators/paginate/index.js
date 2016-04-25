@@ -1,10 +1,9 @@
+import MediaQueryListener from './media-queries';
 import template from './template';
 
 /* global Ractive */
 
-const Paginate = Ractive.extend({
-  template: template
-});
+let mq;
 
 export default function(node, step, length, selector) {
   const items = Array.prototype.slice.call(node.querySelectorAll(selector));
@@ -25,8 +24,9 @@ export default function(node, step, length, selector) {
 
   node.parentNode.appendChild(placeholder);
 
-  let paginate = new Paginate({
+  let paginate = new Ractive({
     el: placeholder,
+    template,
     data() {
       return {
         currentStep: step - 1,
@@ -35,6 +35,8 @@ export default function(node, step, length, selector) {
       };
     },
     onrender() {
+      mq = mq || new MediaQueryListener();
+
       this.observe('currentStep', (offset) => {
         hideNodes(offset);
       });
