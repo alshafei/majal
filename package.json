@@ -51,8 +51,9 @@
     "less-plugin-autoprefix": "^1.5.1",
     "pug": "^2.0.0-alpha4",
     "rollup": "^0.25.8",
-    "tarima-bower": "^0.3.0",
+    "tarima-bower": "^0.3.1",
+    "tarima-browser-sync": "^0.1.0",
     "tarima-cli": "git+https://github.com/gextech/tarima-cli.git#next",
-    "tarima-images": "^0.2.0"
+    "tarima-images": "^0.2.2"
   }
 }
