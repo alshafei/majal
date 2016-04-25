@@ -17,11 +17,11 @@ section.vertically.centered.segment
     p With team members and initiatives throughout the Middle East, India, Mexico, and beyond, we’ve scaled our projects to a broader, more global audience and rebranded as Majal in 2015 to reflect a renewed transnational positioning.
 
 section.segment
-  ul.bordered.grid
+  ul.bordered.grid(decorator='paginate:1,3,".item"')
     each x in Array.from({ length: 12 })
       li.item.padded
         != imageTag('esraa')
-        span Esra'a Al Shafei
+        span Esra'a Al Shafei ##{String(Math.random()+1).substr(0,3)}
         small Founder &amp; Director
 
 section.vertically.centered.segment
@@ -43,18 +43,18 @@ section.dim.segment
     header
       h3 10 YEARS OF RECOGNITION AND PARTNERSHIPS
       p We share our successes with our supporters and collaborators.
-    ul.grid
+    ul.grid(decorator='paginate:1,4,".item"')
       each x in Array.from({ length: 12 })
         li.item.card
+          h3 ##{String(Math.random()+1).substr(0,3)}
           i.x-ashoka
-    | TODO: paginate
 
 section.vertically.centered.segment
   .centered.container
     header
       h3 WHAT MEDIA SAYS ABOUT US
 
-    ul.grid
+    ul.grid(decorator='paginate:1,2,".item"')
       li.big.item
         blockquote
           i.x-logo-theguardian
@@ -73,8 +73,6 @@ section.vertically.centered.segment
           p.padded.card
             cite "Ahwaa facilitates respectful conversations on a variety of topics surrounding homosexuality."
             span -The Atlantic
-
-    |TODO: paginate
 
 footer.vertically.centered.big.main.segment
   form.centered.container

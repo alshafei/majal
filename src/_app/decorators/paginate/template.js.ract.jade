@@ -1,0 +1,5 @@
+ul.pager
+  |{{#each allSteps:step}}
+  li.page
+    a(href='#' on-click='changeStep' class="{{currentStep===step?'here':null}}")
+  |{{/each}}

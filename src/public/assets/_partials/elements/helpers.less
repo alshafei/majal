@@ -93,6 +93,34 @@
   }
 }
 
+.pager {
+  margin-top: 20px;
+  list-style: none;
+
+  .page {
+    display: inline-block;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      width: 1em;
+      height: 1em;
+      display: block;
+      line-height: 1em;
+      border-radius: 50%;
+      border: 1px solid @altBorderColor;
+
+      &.here {
+        color: @bodyBackground;
+        background: @importantColor;
+      }
+    }
+  }
+}
+
 .segment {
   padding: 2em;
 

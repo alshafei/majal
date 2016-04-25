@@ -37,7 +37,7 @@ nav#menu
 label#toggle(for='target')
   i.x-menu
 
-main(style='pointer-events:none')
+main
   |{{#if currentComponent}}
   |{{>getComponent(currentComponent.name)}}
   |{{else}}

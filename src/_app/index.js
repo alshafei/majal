@@ -1,10 +1,12 @@
 import { findComponent, getComponents } from './components';
+import { getDecorators } from './decorators';
 import template from './resources/app';
 
 /* global Ractive */
 
 export default Ractive.extend({
   components: getComponents(),
+  decorators: getDecorators(),
   template,
   data() {
     return {
