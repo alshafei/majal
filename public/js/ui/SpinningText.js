@@ -36,7 +36,7 @@ Class('SpinningText').inherits(Widget)({
                 if ( $(this).outerHeight() > height ) {
                     biggerChildren = this;
                     height= $(this).outerHeight();
-                }  
+                }
             });
 
             var parent = $(biggerChildren).parent();
@@ -49,7 +49,11 @@ Class('SpinningText').inherits(Widget)({
             var previousPositionTwo = 0;
             var firstRun = 0;
 
-            this.description_0.activate();
+            animatedDescriptions.forEach(function(a) {
+              a.className = a.className.replace(/\bactive\b/g);
+            });
+
+            animatedDescriptions[0].className += ' active';
 
             setInterval( function(){
 
@@ -64,7 +68,7 @@ Class('SpinningText').inherits(Widget)({
                         animatedDescriptions[position].classList.add('active');
                         $(animatedDescriptions[position]).on('transitionend webkitTransidionEnd', function(){
                             animatedDescriptions[position].classList.remove('hidden');
-                        });                     
+                        });
                     }
 
                     firstRun = 1;
@@ -73,7 +77,7 @@ Class('SpinningText').inherits(Widget)({
                     animatedDescriptions[position].classList.add('active');
                  }
 
-                
+
                 if ( position === descriptionsLenght-1){
                     previousPositionTwo = previousPosition;
                     previousPosition = position;
@@ -87,7 +91,7 @@ Class('SpinningText').inherits(Widget)({
                 position++;
 
             }, 5000);
-            
+
         }
 
 	}
