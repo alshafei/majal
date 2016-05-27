@@ -309,10 +309,6 @@ Class('Widget').includes(CustomEventSupport, NodeSupport)({
         @return this [Widget]
         **/
         render : function render(element, beforeElement) {
-            if (this.element.html().trim().length) {
-              return;
-            }
-
             if (this.__destroyed === true) {
                 console.warn('calling on destroyed object');
             }
