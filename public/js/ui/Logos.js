@@ -22,7 +22,7 @@ Class('Logo').inherits(Widget)({
 
             this._bindEvents();
             this._setup();
-            
+
         },
 
         _setup : function _setup() {
@@ -61,9 +61,6 @@ Class('Logo').inherits(Widget)({
         _bindEvents : function _bindEvents() {
             this.element.on('mouseover', this.activate.bind(this));
             this.element.on('mouseout', this.deactivate.bind(this));
-            this.element.on('touchstart', this.activate.bind(this));
-            this.element.on('touchend', this.deactivate.bind(this));
-            
         }
     }
 });
